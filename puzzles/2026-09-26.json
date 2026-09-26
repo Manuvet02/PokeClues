@@ -1,0 +1,252 @@
+{
+  "date": "2026-09-26",
+  "grid_size": [
+    5,
+    4
+  ],
+  "candidates": [
+    {
+      "name": "gourgeist-average",
+      "id": 711
+    },
+    {
+      "name": "togepi",
+      "id": 175
+    },
+    {
+      "name": "sprigatito",
+      "id": 906
+    },
+    {
+      "name": "iron-leaves",
+      "id": 1010
+    },
+    {
+      "name": "farfetchd",
+      "id": 83
+    },
+    {
+      "name": "bonsly",
+      "id": 438
+    },
+    {
+      "name": "cranidos",
+      "id": 408
+    },
+    {
+      "name": "litten",
+      "id": 725
+    },
+    {
+      "name": "trapinch",
+      "id": 328
+    },
+    {
+      "name": "azumarill",
+      "id": 184
+    },
+    {
+      "name": "munchlax",
+      "id": 446
+    },
+    {
+      "name": "servine",
+      "id": 496
+    },
+    {
+      "name": "florges",
+      "id": 671
+    },
+    {
+      "name": "aipom",
+      "id": 190
+    },
+    {
+      "name": "simisage",
+      "id": 512
+    },
+    {
+      "name": "bellossom",
+      "id": 182
+    },
+    {
+      "name": "spinda",
+      "id": 327
+    },
+    {
+      "name": "feebas",
+      "id": 349
+    },
+    {
+      "name": "binacle",
+      "id": 688
+    },
+    {
+      "name": "delcatty",
+      "id": 301
+    }
+  ],
+  "clues": [
+    {
+      "id": 0,
+      "text": "A2 è di tipo flying.",
+      "reveals_cells": [
+        5
+      ]
+    },
+    {
+      "id": 1,
+      "text": "B2 è di tipo ground.",
+      "reveals_cells": [
+        6
+      ]
+    },
+    {
+      "id": 2,
+      "text": "B2 (speed) > B3",
+      "reveals_cells": [
+        10
+      ]
+    },
+    {
+      "id": 3,
+      "text": "D2 è di tipo ghost.",
+      "reveals_cells": [
+        8
+      ]
+    },
+    {
+      "id": 4,
+      "text": "C3 è di tipo fire.",
+      "reveals_cells": [
+        11
+      ]
+    },
+    {
+      "id": 5,
+      "text": "C1 è di tipo psychic.",
+      "reveals_cells": [
+        3
+      ]
+    },
+    {
+      "id": 6,
+      "text": "C4 appartiene alla generation-ix.",
+      "reveals_cells": [
+        15
+      ]
+    },
+    {
+      "id": 7,
+      "text": "A5 appartiene alla generation-iv.",
+      "reveals_cells": []
+    },
+    {
+      "id": 8,
+      "text": "A5 è di colore brown.",
+      "reveals_cells": [
+        17
+      ]
+    },
+    {
+      "id": 9,
+      "text": "B4 appartiene alla generation-iv.",
+      "reveals_cells": [
+        14
+      ]
+    },
+    {
+      "id": 10,
+      "text": "C2 (attack) > D2",
+      "reveals_cells": [
+        7
+      ]
+    },
+    {
+      "id": 11,
+      "text": "A1 è di colore blue.",
+      "reveals_cells": [
+        1
+      ]
+    },
+    {
+      "id": 12,
+      "text": "A3 è di tipo rock.",
+      "reveals_cells": [
+        9
+      ]
+    },
+    {
+      "id": 13,
+      "text": "A4 appartiene alla generation-vi.",
+      "reveals_cells": [
+        13
+      ]
+    },
+    {
+      "id": 14,
+      "text": "D3 è allo stadio evolutivo 3.",
+      "reveals_cells": [
+        12
+      ]
+    },
+    {
+      "id": 15,
+      "text": "B4 (speed) > B5",
+      "reveals_cells": [
+        18
+      ]
+    },
+    {
+      "id": 16,
+      "text": "D4 è di colore green.",
+      "reveals_cells": [
+        16
+      ]
+    },
+    {
+      "id": 17,
+      "text": "C5 è allo stadio evolutivo 2.",
+      "reveals_cells": [
+        19
+      ]
+    },
+    {
+      "id": 18,
+      "text": "B1 è di colore purple.",
+      "reveals_cells": [
+        2
+      ]
+    },
+    {
+      "id": 19,
+      "text": "D4 (hp) > D5",
+      "reveals_cells": [
+        4,
+        20
+      ]
+    }
+  ],
+  "solution": [
+    "azumarill",
+    "aipom",
+    "iron-leaves",
+    "spinda",
+    "farfetchd",
+    "trapinch",
+    "simisage",
+    "gourgeist-average",
+    "binacle",
+    "munchlax",
+    "litten",
+    "bellossom",
+    "florges",
+    "cranidos",
+    "sprigatito",
+    "servine",
+    "bonsly",
+    "togepi",
+    "delcatty",
+    "feebas"
+  ]
+}

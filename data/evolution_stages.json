@@ -1,0 +1,6070 @@
+{
+  "abomasnow": {
+    "evolves_from": "snover",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "abra": {
+    "evolves_from": null,
+    "evolves_to": [
+      "kadabra"
+    ],
+    "stage": 1
+  },
+  "absol": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "accelgor": {
+    "evolves_from": "shelmet",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "aegislash": {
+    "evolves_from": "doublade",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "aerodactyl": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "aggron": {
+    "evolves_from": "lairon",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "aipom": {
+    "evolves_from": null,
+    "evolves_to": [
+      "ambipom"
+    ],
+    "stage": 1
+  },
+  "alakazam": {
+    "evolves_from": "kadabra",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "alcremie": {
+    "evolves_from": "milcery",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "alomomola": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "altaria": {
+    "evolves_from": "swablu",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "amaura": {
+    "evolves_from": null,
+    "evolves_to": [
+      "aurorus"
+    ],
+    "stage": 1
+  },
+  "ambipom": {
+    "evolves_from": "aipom",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "amoonguss": {
+    "evolves_from": "foongus",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "ampharos": {
+    "evolves_from": "flaaffy",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "annihilape": {
+    "evolves_from": "primeape",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "anorith": {
+    "evolves_from": null,
+    "evolves_to": [
+      "armaldo"
+    ],
+    "stage": 1
+  },
+  "appletun": {
+    "evolves_from": "applin",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "applin": {
+    "evolves_from": null,
+    "evolves_to": [
+      "flapple",
+      "appletun",
+      "dipplin"
+    ],
+    "stage": 1
+  },
+  "araquanid": {
+    "evolves_from": "dewpider",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "arbok": {
+    "evolves_from": "ekans",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "arboliva": {
+    "evolves_from": "dolliv",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "arcanine": {
+    "evolves_from": "growlithe",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "arceus": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "archaludon": {
+    "evolves_from": "duraludon",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "archen": {
+    "evolves_from": null,
+    "evolves_to": [
+      "archeops"
+    ],
+    "stage": 1
+  },
+  "archeops": {
+    "evolves_from": "archen",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "arctibax": {
+    "evolves_from": "frigibax",
+    "evolves_to": [
+      "baxcalibur"
+    ],
+    "stage": 2
+  },
+  "arctovish": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "arctozolt": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "ariados": {
+    "evolves_from": "spinarak",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "armaldo": {
+    "evolves_from": "anorith",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "armarouge": {
+    "evolves_from": "charcadet",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "aromatisse": {
+    "evolves_from": "spritzee",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "aron": {
+    "evolves_from": null,
+    "evolves_to": [
+      "lairon"
+    ],
+    "stage": 1
+  },
+  "arrokuda": {
+    "evolves_from": null,
+    "evolves_to": [
+      "barraskewda"
+    ],
+    "stage": 1
+  },
+  "articuno": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "audino": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "aurorus": {
+    "evolves_from": "amaura",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "avalugg": {
+    "evolves_from": "bergmite",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "axew": {
+    "evolves_from": null,
+    "evolves_to": [
+      "fraxure"
+    ],
+    "stage": 1
+  },
+  "azelf": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "azumarill": {
+    "evolves_from": "marill",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "azurill": {
+    "evolves_from": null,
+    "evolves_to": [
+      "marill"
+    ],
+    "stage": 1
+  },
+  "bagon": {
+    "evolves_from": null,
+    "evolves_to": [
+      "shelgon"
+    ],
+    "stage": 1
+  },
+  "baltoy": {
+    "evolves_from": null,
+    "evolves_to": [
+      "claydol"
+    ],
+    "stage": 1
+  },
+  "banette": {
+    "evolves_from": "shuppet",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "barbaracle": {
+    "evolves_from": "binacle",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "barboach": {
+    "evolves_from": null,
+    "evolves_to": [
+      "whiscash"
+    ],
+    "stage": 1
+  },
+  "barraskewda": {
+    "evolves_from": "arrokuda",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "basculegion": {
+    "evolves_from": "basculin",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "basculin": {
+    "evolves_from": null,
+    "evolves_to": [
+      "basculegion"
+    ],
+    "stage": 1
+  },
+  "bastiodon": {
+    "evolves_from": "shieldon",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "baxcalibur": {
+    "evolves_from": "arctibax",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "bayleef": {
+    "evolves_from": "chikorita",
+    "evolves_to": [
+      "meganium"
+    ],
+    "stage": 2
+  },
+  "beartic": {
+    "evolves_from": "cubchoo",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "beautifly": {
+    "evolves_from": "silcoon",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "beedrill": {
+    "evolves_from": "kakuna",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "beheeyem": {
+    "evolves_from": "elgyem",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "beldum": {
+    "evolves_from": null,
+    "evolves_to": [
+      "metang"
+    ],
+    "stage": 1
+  },
+  "bellibolt": {
+    "evolves_from": "tadbulb",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "bellossom": {
+    "evolves_from": "gloom",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "bellsprout": {
+    "evolves_from": null,
+    "evolves_to": [
+      "weepinbell"
+    ],
+    "stage": 1
+  },
+  "bergmite": {
+    "evolves_from": null,
+    "evolves_to": [
+      "avalugg"
+    ],
+    "stage": 1
+  },
+  "bewear": {
+    "evolves_from": "stufful",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "bibarel": {
+    "evolves_from": "bidoof",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "bidoof": {
+    "evolves_from": null,
+    "evolves_to": [
+      "bibarel"
+    ],
+    "stage": 1
+  },
+  "binacle": {
+    "evolves_from": null,
+    "evolves_to": [
+      "barbaracle"
+    ],
+    "stage": 1
+  },
+  "bisharp": {
+    "evolves_from": "pawniard",
+    "evolves_to": [
+      "kingambit"
+    ],
+    "stage": 2
+  },
+  "blacephalon": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "blastoise": {
+    "evolves_from": "wartortle",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "blaziken": {
+    "evolves_from": "combusken",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "blipbug": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dottler"
+    ],
+    "stage": 1
+  },
+  "blissey": {
+    "evolves_from": "chansey",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "blitzle": {
+    "evolves_from": null,
+    "evolves_to": [
+      "zebstrika"
+    ],
+    "stage": 1
+  },
+  "boldore": {
+    "evolves_from": "roggenrola",
+    "evolves_to": [
+      "gigalith"
+    ],
+    "stage": 2
+  },
+  "boltund": {
+    "evolves_from": "yamper",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "bombirdier": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "bonsly": {
+    "evolves_from": null,
+    "evolves_to": [
+      "sudowoodo"
+    ],
+    "stage": 1
+  },
+  "bouffalant": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "bounsweet": {
+    "evolves_from": null,
+    "evolves_to": [
+      "steenee"
+    ],
+    "stage": 1
+  },
+  "braixen": {
+    "evolves_from": "fennekin",
+    "evolves_to": [
+      "delphox"
+    ],
+    "stage": 2
+  },
+  "brambleghast": {
+    "evolves_from": "bramblin",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "bramblin": {
+    "evolves_from": null,
+    "evolves_to": [
+      "brambleghast"
+    ],
+    "stage": 1
+  },
+  "braviary": {
+    "evolves_from": "rufflet",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "breloom": {
+    "evolves_from": "shroomish",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "brionne": {
+    "evolves_from": "popplio",
+    "evolves_to": [
+      "primarina"
+    ],
+    "stage": 2
+  },
+  "bronzong": {
+    "evolves_from": "bronzor",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "bronzor": {
+    "evolves_from": null,
+    "evolves_to": [
+      "bronzong"
+    ],
+    "stage": 1
+  },
+  "brute-bonnet": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "bruxish": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "budew": {
+    "evolves_from": null,
+    "evolves_to": [
+      "roselia"
+    ],
+    "stage": 1
+  },
+  "buizel": {
+    "evolves_from": null,
+    "evolves_to": [
+      "floatzel"
+    ],
+    "stage": 1
+  },
+  "bulbasaur": {
+    "evolves_from": null,
+    "evolves_to": [
+      "ivysaur"
+    ],
+    "stage": 1
+  },
+  "buneary": {
+    "evolves_from": null,
+    "evolves_to": [
+      "lopunny"
+    ],
+    "stage": 1
+  },
+  "bunnelby": {
+    "evolves_from": null,
+    "evolves_to": [
+      "diggersby"
+    ],
+    "stage": 1
+  },
+  "burmy": {
+    "evolves_from": null,
+    "evolves_to": [
+      "wormadam",
+      "mothim"
+    ],
+    "stage": 1
+  },
+  "butterfree": {
+    "evolves_from": "metapod",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "buzzwole": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "cacnea": {
+    "evolves_from": null,
+    "evolves_to": [
+      "cacturne"
+    ],
+    "stage": 1
+  },
+  "cacturne": {
+    "evolves_from": "cacnea",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "calyrex": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "camerupt": {
+    "evolves_from": "numel",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "capsakid": {
+    "evolves_from": null,
+    "evolves_to": [
+      "scovillain"
+    ],
+    "stage": 1
+  },
+  "carbink": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "carkol": {
+    "evolves_from": "rolycoly",
+    "evolves_to": [
+      "coalossal"
+    ],
+    "stage": 2
+  },
+  "carnivine": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "carracosta": {
+    "evolves_from": "tirtouga",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "carvanha": {
+    "evolves_from": null,
+    "evolves_to": [
+      "sharpedo"
+    ],
+    "stage": 1
+  },
+  "cascoon": {
+    "evolves_from": "wurmple",
+    "evolves_to": [
+      "dustox"
+    ],
+    "stage": 2
+  },
+  "castform": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "caterpie": {
+    "evolves_from": null,
+    "evolves_to": [
+      "metapod"
+    ],
+    "stage": 1
+  },
+  "celebi": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "celesteela": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "centiskorch": {
+    "evolves_from": "sizzlipede",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "ceruledge": {
+    "evolves_from": "charcadet",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "cetitan": {
+    "evolves_from": "cetoddle",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "cetoddle": {
+    "evolves_from": null,
+    "evolves_to": [
+      "cetitan"
+    ],
+    "stage": 1
+  },
+  "chandelure": {
+    "evolves_from": "lampent",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "chansey": {
+    "evolves_from": "happiny",
+    "evolves_to": [
+      "blissey"
+    ],
+    "stage": 2
+  },
+  "charcadet": {
+    "evolves_from": null,
+    "evolves_to": [
+      "armarouge",
+      "ceruledge"
+    ],
+    "stage": 1
+  },
+  "charizard": {
+    "evolves_from": "charmeleon",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "charjabug": {
+    "evolves_from": "grubbin",
+    "evolves_to": [
+      "vikavolt"
+    ],
+    "stage": 2
+  },
+  "charmander": {
+    "evolves_from": null,
+    "evolves_to": [
+      "charmeleon"
+    ],
+    "stage": 1
+  },
+  "charmeleon": {
+    "evolves_from": "charmander",
+    "evolves_to": [
+      "charizard"
+    ],
+    "stage": 2
+  },
+  "chatot": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "cherrim": {
+    "evolves_from": "cherubi",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "cherubi": {
+    "evolves_from": null,
+    "evolves_to": [
+      "cherrim"
+    ],
+    "stage": 1
+  },
+  "chesnaught": {
+    "evolves_from": "quilladin",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "chespin": {
+    "evolves_from": null,
+    "evolves_to": [
+      "quilladin"
+    ],
+    "stage": 1
+  },
+  "chewtle": {
+    "evolves_from": null,
+    "evolves_to": [
+      "drednaw"
+    ],
+    "stage": 1
+  },
+  "chi-yu": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "chien-pao": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "chikorita": {
+    "evolves_from": null,
+    "evolves_to": [
+      "bayleef"
+    ],
+    "stage": 1
+  },
+  "chimchar": {
+    "evolves_from": null,
+    "evolves_to": [
+      "monferno"
+    ],
+    "stage": 1
+  },
+  "chimecho": {
+    "evolves_from": "chingling",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "chinchou": {
+    "evolves_from": null,
+    "evolves_to": [
+      "lanturn"
+    ],
+    "stage": 1
+  },
+  "chingling": {
+    "evolves_from": null,
+    "evolves_to": [
+      "chimecho"
+    ],
+    "stage": 1
+  },
+  "cinccino": {
+    "evolves_from": "minccino",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "cinderace": {
+    "evolves_from": "raboot",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "clamperl": {
+    "evolves_from": null,
+    "evolves_to": [
+      "huntail",
+      "gorebyss"
+    ],
+    "stage": 1
+  },
+  "clauncher": {
+    "evolves_from": null,
+    "evolves_to": [
+      "clawitzer"
+    ],
+    "stage": 1
+  },
+  "clawitzer": {
+    "evolves_from": "clauncher",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "claydol": {
+    "evolves_from": "baltoy",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "clefable": {
+    "evolves_from": "clefairy",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "clefairy": {
+    "evolves_from": "cleffa",
+    "evolves_to": [
+      "clefable"
+    ],
+    "stage": 2
+  },
+  "cleffa": {
+    "evolves_from": null,
+    "evolves_to": [
+      "clefairy"
+    ],
+    "stage": 1
+  },
+  "clobbopus": {
+    "evolves_from": null,
+    "evolves_to": [
+      "grapploct"
+    ],
+    "stage": 1
+  },
+  "clodsire": {
+    "evolves_from": "wooper",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "cloyster": {
+    "evolves_from": "shellder",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "coalossal": {
+    "evolves_from": "carkol",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "cobalion": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "cofagrigus": {
+    "evolves_from": "yamask",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "combee": {
+    "evolves_from": null,
+    "evolves_to": [
+      "vespiquen"
+    ],
+    "stage": 1
+  },
+  "combusken": {
+    "evolves_from": "torchic",
+    "evolves_to": [
+      "blaziken"
+    ],
+    "stage": 2
+  },
+  "comfey": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "conkeldurr": {
+    "evolves_from": "gurdurr",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "copperajah": {
+    "evolves_from": "cufant",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "corphish": {
+    "evolves_from": null,
+    "evolves_to": [
+      "crawdaunt"
+    ],
+    "stage": 1
+  },
+  "corsola": {
+    "evolves_from": null,
+    "evolves_to": [
+      "cursola"
+    ],
+    "stage": 1
+  },
+  "corviknight": {
+    "evolves_from": "corvisquire",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "corvisquire": {
+    "evolves_from": "rookidee",
+    "evolves_to": [
+      "corviknight"
+    ],
+    "stage": 2
+  },
+  "cosmoem": {
+    "evolves_from": "cosmog",
+    "evolves_to": [
+      "solgaleo",
+      "lunala"
+    ],
+    "stage": 2
+  },
+  "cosmog": {
+    "evolves_from": null,
+    "evolves_to": [
+      "cosmoem"
+    ],
+    "stage": 1
+  },
+  "cottonee": {
+    "evolves_from": null,
+    "evolves_to": [
+      "whimsicott"
+    ],
+    "stage": 1
+  },
+  "crabominable": {
+    "evolves_from": "crabrawler",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "crabrawler": {
+    "evolves_from": null,
+    "evolves_to": [
+      "crabominable"
+    ],
+    "stage": 1
+  },
+  "cradily": {
+    "evolves_from": "lileep",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "cramorant": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "cranidos": {
+    "evolves_from": null,
+    "evolves_to": [
+      "rampardos"
+    ],
+    "stage": 1
+  },
+  "crawdaunt": {
+    "evolves_from": "corphish",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "cresselia": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "croagunk": {
+    "evolves_from": null,
+    "evolves_to": [
+      "toxicroak"
+    ],
+    "stage": 1
+  },
+  "crobat": {
+    "evolves_from": "golbat",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "crocalor": {
+    "evolves_from": "fuecoco",
+    "evolves_to": [
+      "skeledirge"
+    ],
+    "stage": 2
+  },
+  "croconaw": {
+    "evolves_from": "totodile",
+    "evolves_to": [
+      "feraligatr"
+    ],
+    "stage": 2
+  },
+  "crustle": {
+    "evolves_from": "dwebble",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "cryogonal": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "cubchoo": {
+    "evolves_from": null,
+    "evolves_to": [
+      "beartic"
+    ],
+    "stage": 1
+  },
+  "cubone": {
+    "evolves_from": null,
+    "evolves_to": [
+      "marowak"
+    ],
+    "stage": 1
+  },
+  "cufant": {
+    "evolves_from": null,
+    "evolves_to": [
+      "copperajah"
+    ],
+    "stage": 1
+  },
+  "cursola": {
+    "evolves_from": "corsola",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "cutiefly": {
+    "evolves_from": null,
+    "evolves_to": [
+      "ribombee"
+    ],
+    "stage": 1
+  },
+  "cyclizar": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "cyndaquil": {
+    "evolves_from": null,
+    "evolves_to": [
+      "quilava"
+    ],
+    "stage": 1
+  },
+  "dachsbun": {
+    "evolves_from": "fidough",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "darkrai": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "darmanitan": {
+    "evolves_from": "darumaka",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "dartrix": {
+    "evolves_from": "rowlet",
+    "evolves_to": [
+      "decidueye"
+    ],
+    "stage": 2
+  },
+  "darumaka": {
+    "evolves_from": null,
+    "evolves_to": [
+      "darmanitan"
+    ],
+    "stage": 1
+  },
+  "decidueye": {
+    "evolves_from": "dartrix",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "dedenne": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "deerling": {
+    "evolves_from": null,
+    "evolves_to": [
+      "sawsbuck"
+    ],
+    "stage": 1
+  },
+  "deino": {
+    "evolves_from": null,
+    "evolves_to": [
+      "zweilous"
+    ],
+    "stage": 1
+  },
+  "delcatty": {
+    "evolves_from": "skitty",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "delibird": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "delphox": {
+    "evolves_from": "braixen",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "deoxys": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "dewgong": {
+    "evolves_from": "seel",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "dewott": {
+    "evolves_from": "oshawott",
+    "evolves_to": [
+      "samurott"
+    ],
+    "stage": 2
+  },
+  "dewpider": {
+    "evolves_from": null,
+    "evolves_to": [
+      "araquanid"
+    ],
+    "stage": 1
+  },
+  "dhelmise": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "dialga": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "diancie": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "diggersby": {
+    "evolves_from": "bunnelby",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "diglett": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dugtrio"
+    ],
+    "stage": 1
+  },
+  "dipplin": {
+    "evolves_from": "applin",
+    "evolves_to": [
+      "hydrapple"
+    ],
+    "stage": 2
+  },
+  "ditto": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "dodrio": {
+    "evolves_from": "doduo",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "doduo": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dodrio"
+    ],
+    "stage": 1
+  },
+  "dolliv": {
+    "evolves_from": "smoliv",
+    "evolves_to": [
+      "arboliva"
+    ],
+    "stage": 2
+  },
+  "dondozo": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "donphan": {
+    "evolves_from": "phanpy",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "dottler": {
+    "evolves_from": "blipbug",
+    "evolves_to": [
+      "orbeetle"
+    ],
+    "stage": 2
+  },
+  "doublade": {
+    "evolves_from": "honedge",
+    "evolves_to": [
+      "aegislash"
+    ],
+    "stage": 2
+  },
+  "dracovish": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "dracozolt": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "dragalge": {
+    "evolves_from": "skrelp",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "dragapult": {
+    "evolves_from": "drakloak",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "dragonair": {
+    "evolves_from": "dratini",
+    "evolves_to": [
+      "dragonite"
+    ],
+    "stage": 2
+  },
+  "dragonite": {
+    "evolves_from": "dragonair",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "drakloak": {
+    "evolves_from": "dreepy",
+    "evolves_to": [
+      "dragapult"
+    ],
+    "stage": 2
+  },
+  "drampa": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "drapion": {
+    "evolves_from": "skorupi",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "dratini": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dragonair"
+    ],
+    "stage": 1
+  },
+  "drednaw": {
+    "evolves_from": "chewtle",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "dreepy": {
+    "evolves_from": null,
+    "evolves_to": [
+      "drakloak"
+    ],
+    "stage": 1
+  },
+  "drifblim": {
+    "evolves_from": "drifloon",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "drifloon": {
+    "evolves_from": null,
+    "evolves_to": [
+      "drifblim"
+    ],
+    "stage": 1
+  },
+  "drilbur": {
+    "evolves_from": null,
+    "evolves_to": [
+      "excadrill"
+    ],
+    "stage": 1
+  },
+  "drizzile": {
+    "evolves_from": "sobble",
+    "evolves_to": [
+      "inteleon"
+    ],
+    "stage": 2
+  },
+  "drowzee": {
+    "evolves_from": null,
+    "evolves_to": [
+      "hypno"
+    ],
+    "stage": 1
+  },
+  "druddigon": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "dubwool": {
+    "evolves_from": "wooloo",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "ducklett": {
+    "evolves_from": null,
+    "evolves_to": [
+      "swanna"
+    ],
+    "stage": 1
+  },
+  "dudunsparce": {
+    "evolves_from": "dunsparce",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "dugtrio": {
+    "evolves_from": "diglett",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "dunsparce": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dudunsparce"
+    ],
+    "stage": 1
+  },
+  "duosion": {
+    "evolves_from": "solosis",
+    "evolves_to": [
+      "reuniclus"
+    ],
+    "stage": 2
+  },
+  "duraludon": {
+    "evolves_from": null,
+    "evolves_to": [
+      "archaludon"
+    ],
+    "stage": 1
+  },
+  "durant": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "dusclops": {
+    "evolves_from": "duskull",
+    "evolves_to": [
+      "dusknoir"
+    ],
+    "stage": 2
+  },
+  "dusknoir": {
+    "evolves_from": "dusclops",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "duskull": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dusclops"
+    ],
+    "stage": 1
+  },
+  "dustox": {
+    "evolves_from": "cascoon",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "dwebble": {
+    "evolves_from": null,
+    "evolves_to": [
+      "crustle"
+    ],
+    "stage": 1
+  },
+  "eelektrik": {
+    "evolves_from": "tynamo",
+    "evolves_to": [
+      "eelektross"
+    ],
+    "stage": 2
+  },
+  "eelektross": {
+    "evolves_from": "eelektrik",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "eevee": {
+    "evolves_from": null,
+    "evolves_to": [
+      "vaporeon",
+      "jolteon",
+      "flareon",
+      "espeon",
+      "umbreon",
+      "leafeon",
+      "glaceon",
+      "sylveon"
+    ],
+    "stage": 1
+  },
+  "eiscue": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "ekans": {
+    "evolves_from": null,
+    "evolves_to": [
+      "arbok"
+    ],
+    "stage": 1
+  },
+  "eldegoss": {
+    "evolves_from": "gossifleur",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "electabuzz": {
+    "evolves_from": "elekid",
+    "evolves_to": [
+      "electivire"
+    ],
+    "stage": 2
+  },
+  "electivire": {
+    "evolves_from": "electabuzz",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "electrike": {
+    "evolves_from": null,
+    "evolves_to": [
+      "manectric"
+    ],
+    "stage": 1
+  },
+  "electrode": {
+    "evolves_from": "voltorb",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "elekid": {
+    "evolves_from": null,
+    "evolves_to": [
+      "electabuzz"
+    ],
+    "stage": 1
+  },
+  "elgyem": {
+    "evolves_from": null,
+    "evolves_to": [
+      "beheeyem"
+    ],
+    "stage": 1
+  },
+  "emboar": {
+    "evolves_from": "pignite",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "emolga": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "empoleon": {
+    "evolves_from": "prinplup",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "enamorus": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "entei": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "escavalier": {
+    "evolves_from": "karrablast",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "espathra": {
+    "evolves_from": "flittle",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "espeon": {
+    "evolves_from": "eevee",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "espurr": {
+    "evolves_from": null,
+    "evolves_to": [
+      "meowstic"
+    ],
+    "stage": 1
+  },
+  "eternatus": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "excadrill": {
+    "evolves_from": "drilbur",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "exeggcute": {
+    "evolves_from": null,
+    "evolves_to": [
+      "exeggutor"
+    ],
+    "stage": 1
+  },
+  "exeggutor": {
+    "evolves_from": "exeggcute",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "exploud": {
+    "evolves_from": "loudred",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "falinks": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "farfetchd": {
+    "evolves_from": null,
+    "evolves_to": [
+      "sirfetchd"
+    ],
+    "stage": 1
+  },
+  "farigiraf": {
+    "evolves_from": "girafarig",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "fearow": {
+    "evolves_from": "spearow",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "feebas": {
+    "evolves_from": null,
+    "evolves_to": [
+      "milotic"
+    ],
+    "stage": 1
+  },
+  "fennekin": {
+    "evolves_from": null,
+    "evolves_to": [
+      "braixen"
+    ],
+    "stage": 1
+  },
+  "feraligatr": {
+    "evolves_from": "croconaw",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "ferroseed": {
+    "evolves_from": null,
+    "evolves_to": [
+      "ferrothorn"
+    ],
+    "stage": 1
+  },
+  "ferrothorn": {
+    "evolves_from": "ferroseed",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "fezandipiti": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "fidough": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dachsbun"
+    ],
+    "stage": 1
+  },
+  "finizen": {
+    "evolves_from": null,
+    "evolves_to": [
+      "palafin"
+    ],
+    "stage": 1
+  },
+  "finneon": {
+    "evolves_from": null,
+    "evolves_to": [
+      "lumineon"
+    ],
+    "stage": 1
+  },
+  "flaaffy": {
+    "evolves_from": "mareep",
+    "evolves_to": [
+      "ampharos"
+    ],
+    "stage": 2
+  },
+  "flabebe": {
+    "evolves_from": null,
+    "evolves_to": [
+      "floette"
+    ],
+    "stage": 1
+  },
+  "flamigo": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "flapple": {
+    "evolves_from": "applin",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "flareon": {
+    "evolves_from": "eevee",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "fletchinder": {
+    "evolves_from": "fletchling",
+    "evolves_to": [
+      "talonflame"
+    ],
+    "stage": 2
+  },
+  "fletchling": {
+    "evolves_from": null,
+    "evolves_to": [
+      "fletchinder"
+    ],
+    "stage": 1
+  },
+  "flittle": {
+    "evolves_from": null,
+    "evolves_to": [
+      "espathra"
+    ],
+    "stage": 1
+  },
+  "floatzel": {
+    "evolves_from": "buizel",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "floette": {
+    "evolves_from": "flabebe",
+    "evolves_to": [
+      "florges"
+    ],
+    "stage": 2
+  },
+  "floragato": {
+    "evolves_from": "sprigatito",
+    "evolves_to": [
+      "meowscarada"
+    ],
+    "stage": 2
+  },
+  "florges": {
+    "evolves_from": "floette",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "flutter-mane": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "flygon": {
+    "evolves_from": "vibrava",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "fomantis": {
+    "evolves_from": null,
+    "evolves_to": [
+      "lurantis"
+    ],
+    "stage": 1
+  },
+  "foongus": {
+    "evolves_from": null,
+    "evolves_to": [
+      "amoonguss"
+    ],
+    "stage": 1
+  },
+  "forretress": {
+    "evolves_from": "pineco",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "fraxure": {
+    "evolves_from": "axew",
+    "evolves_to": [
+      "haxorus"
+    ],
+    "stage": 2
+  },
+  "frigibax": {
+    "evolves_from": null,
+    "evolves_to": [
+      "arctibax"
+    ],
+    "stage": 1
+  },
+  "frillish": {
+    "evolves_from": null,
+    "evolves_to": [
+      "jellicent"
+    ],
+    "stage": 1
+  },
+  "froakie": {
+    "evolves_from": null,
+    "evolves_to": [
+      "frogadier"
+    ],
+    "stage": 1
+  },
+  "frogadier": {
+    "evolves_from": "froakie",
+    "evolves_to": [
+      "greninja"
+    ],
+    "stage": 2
+  },
+  "froslass": {
+    "evolves_from": "snorunt",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "frosmoth": {
+    "evolves_from": "snom",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "fuecoco": {
+    "evolves_from": null,
+    "evolves_to": [
+      "crocalor"
+    ],
+    "stage": 1
+  },
+  "furfrou": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "furret": {
+    "evolves_from": "sentret",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "gabite": {
+    "evolves_from": "gible",
+    "evolves_to": [
+      "garchomp"
+    ],
+    "stage": 2
+  },
+  "gallade": {
+    "evolves_from": "kirlia",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "galvantula": {
+    "evolves_from": "joltik",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "garbodor": {
+    "evolves_from": "trubbish",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "garchomp": {
+    "evolves_from": "gabite",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "gardevoir": {
+    "evolves_from": "kirlia",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "garganacl": {
+    "evolves_from": "naclstack",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "gastly": {
+    "evolves_from": null,
+    "evolves_to": [
+      "haunter"
+    ],
+    "stage": 1
+  },
+  "gastrodon": {
+    "evolves_from": "shellos",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "genesect": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "gengar": {
+    "evolves_from": "haunter",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "geodude": {
+    "evolves_from": null,
+    "evolves_to": [
+      "graveler"
+    ],
+    "stage": 1
+  },
+  "gholdengo": {
+    "evolves_from": "gimmighoul",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "gible": {
+    "evolves_from": null,
+    "evolves_to": [
+      "gabite"
+    ],
+    "stage": 1
+  },
+  "gigalith": {
+    "evolves_from": "boldore",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "gimmighoul": {
+    "evolves_from": null,
+    "evolves_to": [
+      "gholdengo"
+    ],
+    "stage": 1
+  },
+  "girafarig": {
+    "evolves_from": null,
+    "evolves_to": [
+      "farigiraf"
+    ],
+    "stage": 1
+  },
+  "giratina": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "glaceon": {
+    "evolves_from": "eevee",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "glalie": {
+    "evolves_from": "snorunt",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "glameow": {
+    "evolves_from": null,
+    "evolves_to": [
+      "purugly"
+    ],
+    "stage": 1
+  },
+  "glastrier": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "gligar": {
+    "evolves_from": null,
+    "evolves_to": [
+      "gliscor"
+    ],
+    "stage": 1
+  },
+  "glimmet": {
+    "evolves_from": null,
+    "evolves_to": [
+      "glimmora"
+    ],
+    "stage": 1
+  },
+  "glimmora": {
+    "evolves_from": "glimmet",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "gliscor": {
+    "evolves_from": "gligar",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "gloom": {
+    "evolves_from": "oddish",
+    "evolves_to": [
+      "vileplume",
+      "bellossom"
+    ],
+    "stage": 2
+  },
+  "gogoat": {
+    "evolves_from": "skiddo",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "golbat": {
+    "evolves_from": "zubat",
+    "evolves_to": [
+      "crobat"
+    ],
+    "stage": 2
+  },
+  "goldeen": {
+    "evolves_from": null,
+    "evolves_to": [
+      "seaking"
+    ],
+    "stage": 1
+  },
+  "golduck": {
+    "evolves_from": "psyduck",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "golem": {
+    "evolves_from": "graveler",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "golett": {
+    "evolves_from": null,
+    "evolves_to": [
+      "golurk"
+    ],
+    "stage": 1
+  },
+  "golisopod": {
+    "evolves_from": "wimpod",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "golurk": {
+    "evolves_from": "golett",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "goodra": {
+    "evolves_from": "sliggoo",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "goomy": {
+    "evolves_from": null,
+    "evolves_to": [
+      "sliggoo"
+    ],
+    "stage": 1
+  },
+  "gorebyss": {
+    "evolves_from": "clamperl",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "gossifleur": {
+    "evolves_from": null,
+    "evolves_to": [
+      "eldegoss"
+    ],
+    "stage": 1
+  },
+  "gothita": {
+    "evolves_from": null,
+    "evolves_to": [
+      "gothorita"
+    ],
+    "stage": 1
+  },
+  "gothitelle": {
+    "evolves_from": "gothorita",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "gothorita": {
+    "evolves_from": "gothita",
+    "evolves_to": [
+      "gothitelle"
+    ],
+    "stage": 2
+  },
+  "gouging-fire": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "gourgeist": {
+    "evolves_from": "pumpkaboo",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "grafaiai": {
+    "evolves_from": "shroodle",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "granbull": {
+    "evolves_from": "snubbull",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "grapploct": {
+    "evolves_from": "clobbopus",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "graveler": {
+    "evolves_from": "geodude",
+    "evolves_to": [
+      "golem"
+    ],
+    "stage": 2
+  },
+  "great-tusk": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "greavard": {
+    "evolves_from": null,
+    "evolves_to": [
+      "houndstone"
+    ],
+    "stage": 1
+  },
+  "greedent": {
+    "evolves_from": "skwovet",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "greninja": {
+    "evolves_from": "frogadier",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "grimer": {
+    "evolves_from": null,
+    "evolves_to": [
+      "muk"
+    ],
+    "stage": 1
+  },
+  "grimmsnarl": {
+    "evolves_from": "morgrem",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "grookey": {
+    "evolves_from": null,
+    "evolves_to": [
+      "thwackey"
+    ],
+    "stage": 1
+  },
+  "grotle": {
+    "evolves_from": "turtwig",
+    "evolves_to": [
+      "torterra"
+    ],
+    "stage": 2
+  },
+  "groudon": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "grovyle": {
+    "evolves_from": "treecko",
+    "evolves_to": [
+      "sceptile"
+    ],
+    "stage": 2
+  },
+  "growlithe": {
+    "evolves_from": null,
+    "evolves_to": [
+      "arcanine"
+    ],
+    "stage": 1
+  },
+  "grubbin": {
+    "evolves_from": null,
+    "evolves_to": [
+      "charjabug"
+    ],
+    "stage": 1
+  },
+  "grumpig": {
+    "evolves_from": "spoink",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "gulpin": {
+    "evolves_from": null,
+    "evolves_to": [
+      "swalot"
+    ],
+    "stage": 1
+  },
+  "gumshoos": {
+    "evolves_from": "yungoos",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "gurdurr": {
+    "evolves_from": "timburr",
+    "evolves_to": [
+      "conkeldurr"
+    ],
+    "stage": 2
+  },
+  "guzzlord": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "gyarados": {
+    "evolves_from": "magikarp",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "hakamo-o": {
+    "evolves_from": "jangmo-o",
+    "evolves_to": [
+      "kommo-o"
+    ],
+    "stage": 2
+  },
+  "happiny": {
+    "evolves_from": null,
+    "evolves_to": [
+      "chansey"
+    ],
+    "stage": 1
+  },
+  "hariyama": {
+    "evolves_from": "makuhita",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "hatenna": {
+    "evolves_from": null,
+    "evolves_to": [
+      "hattrem"
+    ],
+    "stage": 1
+  },
+  "hatterene": {
+    "evolves_from": "hattrem",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "hattrem": {
+    "evolves_from": "hatenna",
+    "evolves_to": [
+      "hatterene"
+    ],
+    "stage": 2
+  },
+  "haunter": {
+    "evolves_from": "gastly",
+    "evolves_to": [
+      "gengar"
+    ],
+    "stage": 2
+  },
+  "hawlucha": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "haxorus": {
+    "evolves_from": "fraxure",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "heatmor": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "heatran": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "heliolisk": {
+    "evolves_from": "helioptile",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "helioptile": {
+    "evolves_from": null,
+    "evolves_to": [
+      "heliolisk"
+    ],
+    "stage": 1
+  },
+  "heracross": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "herdier": {
+    "evolves_from": "lillipup",
+    "evolves_to": [
+      "stoutland"
+    ],
+    "stage": 2
+  },
+  "hippopotas": {
+    "evolves_from": null,
+    "evolves_to": [
+      "hippowdon"
+    ],
+    "stage": 1
+  },
+  "hippowdon": {
+    "evolves_from": "hippopotas",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "hitmonchan": {
+    "evolves_from": "tyrogue",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "hitmonlee": {
+    "evolves_from": "tyrogue",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "hitmontop": {
+    "evolves_from": "tyrogue",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "ho-oh": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "honchkrow": {
+    "evolves_from": "murkrow",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "honedge": {
+    "evolves_from": null,
+    "evolves_to": [
+      "doublade"
+    ],
+    "stage": 1
+  },
+  "hoopa": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "hoothoot": {
+    "evolves_from": null,
+    "evolves_to": [
+      "noctowl"
+    ],
+    "stage": 1
+  },
+  "hoppip": {
+    "evolves_from": null,
+    "evolves_to": [
+      "skiploom"
+    ],
+    "stage": 1
+  },
+  "horsea": {
+    "evolves_from": null,
+    "evolves_to": [
+      "seadra"
+    ],
+    "stage": 1
+  },
+  "houndoom": {
+    "evolves_from": "houndour",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "houndour": {
+    "evolves_from": null,
+    "evolves_to": [
+      "houndoom"
+    ],
+    "stage": 1
+  },
+  "houndstone": {
+    "evolves_from": "greavard",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "huntail": {
+    "evolves_from": "clamperl",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "hydrapple": {
+    "evolves_from": "dipplin",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "hydreigon": {
+    "evolves_from": "zweilous",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "hypno": {
+    "evolves_from": "drowzee",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "igglybuff": {
+    "evolves_from": null,
+    "evolves_to": [
+      "jigglypuff"
+    ],
+    "stage": 1
+  },
+  "illumise": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "impidimp": {
+    "evolves_from": null,
+    "evolves_to": [
+      "morgrem"
+    ],
+    "stage": 1
+  },
+  "incineroar": {
+    "evolves_from": "torracat",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "indeedee": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "infernape": {
+    "evolves_from": "monferno",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "inkay": {
+    "evolves_from": null,
+    "evolves_to": [
+      "malamar"
+    ],
+    "stage": 1
+  },
+  "inteleon": {
+    "evolves_from": "drizzile",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "iron-boulder": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "iron-bundle": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "iron-crown": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "iron-hands": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "iron-jugulis": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "iron-leaves": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "iron-moth": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "iron-thorns": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "iron-treads": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "iron-valiant": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "ivysaur": {
+    "evolves_from": "bulbasaur",
+    "evolves_to": [
+      "venusaur"
+    ],
+    "stage": 2
+  },
+  "jangmo-o": {
+    "evolves_from": null,
+    "evolves_to": [
+      "hakamo-o"
+    ],
+    "stage": 1
+  },
+  "jellicent": {
+    "evolves_from": "frillish",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "jigglypuff": {
+    "evolves_from": "igglybuff",
+    "evolves_to": [
+      "wigglytuff"
+    ],
+    "stage": 2
+  },
+  "jirachi": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "jolteon": {
+    "evolves_from": "eevee",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "joltik": {
+    "evolves_from": null,
+    "evolves_to": [
+      "galvantula"
+    ],
+    "stage": 1
+  },
+  "jumpluff": {
+    "evolves_from": "skiploom",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "jynx": {
+    "evolves_from": "smoochum",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "kabuto": {
+    "evolves_from": null,
+    "evolves_to": [
+      "kabutops"
+    ],
+    "stage": 1
+  },
+  "kabutops": {
+    "evolves_from": "kabuto",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "kadabra": {
+    "evolves_from": "abra",
+    "evolves_to": [
+      "alakazam"
+    ],
+    "stage": 2
+  },
+  "kakuna": {
+    "evolves_from": "weedle",
+    "evolves_to": [
+      "beedrill"
+    ],
+    "stage": 2
+  },
+  "kangaskhan": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "karrablast": {
+    "evolves_from": null,
+    "evolves_to": [
+      "escavalier"
+    ],
+    "stage": 1
+  },
+  "kartana": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "kecleon": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "keldeo": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "kilowattrel": {
+    "evolves_from": "wattrel",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "kingambit": {
+    "evolves_from": "bisharp",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "kingdra": {
+    "evolves_from": "seadra",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "kingler": {
+    "evolves_from": "krabby",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "kirlia": {
+    "evolves_from": "ralts",
+    "evolves_to": [
+      "gardevoir",
+      "gallade"
+    ],
+    "stage": 2
+  },
+  "klang": {
+    "evolves_from": "klink",
+    "evolves_to": [
+      "klinklang"
+    ],
+    "stage": 2
+  },
+  "klawf": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "kleavor": {
+    "evolves_from": "scyther",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "klefki": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "klink": {
+    "evolves_from": null,
+    "evolves_to": [
+      "klang"
+    ],
+    "stage": 1
+  },
+  "klinklang": {
+    "evolves_from": "klang",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "koffing": {
+    "evolves_from": null,
+    "evolves_to": [
+      "weezing"
+    ],
+    "stage": 1
+  },
+  "komala": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "kommo-o": {
+    "evolves_from": "hakamo-o",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "koraidon": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "krabby": {
+    "evolves_from": null,
+    "evolves_to": [
+      "kingler"
+    ],
+    "stage": 1
+  },
+  "kricketot": {
+    "evolves_from": null,
+    "evolves_to": [
+      "kricketune"
+    ],
+    "stage": 1
+  },
+  "kricketune": {
+    "evolves_from": "kricketot",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "krokorok": {
+    "evolves_from": "sandile",
+    "evolves_to": [
+      "krookodile"
+    ],
+    "stage": 2
+  },
+  "krookodile": {
+    "evolves_from": "krokorok",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "kubfu": {
+    "evolves_from": null,
+    "evolves_to": [
+      "urshifu"
+    ],
+    "stage": 1
+  },
+  "kyogre": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "kyurem": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "lairon": {
+    "evolves_from": "aron",
+    "evolves_to": [
+      "aggron"
+    ],
+    "stage": 2
+  },
+  "lampent": {
+    "evolves_from": "litwick",
+    "evolves_to": [
+      "chandelure"
+    ],
+    "stage": 2
+  },
+  "landorus": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "lanturn": {
+    "evolves_from": "chinchou",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "lapras": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "larvesta": {
+    "evolves_from": null,
+    "evolves_to": [
+      "volcarona"
+    ],
+    "stage": 1
+  },
+  "larvitar": {
+    "evolves_from": null,
+    "evolves_to": [
+      "pupitar"
+    ],
+    "stage": 1
+  },
+  "latias": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "latios": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "leafeon": {
+    "evolves_from": "eevee",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "leavanny": {
+    "evolves_from": "swadloon",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "lechonk": {
+    "evolves_from": null,
+    "evolves_to": [
+      "oinkologne"
+    ],
+    "stage": 1
+  },
+  "ledian": {
+    "evolves_from": "ledyba",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "ledyba": {
+    "evolves_from": null,
+    "evolves_to": [
+      "ledian"
+    ],
+    "stage": 1
+  },
+  "lickilicky": {
+    "evolves_from": "lickitung",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "lickitung": {
+    "evolves_from": null,
+    "evolves_to": [
+      "lickilicky"
+    ],
+    "stage": 1
+  },
+  "liepard": {
+    "evolves_from": "purrloin",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "lileep": {
+    "evolves_from": null,
+    "evolves_to": [
+      "cradily"
+    ],
+    "stage": 1
+  },
+  "lilligant": {
+    "evolves_from": "petilil",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "lillipup": {
+    "evolves_from": null,
+    "evolves_to": [
+      "herdier"
+    ],
+    "stage": 1
+  },
+  "linoone": {
+    "evolves_from": "zigzagoon",
+    "evolves_to": [
+      "obstagoon"
+    ],
+    "stage": 2
+  },
+  "litleo": {
+    "evolves_from": null,
+    "evolves_to": [
+      "pyroar"
+    ],
+    "stage": 1
+  },
+  "litten": {
+    "evolves_from": null,
+    "evolves_to": [
+      "torracat"
+    ],
+    "stage": 1
+  },
+  "litwick": {
+    "evolves_from": null,
+    "evolves_to": [
+      "lampent"
+    ],
+    "stage": 1
+  },
+  "lokix": {
+    "evolves_from": "nymble",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "lombre": {
+    "evolves_from": "lotad",
+    "evolves_to": [
+      "ludicolo"
+    ],
+    "stage": 2
+  },
+  "lopunny": {
+    "evolves_from": "buneary",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "lotad": {
+    "evolves_from": null,
+    "evolves_to": [
+      "lombre"
+    ],
+    "stage": 1
+  },
+  "loudred": {
+    "evolves_from": "whismur",
+    "evolves_to": [
+      "exploud"
+    ],
+    "stage": 2
+  },
+  "lucario": {
+    "evolves_from": "riolu",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "ludicolo": {
+    "evolves_from": "lombre",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "lugia": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "lumineon": {
+    "evolves_from": "finneon",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "lunala": {
+    "evolves_from": "cosmoem",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "lunatone": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "lurantis": {
+    "evolves_from": "fomantis",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "luvdisc": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "luxio": {
+    "evolves_from": "shinx",
+    "evolves_to": [
+      "luxray"
+    ],
+    "stage": 2
+  },
+  "luxray": {
+    "evolves_from": "luxio",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "lycanroc": {
+    "evolves_from": "rockruff",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "mabosstiff": {
+    "evolves_from": "maschiff",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "machamp": {
+    "evolves_from": "machoke",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "machoke": {
+    "evolves_from": "machop",
+    "evolves_to": [
+      "machamp"
+    ],
+    "stage": 2
+  },
+  "machop": {
+    "evolves_from": null,
+    "evolves_to": [
+      "machoke"
+    ],
+    "stage": 1
+  },
+  "magby": {
+    "evolves_from": null,
+    "evolves_to": [
+      "magmar"
+    ],
+    "stage": 1
+  },
+  "magcargo": {
+    "evolves_from": "slugma",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "magearna": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "magikarp": {
+    "evolves_from": null,
+    "evolves_to": [
+      "gyarados"
+    ],
+    "stage": 1
+  },
+  "magmar": {
+    "evolves_from": "magby",
+    "evolves_to": [
+      "magmortar"
+    ],
+    "stage": 2
+  },
+  "magmortar": {
+    "evolves_from": "magmar",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "magnemite": {
+    "evolves_from": null,
+    "evolves_to": [
+      "magneton"
+    ],
+    "stage": 1
+  },
+  "magneton": {
+    "evolves_from": "magnemite",
+    "evolves_to": [
+      "magnezone"
+    ],
+    "stage": 2
+  },
+  "magnezone": {
+    "evolves_from": "magneton",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "makuhita": {
+    "evolves_from": null,
+    "evolves_to": [
+      "hariyama"
+    ],
+    "stage": 1
+  },
+  "malamar": {
+    "evolves_from": "inkay",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "mamoswine": {
+    "evolves_from": "piloswine",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "manaphy": {
+    "evolves_from": "phione",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "mandibuzz": {
+    "evolves_from": "vullaby",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "manectric": {
+    "evolves_from": "electrike",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "mankey": {
+    "evolves_from": null,
+    "evolves_to": [
+      "primeape"
+    ],
+    "stage": 1
+  },
+  "mantine": {
+    "evolves_from": "mantyke",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "mantyke": {
+    "evolves_from": null,
+    "evolves_to": [
+      "mantine"
+    ],
+    "stage": 1
+  },
+  "maractus": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "mareanie": {
+    "evolves_from": null,
+    "evolves_to": [
+      "toxapex"
+    ],
+    "stage": 1
+  },
+  "mareep": {
+    "evolves_from": null,
+    "evolves_to": [
+      "flaaffy"
+    ],
+    "stage": 1
+  },
+  "marill": {
+    "evolves_from": "azurill",
+    "evolves_to": [
+      "azumarill"
+    ],
+    "stage": 2
+  },
+  "marowak": {
+    "evolves_from": "cubone",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "marshadow": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "marshtomp": {
+    "evolves_from": "mudkip",
+    "evolves_to": [
+      "swampert"
+    ],
+    "stage": 2
+  },
+  "maschiff": {
+    "evolves_from": null,
+    "evolves_to": [
+      "mabosstiff"
+    ],
+    "stage": 1
+  },
+  "masquerain": {
+    "evolves_from": "surskit",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "maushold": {
+    "evolves_from": "tandemaus",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "mawile": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "medicham": {
+    "evolves_from": "meditite",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "meditite": {
+    "evolves_from": null,
+    "evolves_to": [
+      "medicham"
+    ],
+    "stage": 1
+  },
+  "meganium": {
+    "evolves_from": "bayleef",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "melmetal": {
+    "evolves_from": "meltan",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "meloetta": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "meltan": {
+    "evolves_from": null,
+    "evolves_to": [
+      "melmetal"
+    ],
+    "stage": 1
+  },
+  "meowscarada": {
+    "evolves_from": "floragato",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "meowstic": {
+    "evolves_from": "espurr",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "meowth": {
+    "evolves_from": null,
+    "evolves_to": [
+      "persian",
+      "perrserker"
+    ],
+    "stage": 1
+  },
+  "mesprit": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "metagross": {
+    "evolves_from": "metang",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "metang": {
+    "evolves_from": "beldum",
+    "evolves_to": [
+      "metagross"
+    ],
+    "stage": 2
+  },
+  "metapod": {
+    "evolves_from": "caterpie",
+    "evolves_to": [
+      "butterfree"
+    ],
+    "stage": 2
+  },
+  "mew": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "mewtwo": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "mienfoo": {
+    "evolves_from": null,
+    "evolves_to": [
+      "mienshao"
+    ],
+    "stage": 1
+  },
+  "mienshao": {
+    "evolves_from": "mienfoo",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "mightyena": {
+    "evolves_from": "poochyena",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "milcery": {
+    "evolves_from": null,
+    "evolves_to": [
+      "alcremie"
+    ],
+    "stage": 1
+  },
+  "milotic": {
+    "evolves_from": "feebas",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "miltank": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "mime-jr": {
+    "evolves_from": null,
+    "evolves_to": [
+      "mr-mime"
+    ],
+    "stage": 1
+  },
+  "mimikyu": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "minccino": {
+    "evolves_from": null,
+    "evolves_to": [
+      "cinccino"
+    ],
+    "stage": 1
+  },
+  "minior": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "minun": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "miraidon": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "misdreavus": {
+    "evolves_from": null,
+    "evolves_to": [
+      "mismagius"
+    ],
+    "stage": 1
+  },
+  "mismagius": {
+    "evolves_from": "misdreavus",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "moltres": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "monferno": {
+    "evolves_from": "chimchar",
+    "evolves_to": [
+      "infernape"
+    ],
+    "stage": 2
+  },
+  "morelull": {
+    "evolves_from": null,
+    "evolves_to": [
+      "shiinotic"
+    ],
+    "stage": 1
+  },
+  "morgrem": {
+    "evolves_from": "impidimp",
+    "evolves_to": [
+      "grimmsnarl"
+    ],
+    "stage": 2
+  },
+  "morpeko": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "mothim": {
+    "evolves_from": "burmy",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "mr-mime": {
+    "evolves_from": "mime-jr",
+    "evolves_to": [
+      "mr-rime"
+    ],
+    "stage": 2
+  },
+  "mr-rime": {
+    "evolves_from": "mr-mime",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "mudbray": {
+    "evolves_from": null,
+    "evolves_to": [
+      "mudsdale"
+    ],
+    "stage": 1
+  },
+  "mudkip": {
+    "evolves_from": null,
+    "evolves_to": [
+      "marshtomp"
+    ],
+    "stage": 1
+  },
+  "mudsdale": {
+    "evolves_from": "mudbray",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "muk": {
+    "evolves_from": "grimer",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "munchlax": {
+    "evolves_from": null,
+    "evolves_to": [
+      "snorlax"
+    ],
+    "stage": 1
+  },
+  "munkidori": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "munna": {
+    "evolves_from": null,
+    "evolves_to": [
+      "musharna"
+    ],
+    "stage": 1
+  },
+  "murkrow": {
+    "evolves_from": null,
+    "evolves_to": [
+      "honchkrow"
+    ],
+    "stage": 1
+  },
+  "musharna": {
+    "evolves_from": "munna",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "nacli": {
+    "evolves_from": null,
+    "evolves_to": [
+      "naclstack"
+    ],
+    "stage": 1
+  },
+  "naclstack": {
+    "evolves_from": "nacli",
+    "evolves_to": [
+      "garganacl"
+    ],
+    "stage": 2
+  },
+  "naganadel": {
+    "evolves_from": "poipole",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "natu": {
+    "evolves_from": null,
+    "evolves_to": [
+      "xatu"
+    ],
+    "stage": 1
+  },
+  "necrozma": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "nickit": {
+    "evolves_from": null,
+    "evolves_to": [
+      "thievul"
+    ],
+    "stage": 1
+  },
+  "nidoking": {
+    "evolves_from": "nidorino",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "nidoqueen": {
+    "evolves_from": "nidorina",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "nidoran-f": {
+    "evolves_from": null,
+    "evolves_to": [
+      "nidorina"
+    ],
+    "stage": 1
+  },
+  "nidoran-m": {
+    "evolves_from": null,
+    "evolves_to": [
+      "nidorino"
+    ],
+    "stage": 1
+  },
+  "nidorina": {
+    "evolves_from": "nidoran-f",
+    "evolves_to": [
+      "nidoqueen"
+    ],
+    "stage": 2
+  },
+  "nidorino": {
+    "evolves_from": "nidoran-m",
+    "evolves_to": [
+      "nidoking"
+    ],
+    "stage": 2
+  },
+  "nihilego": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "nincada": {
+    "evolves_from": null,
+    "evolves_to": [
+      "ninjask",
+      "shedinja"
+    ],
+    "stage": 1
+  },
+  "ninetales": {
+    "evolves_from": "vulpix",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "ninjask": {
+    "evolves_from": "nincada",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "noctowl": {
+    "evolves_from": "hoothoot",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "noibat": {
+    "evolves_from": null,
+    "evolves_to": [
+      "noivern"
+    ],
+    "stage": 1
+  },
+  "noivern": {
+    "evolves_from": "noibat",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "nosepass": {
+    "evolves_from": null,
+    "evolves_to": [
+      "probopass"
+    ],
+    "stage": 1
+  },
+  "numel": {
+    "evolves_from": null,
+    "evolves_to": [
+      "camerupt"
+    ],
+    "stage": 1
+  },
+  "nuzleaf": {
+    "evolves_from": "seedot",
+    "evolves_to": [
+      "shiftry"
+    ],
+    "stage": 2
+  },
+  "nymble": {
+    "evolves_from": null,
+    "evolves_to": [
+      "lokix"
+    ],
+    "stage": 1
+  },
+  "obstagoon": {
+    "evolves_from": "linoone",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "octillery": {
+    "evolves_from": "remoraid",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "oddish": {
+    "evolves_from": null,
+    "evolves_to": [
+      "gloom"
+    ],
+    "stage": 1
+  },
+  "ogerpon": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "oinkologne": {
+    "evolves_from": "lechonk",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "okidogi": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "omanyte": {
+    "evolves_from": null,
+    "evolves_to": [
+      "omastar"
+    ],
+    "stage": 1
+  },
+  "omastar": {
+    "evolves_from": "omanyte",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "onix": {
+    "evolves_from": null,
+    "evolves_to": [
+      "steelix"
+    ],
+    "stage": 1
+  },
+  "oranguru": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "orbeetle": {
+    "evolves_from": "dottler",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "oricorio": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "orthworm": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "oshawott": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dewott"
+    ],
+    "stage": 1
+  },
+  "overqwil": {
+    "evolves_from": "qwilfish",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "pachirisu": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "palafin": {
+    "evolves_from": "finizen",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "palkia": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "palossand": {
+    "evolves_from": "sandygast",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "palpitoad": {
+    "evolves_from": "tympole",
+    "evolves_to": [
+      "seismitoad"
+    ],
+    "stage": 2
+  },
+  "pancham": {
+    "evolves_from": null,
+    "evolves_to": [
+      "pangoro"
+    ],
+    "stage": 1
+  },
+  "pangoro": {
+    "evolves_from": "pancham",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "panpour": {
+    "evolves_from": null,
+    "evolves_to": [
+      "simipour"
+    ],
+    "stage": 1
+  },
+  "pansage": {
+    "evolves_from": null,
+    "evolves_to": [
+      "simisage"
+    ],
+    "stage": 1
+  },
+  "pansear": {
+    "evolves_from": null,
+    "evolves_to": [
+      "simisear"
+    ],
+    "stage": 1
+  },
+  "paras": {
+    "evolves_from": null,
+    "evolves_to": [
+      "parasect"
+    ],
+    "stage": 1
+  },
+  "parasect": {
+    "evolves_from": "paras",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "passimian": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "patrat": {
+    "evolves_from": null,
+    "evolves_to": [
+      "watchog"
+    ],
+    "stage": 1
+  },
+  "pawmi": {
+    "evolves_from": null,
+    "evolves_to": [
+      "pawmo"
+    ],
+    "stage": 1
+  },
+  "pawmo": {
+    "evolves_from": "pawmi",
+    "evolves_to": [
+      "pawmot"
+    ],
+    "stage": 2
+  },
+  "pawmot": {
+    "evolves_from": "pawmo",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "pawniard": {
+    "evolves_from": null,
+    "evolves_to": [
+      "bisharp"
+    ],
+    "stage": 1
+  },
+  "pecharunt": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "pelipper": {
+    "evolves_from": "wingull",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "perrserker": {
+    "evolves_from": "meowth",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "persian": {
+    "evolves_from": "meowth",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "petilil": {
+    "evolves_from": null,
+    "evolves_to": [
+      "lilligant"
+    ],
+    "stage": 1
+  },
+  "phanpy": {
+    "evolves_from": null,
+    "evolves_to": [
+      "donphan"
+    ],
+    "stage": 1
+  },
+  "phantump": {
+    "evolves_from": null,
+    "evolves_to": [
+      "trevenant"
+    ],
+    "stage": 1
+  },
+  "pheromosa": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "phione": {
+    "evolves_from": null,
+    "evolves_to": [
+      "manaphy"
+    ],
+    "stage": 1
+  },
+  "pichu": {
+    "evolves_from": null,
+    "evolves_to": [
+      "pikachu"
+    ],
+    "stage": 1
+  },
+  "pidgeot": {
+    "evolves_from": "pidgeotto",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "pidgeotto": {
+    "evolves_from": "pidgey",
+    "evolves_to": [
+      "pidgeot"
+    ],
+    "stage": 2
+  },
+  "pidgey": {
+    "evolves_from": null,
+    "evolves_to": [
+      "pidgeotto"
+    ],
+    "stage": 1
+  },
+  "pidove": {
+    "evolves_from": null,
+    "evolves_to": [
+      "tranquill"
+    ],
+    "stage": 1
+  },
+  "pignite": {
+    "evolves_from": "tepig",
+    "evolves_to": [
+      "emboar"
+    ],
+    "stage": 2
+  },
+  "pikachu": {
+    "evolves_from": "pichu",
+    "evolves_to": [
+      "raichu"
+    ],
+    "stage": 2
+  },
+  "pikipek": {
+    "evolves_from": null,
+    "evolves_to": [
+      "trumbeak"
+    ],
+    "stage": 1
+  },
+  "piloswine": {
+    "evolves_from": "swinub",
+    "evolves_to": [
+      "mamoswine"
+    ],
+    "stage": 2
+  },
+  "pincurchin": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "pineco": {
+    "evolves_from": null,
+    "evolves_to": [
+      "forretress"
+    ],
+    "stage": 1
+  },
+  "pinsir": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "piplup": {
+    "evolves_from": null,
+    "evolves_to": [
+      "prinplup"
+    ],
+    "stage": 1
+  },
+  "plusle": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "poipole": {
+    "evolves_from": null,
+    "evolves_to": [
+      "naganadel"
+    ],
+    "stage": 1
+  },
+  "politoed": {
+    "evolves_from": "poliwhirl",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "poliwag": {
+    "evolves_from": null,
+    "evolves_to": [
+      "poliwhirl"
+    ],
+    "stage": 1
+  },
+  "poliwhirl": {
+    "evolves_from": "poliwag",
+    "evolves_to": [
+      "poliwrath",
+      "politoed"
+    ],
+    "stage": 2
+  },
+  "poliwrath": {
+    "evolves_from": "poliwhirl",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "poltchageist": {
+    "evolves_from": null,
+    "evolves_to": [
+      "sinistcha"
+    ],
+    "stage": 1
+  },
+  "polteageist": {
+    "evolves_from": "sinistea",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "ponyta": {
+    "evolves_from": null,
+    "evolves_to": [
+      "rapidash"
+    ],
+    "stage": 1
+  },
+  "poochyena": {
+    "evolves_from": null,
+    "evolves_to": [
+      "mightyena"
+    ],
+    "stage": 1
+  },
+  "popplio": {
+    "evolves_from": null,
+    "evolves_to": [
+      "brionne"
+    ],
+    "stage": 1
+  },
+  "porygon": {
+    "evolves_from": null,
+    "evolves_to": [
+      "porygon2"
+    ],
+    "stage": 1
+  },
+  "porygon-z": {
+    "evolves_from": "porygon2",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "porygon2": {
+    "evolves_from": "porygon",
+    "evolves_to": [
+      "porygon-z"
+    ],
+    "stage": 2
+  },
+  "primarina": {
+    "evolves_from": "brionne",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "primeape": {
+    "evolves_from": "mankey",
+    "evolves_to": [
+      "annihilape"
+    ],
+    "stage": 2
+  },
+  "prinplup": {
+    "evolves_from": "piplup",
+    "evolves_to": [
+      "empoleon"
+    ],
+    "stage": 2
+  },
+  "probopass": {
+    "evolves_from": "nosepass",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "psyduck": {
+    "evolves_from": null,
+    "evolves_to": [
+      "golduck"
+    ],
+    "stage": 1
+  },
+  "pumpkaboo": {
+    "evolves_from": null,
+    "evolves_to": [
+      "gourgeist"
+    ],
+    "stage": 1
+  },
+  "pupitar": {
+    "evolves_from": "larvitar",
+    "evolves_to": [
+      "tyranitar"
+    ],
+    "stage": 2
+  },
+  "purrloin": {
+    "evolves_from": null,
+    "evolves_to": [
+      "liepard"
+    ],
+    "stage": 1
+  },
+  "purugly": {
+    "evolves_from": "glameow",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "pyroar": {
+    "evolves_from": "litleo",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "pyukumuku": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "quagsire": {
+    "evolves_from": "wooper",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "quaquaval": {
+    "evolves_from": "quaxwell",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "quaxly": {
+    "evolves_from": null,
+    "evolves_to": [
+      "quaxwell"
+    ],
+    "stage": 1
+  },
+  "quaxwell": {
+    "evolves_from": "quaxly",
+    "evolves_to": [
+      "quaquaval"
+    ],
+    "stage": 2
+  },
+  "quilava": {
+    "evolves_from": "cyndaquil",
+    "evolves_to": [
+      "typhlosion"
+    ],
+    "stage": 2
+  },
+  "quilladin": {
+    "evolves_from": "chespin",
+    "evolves_to": [
+      "chesnaught"
+    ],
+    "stage": 2
+  },
+  "qwilfish": {
+    "evolves_from": null,
+    "evolves_to": [
+      "overqwil"
+    ],
+    "stage": 1
+  },
+  "raboot": {
+    "evolves_from": "scorbunny",
+    "evolves_to": [
+      "cinderace"
+    ],
+    "stage": 2
+  },
+  "rabsca": {
+    "evolves_from": "rellor",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "raging-bolt": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "raichu": {
+    "evolves_from": "pikachu",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "raikou": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "ralts": {
+    "evolves_from": null,
+    "evolves_to": [
+      "kirlia"
+    ],
+    "stage": 1
+  },
+  "rampardos": {
+    "evolves_from": "cranidos",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "rapidash": {
+    "evolves_from": "ponyta",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "raticate": {
+    "evolves_from": "rattata",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "rattata": {
+    "evolves_from": null,
+    "evolves_to": [
+      "raticate"
+    ],
+    "stage": 1
+  },
+  "rayquaza": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "regice": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "regidrago": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "regieleki": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "regigigas": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "regirock": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "registeel": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "relicanth": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "rellor": {
+    "evolves_from": null,
+    "evolves_to": [
+      "rabsca"
+    ],
+    "stage": 1
+  },
+  "remoraid": {
+    "evolves_from": null,
+    "evolves_to": [
+      "octillery"
+    ],
+    "stage": 1
+  },
+  "reshiram": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "reuniclus": {
+    "evolves_from": "duosion",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "revavroom": {
+    "evolves_from": "varoom",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "rhydon": {
+    "evolves_from": "rhyhorn",
+    "evolves_to": [
+      "rhyperior"
+    ],
+    "stage": 2
+  },
+  "rhyhorn": {
+    "evolves_from": null,
+    "evolves_to": [
+      "rhydon"
+    ],
+    "stage": 1
+  },
+  "rhyperior": {
+    "evolves_from": "rhydon",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "ribombee": {
+    "evolves_from": "cutiefly",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "rillaboom": {
+    "evolves_from": "thwackey",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "riolu": {
+    "evolves_from": null,
+    "evolves_to": [
+      "lucario"
+    ],
+    "stage": 1
+  },
+  "roaring-moon": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "rockruff": {
+    "evolves_from": null,
+    "evolves_to": [
+      "lycanroc"
+    ],
+    "stage": 1
+  },
+  "roggenrola": {
+    "evolves_from": null,
+    "evolves_to": [
+      "boldore"
+    ],
+    "stage": 1
+  },
+  "rolycoly": {
+    "evolves_from": null,
+    "evolves_to": [
+      "carkol"
+    ],
+    "stage": 1
+  },
+  "rookidee": {
+    "evolves_from": null,
+    "evolves_to": [
+      "corvisquire"
+    ],
+    "stage": 1
+  },
+  "roselia": {
+    "evolves_from": "budew",
+    "evolves_to": [
+      "roserade"
+    ],
+    "stage": 2
+  },
+  "roserade": {
+    "evolves_from": "roselia",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "rotom": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "rowlet": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dartrix"
+    ],
+    "stage": 1
+  },
+  "rufflet": {
+    "evolves_from": null,
+    "evolves_to": [
+      "braviary"
+    ],
+    "stage": 1
+  },
+  "runerigus": {
+    "evolves_from": "yamask",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "sableye": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "salamence": {
+    "evolves_from": "shelgon",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "salandit": {
+    "evolves_from": null,
+    "evolves_to": [
+      "salazzle"
+    ],
+    "stage": 1
+  },
+  "salazzle": {
+    "evolves_from": "salandit",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "samurott": {
+    "evolves_from": "dewott",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "sandaconda": {
+    "evolves_from": "silicobra",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "sandile": {
+    "evolves_from": null,
+    "evolves_to": [
+      "krokorok"
+    ],
+    "stage": 1
+  },
+  "sandshrew": {
+    "evolves_from": null,
+    "evolves_to": [
+      "sandslash"
+    ],
+    "stage": 1
+  },
+  "sandslash": {
+    "evolves_from": "sandshrew",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "sandy-shocks": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "sandygast": {
+    "evolves_from": null,
+    "evolves_to": [
+      "palossand"
+    ],
+    "stage": 1
+  },
+  "sawk": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "sawsbuck": {
+    "evolves_from": "deerling",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "scatterbug": {
+    "evolves_from": null,
+    "evolves_to": [
+      "spewpa"
+    ],
+    "stage": 1
+  },
+  "sceptile": {
+    "evolves_from": "grovyle",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "scizor": {
+    "evolves_from": "scyther",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "scolipede": {
+    "evolves_from": "whirlipede",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "scorbunny": {
+    "evolves_from": null,
+    "evolves_to": [
+      "raboot"
+    ],
+    "stage": 1
+  },
+  "scovillain": {
+    "evolves_from": "capsakid",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "scrafty": {
+    "evolves_from": "scraggy",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "scraggy": {
+    "evolves_from": null,
+    "evolves_to": [
+      "scrafty"
+    ],
+    "stage": 1
+  },
+  "scream-tail": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "scyther": {
+    "evolves_from": null,
+    "evolves_to": [
+      "scizor",
+      "kleavor"
+    ],
+    "stage": 1
+  },
+  "seadra": {
+    "evolves_from": "horsea",
+    "evolves_to": [
+      "kingdra"
+    ],
+    "stage": 2
+  },
+  "seaking": {
+    "evolves_from": "goldeen",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "sealeo": {
+    "evolves_from": "spheal",
+    "evolves_to": [
+      "walrein"
+    ],
+    "stage": 2
+  },
+  "seedot": {
+    "evolves_from": null,
+    "evolves_to": [
+      "nuzleaf"
+    ],
+    "stage": 1
+  },
+  "seel": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dewgong"
+    ],
+    "stage": 1
+  },
+  "seismitoad": {
+    "evolves_from": "palpitoad",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "sentret": {
+    "evolves_from": null,
+    "evolves_to": [
+      "furret"
+    ],
+    "stage": 1
+  },
+  "serperior": {
+    "evolves_from": "servine",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "servine": {
+    "evolves_from": "snivy",
+    "evolves_to": [
+      "serperior"
+    ],
+    "stage": 2
+  },
+  "seviper": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "sewaddle": {
+    "evolves_from": null,
+    "evolves_to": [
+      "swadloon"
+    ],
+    "stage": 1
+  },
+  "sharpedo": {
+    "evolves_from": "carvanha",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "shaymin": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "shedinja": {
+    "evolves_from": "nincada",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "shelgon": {
+    "evolves_from": "bagon",
+    "evolves_to": [
+      "salamence"
+    ],
+    "stage": 2
+  },
+  "shellder": {
+    "evolves_from": null,
+    "evolves_to": [
+      "cloyster"
+    ],
+    "stage": 1
+  },
+  "shellos": {
+    "evolves_from": null,
+    "evolves_to": [
+      "gastrodon"
+    ],
+    "stage": 1
+  },
+  "shelmet": {
+    "evolves_from": null,
+    "evolves_to": [
+      "accelgor"
+    ],
+    "stage": 1
+  },
+  "shieldon": {
+    "evolves_from": null,
+    "evolves_to": [
+      "bastiodon"
+    ],
+    "stage": 1
+  },
+  "shiftry": {
+    "evolves_from": "nuzleaf",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "shiinotic": {
+    "evolves_from": "morelull",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "shinx": {
+    "evolves_from": null,
+    "evolves_to": [
+      "luxio"
+    ],
+    "stage": 1
+  },
+  "shroodle": {
+    "evolves_from": null,
+    "evolves_to": [
+      "grafaiai"
+    ],
+    "stage": 1
+  },
+  "shroomish": {
+    "evolves_from": null,
+    "evolves_to": [
+      "breloom"
+    ],
+    "stage": 1
+  },
+  "shuckle": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "shuppet": {
+    "evolves_from": null,
+    "evolves_to": [
+      "banette"
+    ],
+    "stage": 1
+  },
+  "sigilyph": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "silcoon": {
+    "evolves_from": "wurmple",
+    "evolves_to": [
+      "beautifly"
+    ],
+    "stage": 2
+  },
+  "silicobra": {
+    "evolves_from": null,
+    "evolves_to": [
+      "sandaconda"
+    ],
+    "stage": 1
+  },
+  "silvally": {
+    "evolves_from": "type-null",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "simipour": {
+    "evolves_from": "panpour",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "simisage": {
+    "evolves_from": "pansage",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "simisear": {
+    "evolves_from": "pansear",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "sinistcha": {
+    "evolves_from": "poltchageist",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "sinistea": {
+    "evolves_from": null,
+    "evolves_to": [
+      "polteageist"
+    ],
+    "stage": 1
+  },
+  "sirfetchd": {
+    "evolves_from": "farfetchd",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "sizzlipede": {
+    "evolves_from": null,
+    "evolves_to": [
+      "centiskorch"
+    ],
+    "stage": 1
+  },
+  "skarmory": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "skeledirge": {
+    "evolves_from": "crocalor",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "skiddo": {
+    "evolves_from": null,
+    "evolves_to": [
+      "gogoat"
+    ],
+    "stage": 1
+  },
+  "skiploom": {
+    "evolves_from": "hoppip",
+    "evolves_to": [
+      "jumpluff"
+    ],
+    "stage": 2
+  },
+  "skitty": {
+    "evolves_from": null,
+    "evolves_to": [
+      "delcatty"
+    ],
+    "stage": 1
+  },
+  "skorupi": {
+    "evolves_from": null,
+    "evolves_to": [
+      "drapion"
+    ],
+    "stage": 1
+  },
+  "skrelp": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dragalge"
+    ],
+    "stage": 1
+  },
+  "skuntank": {
+    "evolves_from": "stunky",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "skwovet": {
+    "evolves_from": null,
+    "evolves_to": [
+      "greedent"
+    ],
+    "stage": 1
+  },
+  "slaking": {
+    "evolves_from": "vigoroth",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "slakoth": {
+    "evolves_from": null,
+    "evolves_to": [
+      "vigoroth"
+    ],
+    "stage": 1
+  },
+  "sliggoo": {
+    "evolves_from": "goomy",
+    "evolves_to": [
+      "goodra"
+    ],
+    "stage": 2
+  },
+  "slither-wing": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "slowbro": {
+    "evolves_from": "slowpoke",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "slowking": {
+    "evolves_from": "slowpoke",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "slowpoke": {
+    "evolves_from": null,
+    "evolves_to": [
+      "slowbro",
+      "slowking"
+    ],
+    "stage": 1
+  },
+  "slugma": {
+    "evolves_from": null,
+    "evolves_to": [
+      "magcargo"
+    ],
+    "stage": 1
+  },
+  "slurpuff": {
+    "evolves_from": "swirlix",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "smeargle": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "smoliv": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dolliv"
+    ],
+    "stage": 1
+  },
+  "smoochum": {
+    "evolves_from": null,
+    "evolves_to": [
+      "jynx"
+    ],
+    "stage": 1
+  },
+  "sneasel": {
+    "evolves_from": null,
+    "evolves_to": [
+      "weavile",
+      "sneasler"
+    ],
+    "stage": 1
+  },
+  "sneasler": {
+    "evolves_from": "sneasel",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "snivy": {
+    "evolves_from": null,
+    "evolves_to": [
+      "servine"
+    ],
+    "stage": 1
+  },
+  "snom": {
+    "evolves_from": null,
+    "evolves_to": [
+      "frosmoth"
+    ],
+    "stage": 1
+  },
+  "snorlax": {
+    "evolves_from": "munchlax",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "snorunt": {
+    "evolves_from": null,
+    "evolves_to": [
+      "glalie",
+      "froslass"
+    ],
+    "stage": 1
+  },
+  "snover": {
+    "evolves_from": null,
+    "evolves_to": [
+      "abomasnow"
+    ],
+    "stage": 1
+  },
+  "snubbull": {
+    "evolves_from": null,
+    "evolves_to": [
+      "granbull"
+    ],
+    "stage": 1
+  },
+  "sobble": {
+    "evolves_from": null,
+    "evolves_to": [
+      "drizzile"
+    ],
+    "stage": 1
+  },
+  "solgaleo": {
+    "evolves_from": "cosmoem",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "solosis": {
+    "evolves_from": null,
+    "evolves_to": [
+      "duosion"
+    ],
+    "stage": 1
+  },
+  "solrock": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "spearow": {
+    "evolves_from": null,
+    "evolves_to": [
+      "fearow"
+    ],
+    "stage": 1
+  },
+  "spectrier": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "spewpa": {
+    "evolves_from": "scatterbug",
+    "evolves_to": [
+      "vivillon"
+    ],
+    "stage": 2
+  },
+  "spheal": {
+    "evolves_from": null,
+    "evolves_to": [
+      "sealeo"
+    ],
+    "stage": 1
+  },
+  "spidops": {
+    "evolves_from": "tarountula",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "spinarak": {
+    "evolves_from": null,
+    "evolves_to": [
+      "ariados"
+    ],
+    "stage": 1
+  },
+  "spinda": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "spiritomb": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "spoink": {
+    "evolves_from": null,
+    "evolves_to": [
+      "grumpig"
+    ],
+    "stage": 1
+  },
+  "sprigatito": {
+    "evolves_from": null,
+    "evolves_to": [
+      "floragato"
+    ],
+    "stage": 1
+  },
+  "spritzee": {
+    "evolves_from": null,
+    "evolves_to": [
+      "aromatisse"
+    ],
+    "stage": 1
+  },
+  "squawkabilly": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "squirtle": {
+    "evolves_from": null,
+    "evolves_to": [
+      "wartortle"
+    ],
+    "stage": 1
+  },
+  "stakataka": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "stantler": {
+    "evolves_from": null,
+    "evolves_to": [
+      "wyrdeer"
+    ],
+    "stage": 1
+  },
+  "staraptor": {
+    "evolves_from": "staravia",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "staravia": {
+    "evolves_from": "starly",
+    "evolves_to": [
+      "staraptor"
+    ],
+    "stage": 2
+  },
+  "starly": {
+    "evolves_from": null,
+    "evolves_to": [
+      "staravia"
+    ],
+    "stage": 1
+  },
+  "starmie": {
+    "evolves_from": "staryu",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "staryu": {
+    "evolves_from": null,
+    "evolves_to": [
+      "starmie"
+    ],
+    "stage": 1
+  },
+  "steelix": {
+    "evolves_from": "onix",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "steenee": {
+    "evolves_from": "bounsweet",
+    "evolves_to": [
+      "tsareena"
+    ],
+    "stage": 2
+  },
+  "stonjourner": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "stoutland": {
+    "evolves_from": "herdier",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "stufful": {
+    "evolves_from": null,
+    "evolves_to": [
+      "bewear"
+    ],
+    "stage": 1
+  },
+  "stunfisk": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "stunky": {
+    "evolves_from": null,
+    "evolves_to": [
+      "skuntank"
+    ],
+    "stage": 1
+  },
+  "sudowoodo": {
+    "evolves_from": "bonsly",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "suicune": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "sunflora": {
+    "evolves_from": "sunkern",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "sunkern": {
+    "evolves_from": null,
+    "evolves_to": [
+      "sunflora"
+    ],
+    "stage": 1
+  },
+  "surskit": {
+    "evolves_from": null,
+    "evolves_to": [
+      "masquerain"
+    ],
+    "stage": 1
+  },
+  "swablu": {
+    "evolves_from": null,
+    "evolves_to": [
+      "altaria"
+    ],
+    "stage": 1
+  },
+  "swadloon": {
+    "evolves_from": "sewaddle",
+    "evolves_to": [
+      "leavanny"
+    ],
+    "stage": 2
+  },
+  "swalot": {
+    "evolves_from": "gulpin",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "swampert": {
+    "evolves_from": "marshtomp",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "swanna": {
+    "evolves_from": "ducklett",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "swellow": {
+    "evolves_from": "taillow",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "swinub": {
+    "evolves_from": null,
+    "evolves_to": [
+      "piloswine"
+    ],
+    "stage": 1
+  },
+  "swirlix": {
+    "evolves_from": null,
+    "evolves_to": [
+      "slurpuff"
+    ],
+    "stage": 1
+  },
+  "swoobat": {
+    "evolves_from": "woobat",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "sylveon": {
+    "evolves_from": "eevee",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "tadbulb": {
+    "evolves_from": null,
+    "evolves_to": [
+      "bellibolt"
+    ],
+    "stage": 1
+  },
+  "taillow": {
+    "evolves_from": null,
+    "evolves_to": [
+      "swellow"
+    ],
+    "stage": 1
+  },
+  "talonflame": {
+    "evolves_from": "fletchinder",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "tandemaus": {
+    "evolves_from": null,
+    "evolves_to": [
+      "maushold"
+    ],
+    "stage": 1
+  },
+  "tangela": {
+    "evolves_from": null,
+    "evolves_to": [
+      "tangrowth"
+    ],
+    "stage": 1
+  },
+  "tangrowth": {
+    "evolves_from": "tangela",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "tapu-bulu": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "tapu-fini": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "tapu-koko": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "tapu-lele": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "tarountula": {
+    "evolves_from": null,
+    "evolves_to": [
+      "spidops"
+    ],
+    "stage": 1
+  },
+  "tatsugiri": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "tauros": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "teddiursa": {
+    "evolves_from": null,
+    "evolves_to": [
+      "ursaring"
+    ],
+    "stage": 1
+  },
+  "tentacool": {
+    "evolves_from": null,
+    "evolves_to": [
+      "tentacruel"
+    ],
+    "stage": 1
+  },
+  "tentacruel": {
+    "evolves_from": "tentacool",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "tepig": {
+    "evolves_from": null,
+    "evolves_to": [
+      "pignite"
+    ],
+    "stage": 1
+  },
+  "terapagos": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "terrakion": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "thievul": {
+    "evolves_from": "nickit",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "throh": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "thundurus": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "thwackey": {
+    "evolves_from": "grookey",
+    "evolves_to": [
+      "rillaboom"
+    ],
+    "stage": 2
+  },
+  "timburr": {
+    "evolves_from": null,
+    "evolves_to": [
+      "gurdurr"
+    ],
+    "stage": 1
+  },
+  "ting-lu": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "tinkatink": {
+    "evolves_from": null,
+    "evolves_to": [
+      "tinkatuff"
+    ],
+    "stage": 1
+  },
+  "tinkaton": {
+    "evolves_from": "tinkatuff",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "tinkatuff": {
+    "evolves_from": "tinkatink",
+    "evolves_to": [
+      "tinkaton"
+    ],
+    "stage": 2
+  },
+  "tirtouga": {
+    "evolves_from": null,
+    "evolves_to": [
+      "carracosta"
+    ],
+    "stage": 1
+  },
+  "toedscool": {
+    "evolves_from": null,
+    "evolves_to": [
+      "toedscruel"
+    ],
+    "stage": 1
+  },
+  "toedscruel": {
+    "evolves_from": "toedscool",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "togedemaru": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "togekiss": {
+    "evolves_from": "togetic",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "togepi": {
+    "evolves_from": null,
+    "evolves_to": [
+      "togetic"
+    ],
+    "stage": 1
+  },
+  "togetic": {
+    "evolves_from": "togepi",
+    "evolves_to": [
+      "togekiss"
+    ],
+    "stage": 2
+  },
+  "torchic": {
+    "evolves_from": null,
+    "evolves_to": [
+      "combusken"
+    ],
+    "stage": 1
+  },
+  "torkoal": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "tornadus": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "torracat": {
+    "evolves_from": "litten",
+    "evolves_to": [
+      "incineroar"
+    ],
+    "stage": 2
+  },
+  "torterra": {
+    "evolves_from": "grotle",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "totodile": {
+    "evolves_from": null,
+    "evolves_to": [
+      "croconaw"
+    ],
+    "stage": 1
+  },
+  "toucannon": {
+    "evolves_from": "trumbeak",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "toxapex": {
+    "evolves_from": "mareanie",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "toxel": {
+    "evolves_from": null,
+    "evolves_to": [
+      "toxtricity"
+    ],
+    "stage": 1
+  },
+  "toxicroak": {
+    "evolves_from": "croagunk",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "toxtricity": {
+    "evolves_from": "toxel",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "tranquill": {
+    "evolves_from": "pidove",
+    "evolves_to": [
+      "unfezant"
+    ],
+    "stage": 2
+  },
+  "trapinch": {
+    "evolves_from": null,
+    "evolves_to": [
+      "vibrava"
+    ],
+    "stage": 1
+  },
+  "treecko": {
+    "evolves_from": null,
+    "evolves_to": [
+      "grovyle"
+    ],
+    "stage": 1
+  },
+  "trevenant": {
+    "evolves_from": "phantump",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "tropius": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "trubbish": {
+    "evolves_from": null,
+    "evolves_to": [
+      "garbodor"
+    ],
+    "stage": 1
+  },
+  "trumbeak": {
+    "evolves_from": "pikipek",
+    "evolves_to": [
+      "toucannon"
+    ],
+    "stage": 2
+  },
+  "tsareena": {
+    "evolves_from": "steenee",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "turtonator": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "turtwig": {
+    "evolves_from": null,
+    "evolves_to": [
+      "grotle"
+    ],
+    "stage": 1
+  },
+  "tympole": {
+    "evolves_from": null,
+    "evolves_to": [
+      "palpitoad"
+    ],
+    "stage": 1
+  },
+  "tynamo": {
+    "evolves_from": null,
+    "evolves_to": [
+      "eelektrik"
+    ],
+    "stage": 1
+  },
+  "type-null": {
+    "evolves_from": null,
+    "evolves_to": [
+      "silvally"
+    ],
+    "stage": 1
+  },
+  "typhlosion": {
+    "evolves_from": "quilava",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "tyranitar": {
+    "evolves_from": "pupitar",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "tyrantrum": {
+    "evolves_from": "tyrunt",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "tyrogue": {
+    "evolves_from": null,
+    "evolves_to": [
+      "hitmonlee",
+      "hitmonchan",
+      "hitmontop"
+    ],
+    "stage": 1
+  },
+  "tyrunt": {
+    "evolves_from": null,
+    "evolves_to": [
+      "tyrantrum"
+    ],
+    "stage": 1
+  },
+  "umbreon": {
+    "evolves_from": "eevee",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "unfezant": {
+    "evolves_from": "tranquill",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "unown": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "ursaluna": {
+    "evolves_from": "ursaring",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "ursaring": {
+    "evolves_from": "teddiursa",
+    "evolves_to": [
+      "ursaluna"
+    ],
+    "stage": 2
+  },
+  "urshifu": {
+    "evolves_from": "kubfu",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "uxie": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "vanillish": {
+    "evolves_from": "vanillite",
+    "evolves_to": [
+      "vanilluxe"
+    ],
+    "stage": 2
+  },
+  "vanillite": {
+    "evolves_from": null,
+    "evolves_to": [
+      "vanillish"
+    ],
+    "stage": 1
+  },
+  "vanilluxe": {
+    "evolves_from": "vanillish",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "vaporeon": {
+    "evolves_from": "eevee",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "varoom": {
+    "evolves_from": null,
+    "evolves_to": [
+      "revavroom"
+    ],
+    "stage": 1
+  },
+  "veluza": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "venipede": {
+    "evolves_from": null,
+    "evolves_to": [
+      "whirlipede"
+    ],
+    "stage": 1
+  },
+  "venomoth": {
+    "evolves_from": "venonat",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "venonat": {
+    "evolves_from": null,
+    "evolves_to": [
+      "venomoth"
+    ],
+    "stage": 1
+  },
+  "venusaur": {
+    "evolves_from": "ivysaur",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "vespiquen": {
+    "evolves_from": "combee",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "vibrava": {
+    "evolves_from": "trapinch",
+    "evolves_to": [
+      "flygon"
+    ],
+    "stage": 2
+  },
+  "victini": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "victreebel": {
+    "evolves_from": "weepinbell",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "vigoroth": {
+    "evolves_from": "slakoth",
+    "evolves_to": [
+      "slaking"
+    ],
+    "stage": 2
+  },
+  "vikavolt": {
+    "evolves_from": "charjabug",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "vileplume": {
+    "evolves_from": "gloom",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "virizion": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "vivillon": {
+    "evolves_from": "spewpa",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "volbeat": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "volcanion": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "volcarona": {
+    "evolves_from": "larvesta",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "voltorb": {
+    "evolves_from": null,
+    "evolves_to": [
+      "electrode"
+    ],
+    "stage": 1
+  },
+  "vullaby": {
+    "evolves_from": null,
+    "evolves_to": [
+      "mandibuzz"
+    ],
+    "stage": 1
+  },
+  "vulpix": {
+    "evolves_from": null,
+    "evolves_to": [
+      "ninetales"
+    ],
+    "stage": 1
+  },
+  "wailmer": {
+    "evolves_from": null,
+    "evolves_to": [
+      "wailord"
+    ],
+    "stage": 1
+  },
+  "wailord": {
+    "evolves_from": "wailmer",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "walking-wake": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "walrein": {
+    "evolves_from": "sealeo",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "wartortle": {
+    "evolves_from": "squirtle",
+    "evolves_to": [
+      "blastoise"
+    ],
+    "stage": 2
+  },
+  "watchog": {
+    "evolves_from": "patrat",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "wattrel": {
+    "evolves_from": null,
+    "evolves_to": [
+      "kilowattrel"
+    ],
+    "stage": 1
+  },
+  "weavile": {
+    "evolves_from": "sneasel",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "weedle": {
+    "evolves_from": null,
+    "evolves_to": [
+      "kakuna"
+    ],
+    "stage": 1
+  },
+  "weepinbell": {
+    "evolves_from": "bellsprout",
+    "evolves_to": [
+      "victreebel"
+    ],
+    "stage": 2
+  },
+  "weezing": {
+    "evolves_from": "koffing",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "whimsicott": {
+    "evolves_from": "cottonee",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "whirlipede": {
+    "evolves_from": "venipede",
+    "evolves_to": [
+      "scolipede"
+    ],
+    "stage": 2
+  },
+  "whiscash": {
+    "evolves_from": "barboach",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "whismur": {
+    "evolves_from": null,
+    "evolves_to": [
+      "loudred"
+    ],
+    "stage": 1
+  },
+  "wigglytuff": {
+    "evolves_from": "jigglypuff",
+    "evolves_to": [],
+    "stage": 3
+  },
+  "wiglett": {
+    "evolves_from": null,
+    "evolves_to": [
+      "wugtrio"
+    ],
+    "stage": 1
+  },
+  "wimpod": {
+    "evolves_from": null,
+    "evolves_to": [
+      "golisopod"
+    ],
+    "stage": 1
+  },
+  "wingull": {
+    "evolves_from": null,
+    "evolves_to": [
+      "pelipper"
+    ],
+    "stage": 1
+  },
+  "wishiwashi": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "wo-chien": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "wobbuffet": {
+    "evolves_from": "wynaut",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "woobat": {
+    "evolves_from": null,
+    "evolves_to": [
+      "swoobat"
+    ],
+    "stage": 1
+  },
+  "wooloo": {
+    "evolves_from": null,
+    "evolves_to": [
+      "dubwool"
+    ],
+    "stage": 1
+  },
+  "wooper": {
+    "evolves_from": null,
+    "evolves_to": [
+      "quagsire",
+      "clodsire"
+    ],
+    "stage": 1
+  },
+  "wormadam": {
+    "evolves_from": "burmy",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "wugtrio": {
+    "evolves_from": "wiglett",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "wurmple": {
+    "evolves_from": null,
+    "evolves_to": [
+      "silcoon",
+      "cascoon"
+    ],
+    "stage": 1
+  },
+  "wynaut": {
+    "evolves_from": null,
+    "evolves_to": [
+      "wobbuffet"
+    ],
+    "stage": 1
+  },
+  "wyrdeer": {
+    "evolves_from": "stantler",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "xatu": {
+    "evolves_from": "natu",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "xerneas": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "xurkitree": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "yamask": {
+    "evolves_from": null,
+    "evolves_to": [
+      "cofagrigus",
+      "runerigus"
+    ],
+    "stage": 1
+  },
+  "yamper": {
+    "evolves_from": null,
+    "evolves_to": [
+      "boltund"
+    ],
+    "stage": 1
+  },
+  "yanma": {
+    "evolves_from": null,
+    "evolves_to": [
+      "yanmega"
+    ],
+    "stage": 1
+  },
+  "yanmega": {
+    "evolves_from": "yanma",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "yungoos": {
+    "evolves_from": null,
+    "evolves_to": [
+      "gumshoos"
+    ],
+    "stage": 1
+  },
+  "yveltal": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "zacian": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "zamazenta": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "zangoose": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "zapdos": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "zarude": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "zebstrika": {
+    "evolves_from": "blitzle",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "zekrom": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "zeraora": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  },
+  "zigzagoon": {
+    "evolves_from": null,
+    "evolves_to": [
+      "linoone"
+    ],
+    "stage": 1
+  },
+  "zoroark": {
+    "evolves_from": "zorua",
+    "evolves_to": [],
+    "stage": 2
+  },
+  "zorua": {
+    "evolves_from": null,
+    "evolves_to": [
+      "zoroark"
+    ],
+    "stage": 1
+  },
+  "zubat": {
+    "evolves_from": null,
+    "evolves_to": [
+      "golbat"
+    ],
+    "stage": 1
+  },
+  "zweilous": {
+    "evolves_from": "deino",
+    "evolves_to": [
+      "hydreigon"
+    ],
+    "stage": 2
+  },
+  "zygarde": {
+    "evolves_from": null,
+    "evolves_to": [],
+    "stage": 1
+  }
+}

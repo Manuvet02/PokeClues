@@ -1,0 +1,247 @@
+{
+  "date": "2026-09-24",
+  "grid_size": [
+    5,
+    4
+  ],
+  "candidates": [
+    {
+      "name": "ribombee",
+      "id": 743
+    },
+    {
+      "name": "rolycoly",
+      "id": 837
+    },
+    {
+      "name": "trubbish",
+      "id": 568
+    },
+    {
+      "name": "delibird",
+      "id": 225
+    },
+    {
+      "name": "gurdurr",
+      "id": 533
+    },
+    {
+      "name": "iron-thorns",
+      "id": 995
+    },
+    {
+      "name": "iron-hands",
+      "id": 992
+    },
+    {
+      "name": "virizion",
+      "id": 640
+    },
+    {
+      "name": "axew",
+      "id": 610
+    },
+    {
+      "name": "bergmite",
+      "id": 712
+    },
+    {
+      "name": "venusaur",
+      "id": 3
+    },
+    {
+      "name": "bouffalant",
+      "id": 626
+    },
+    {
+      "name": "zorua",
+      "id": 570
+    },
+    {
+      "name": "purugly",
+      "id": 432
+    },
+    {
+      "name": "grubbin",
+      "id": 736
+    },
+    {
+      "name": "eldegoss",
+      "id": 830
+    },
+    {
+      "name": "relicanth",
+      "id": 369
+    },
+    {
+      "name": "tentacool",
+      "id": 72
+    },
+    {
+      "name": "surskit",
+      "id": 283
+    },
+    {
+      "name": "persian",
+      "id": 53
+    }
+  ],
+  "clues": [
+    {
+      "id": 0,
+      "text": "Il Pokémon nella cella 17 è di tipo dragon.",
+      "reveals_cells": [
+        17
+      ]
+    },
+    {
+      "id": 1,
+      "text": "Il Pokémon nella cella 2 è di tipo fairy.",
+      "reveals_cells": [
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Il Pokémon nella cella 12 appartiene alla generation-iv.",
+      "reveals_cells": [
+        12
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Il Pokémon nella cella 11 è di colore black.",
+      "reveals_cells": [
+        11
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Il Pokémon nella cella 7 è di tipo dark.",
+      "reveals_cells": [
+        7
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Il Pokémon nella cella 14 appartiene alla generation-ii.",
+      "reveals_cells": [
+        14
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Il Pokémon nella cella 20 è di tipo ice.",
+      "reveals_cells": [
+        20
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Il Pokémon nella cella 18 è allo stadio evolutivo 3.",
+      "reveals_cells": [
+        18
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Il Pokémon nella cella 1 è di colore yellow.",
+      "reveals_cells": [
+        1
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Il Pokémon nella cella 3 è di tipo normal.",
+      "reveals_cells": [
+        3
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Il Pokémon nella cella 8 appartiene alla generation-viii.",
+      "reveals_cells": [
+        8
+      ]
+    },
+    {
+      "id": 11,
+      "text": "Il Pokémon nella cella 4 è di tipo grass.",
+      "reveals_cells": [
+        4
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Il Pokémon nella cella 15 appartiene alla generation-i.",
+      "reveals_cells": [
+        15
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Il Pokémon nella cella 19 è di tipo poison.",
+      "reveals_cells": [
+        19
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Il Pokémon nella cella 9 è di colore blue.",
+      "reveals_cells": [
+        9
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Il Pokémon nella cella 13 è di tipo bug.",
+      "reveals_cells": [
+        13
+      ]
+    },
+    {
+      "id": 16,
+      "text": "Il Pokémon nella cella 6 è di tipo water.",
+      "reveals_cells": [
+        6
+      ]
+    },
+    {
+      "id": 17,
+      "text": "La statistica 'speed' del Pokémon in cella 6 è minore di quella del Pokémon in cella 10.",
+      "reveals_cells": [
+        10
+      ]
+    },
+    {
+      "id": 18,
+      "text": "La statistica 'hp' del Pokémon in cella 5 è minore di quella del Pokémon in cella 6.",
+      "reveals_cells": [
+        5,
+        16
+      ]
+    }
+  ],
+  "solution": [
+    "persian",
+    "ribombee",
+    "bouffalant",
+    "virizion",
+    "gurdurr",
+    "relicanth",
+    "zorua",
+    "eldegoss",
+    "surskit",
+    "iron-thorns",
+    "rolycoly",
+    "purugly",
+    "grubbin",
+    "delibird",
+    "tentacool",
+    "iron-hands",
+    "axew",
+    "venusaur",
+    "trubbish",
+    "bergmite"
+  ]
+}

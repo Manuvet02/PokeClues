@@ -1,0 +1,1000 @@
+{
+  "id": 665,
+  "name": "spewpa",
+  "base_experience": 75,
+  "height": 3,
+  "is_default": true,
+  "order": 797,
+  "weight": 84,
+  "abilities": [
+    {
+      "is_hidden": false,
+      "slot": 1,
+      "ability": {
+        "name": "shed-skin",
+        "url": "https://pokeapi.co/api/v2/ability/61/"
+      }
+    },
+    {
+      "is_hidden": true,
+      "slot": 3,
+      "ability": {
+        "name": "friend-guard",
+        "url": "https://pokeapi.co/api/v2/ability/132/"
+      }
+    }
+  ],
+  "past_abilities": [],
+  "forms": [
+    {
+      "name": "spewpa-icy-snow",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/665/"
+    },
+    {
+      "name": "spewpa-polar",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10290/"
+    },
+    {
+      "name": "spewpa-tundra",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10291/"
+    },
+    {
+      "name": "spewpa-continental",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10292/"
+    },
+    {
+      "name": "spewpa-garden",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10293/"
+    },
+    {
+      "name": "spewpa-elegant",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10294/"
+    },
+    {
+      "name": "spewpa-meadow",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10295/"
+    },
+    {
+      "name": "spewpa-modern",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10296/"
+    },
+    {
+      "name": "spewpa-marine",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10297/"
+    },
+    {
+      "name": "spewpa-archipelago",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10298/"
+    },
+    {
+      "name": "spewpa-high-plains",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10299/"
+    },
+    {
+      "name": "spewpa-sandstorm",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10300/"
+    },
+    {
+      "name": "spewpa-river",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10301/"
+    },
+    {
+      "name": "spewpa-monsoon",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10302/"
+    },
+    {
+      "name": "spewpa-savanna",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10303/"
+    },
+    {
+      "name": "spewpa-sun",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10304/"
+    },
+    {
+      "name": "spewpa-ocean",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10305/"
+    },
+    {
+      "name": "spewpa-jungle",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10306/"
+    },
+    {
+      "name": "spewpa-fancy",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10307/"
+    },
+    {
+      "name": "spewpa-poke-ball",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/10308/"
+    }
+  ],
+  "game_indices": [
+    {
+      "game_index": 665,
+      "version": {
+        "name": "x",
+        "url": "https://pokeapi.co/api/v2/version/23/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "y",
+        "url": "https://pokeapi.co/api/v2/version/24/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "omega-ruby",
+        "url": "https://pokeapi.co/api/v2/version/25/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "alpha-sapphire",
+        "url": "https://pokeapi.co/api/v2/version/26/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "sun",
+        "url": "https://pokeapi.co/api/v2/version/27/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "moon",
+        "url": "https://pokeapi.co/api/v2/version/28/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "ultra-sun",
+        "url": "https://pokeapi.co/api/v2/version/29/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "ultra-moon",
+        "url": "https://pokeapi.co/api/v2/version/30/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "lets-go-pikachu",
+        "url": "https://pokeapi.co/api/v2/version/31/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "lets-go-eevee",
+        "url": "https://pokeapi.co/api/v2/version/32/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "scarlet",
+        "url": "https://pokeapi.co/api/v2/version/40/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "violet",
+        "url": "https://pokeapi.co/api/v2/version/41/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "the-teal-mask-scarlet",
+        "url": "https://pokeapi.co/api/v2/version/42/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "the-indigo-disk-scarlet",
+        "url": "https://pokeapi.co/api/v2/version/43/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "legends-za",
+        "url": "https://pokeapi.co/api/v2/version/47/"
+      }
+    },
+    {
+      "game_index": 665,
+      "version": {
+        "name": "mega-dimension",
+        "url": "https://pokeapi.co/api/v2/version/48/"
+      }
+    }
+  ],
+  "held_items": [],
+  "location_area_encounters": "https://pokeapi.co/api/v2/pokemon/665/encounters",
+  "moves": [
+    {
+      "move": {
+        "name": "harden",
+        "url": "https://pokeapi.co/api/v2/move/106/"
+      },
+      "version_group_details": [
+        {
+          "level_learned_at": 1,
+          "version_group": {
+            "name": "x-y",
+            "url": "https://pokeapi.co/api/v2/version-group/15/"
+          },
+          "move_learn_method": {
+            "name": "level-up",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 1,
+          "version_group": {
+            "name": "omega-ruby-alpha-sapphire",
+            "url": "https://pokeapi.co/api/v2/version-group/16/"
+          },
+          "move_learn_method": {
+            "name": "level-up",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 1,
+          "version_group": {
+            "name": "sun-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/17/"
+          },
+          "move_learn_method": {
+            "name": "level-up",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+          },
+          "order": 2
+        },
+        {
+          "level_learned_at": 1,
+          "version_group": {
+            "name": "ultra-sun-ultra-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/18/"
+          },
+          "move_learn_method": {
+            "name": "level-up",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+          },
+          "order": 2
+        },
+        {
+          "level_learned_at": 1,
+          "version_group": {
+            "name": "scarlet-violet",
+            "url": "https://pokeapi.co/api/v2/version-group/25/"
+          },
+          "move_learn_method": {
+            "name": "level-up",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+          },
+          "order": null
+        }
+      ]
+    },
+    {
+      "move": {
+        "name": "protect",
+        "url": "https://pokeapi.co/api/v2/move/182/"
+      },
+      "version_group_details": [
+        {
+          "level_learned_at": 9,
+          "version_group": {
+            "name": "x-y",
+            "url": "https://pokeapi.co/api/v2/version-group/15/"
+          },
+          "move_learn_method": {
+            "name": "level-up",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "x-y",
+            "url": "https://pokeapi.co/api/v2/version-group/15/"
+          },
+          "move_learn_method": {
+            "name": "machine",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/4/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 9,
+          "version_group": {
+            "name": "omega-ruby-alpha-sapphire",
+            "url": "https://pokeapi.co/api/v2/version-group/16/"
+          },
+          "move_learn_method": {
+            "name": "level-up",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "omega-ruby-alpha-sapphire",
+            "url": "https://pokeapi.co/api/v2/version-group/16/"
+          },
+          "move_learn_method": {
+            "name": "machine",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/4/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "sun-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/17/"
+          },
+          "move_learn_method": {
+            "name": "level-up",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 1,
+          "version_group": {
+            "name": "sun-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/17/"
+          },
+          "move_learn_method": {
+            "name": "level-up",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+          },
+          "order": 1
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "sun-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/17/"
+          },
+          "move_learn_method": {
+            "name": "machine",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/4/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "ultra-sun-ultra-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/18/"
+          },
+          "move_learn_method": {
+            "name": "level-up",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 1,
+          "version_group": {
+            "name": "ultra-sun-ultra-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/18/"
+          },
+          "move_learn_method": {
+            "name": "level-up",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+          },
+          "order": 1
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "ultra-sun-ultra-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/18/"
+          },
+          "move_learn_method": {
+            "name": "machine",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/4/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "scarlet-violet",
+            "url": "https://pokeapi.co/api/v2/version-group/25/"
+          },
+          "move_learn_method": {
+            "name": "level-up",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/1/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "scarlet-violet",
+            "url": "https://pokeapi.co/api/v2/version-group/25/"
+          },
+          "move_learn_method": {
+            "name": "machine",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/4/"
+          },
+          "order": null
+        }
+      ]
+    },
+    {
+      "move": {
+        "name": "iron-defense",
+        "url": "https://pokeapi.co/api/v2/move/334/"
+      },
+      "version_group_details": [
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "omega-ruby-alpha-sapphire",
+            "url": "https://pokeapi.co/api/v2/version-group/16/"
+          },
+          "move_learn_method": {
+            "name": "tutor",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/3/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "ultra-sun-ultra-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/18/"
+          },
+          "move_learn_method": {
+            "name": "tutor",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/3/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "scarlet-violet",
+            "url": "https://pokeapi.co/api/v2/version-group/25/"
+          },
+          "move_learn_method": {
+            "name": "machine",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/4/"
+          },
+          "order": null
+        }
+      ]
+    },
+    {
+      "move": {
+        "name": "bug-bite",
+        "url": "https://pokeapi.co/api/v2/move/450/"
+      },
+      "version_group_details": [
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "omega-ruby-alpha-sapphire",
+            "url": "https://pokeapi.co/api/v2/version-group/16/"
+          },
+          "move_learn_method": {
+            "name": "tutor",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/3/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "ultra-sun-ultra-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/18/"
+          },
+          "move_learn_method": {
+            "name": "tutor",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/3/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "scarlet-violet",
+            "url": "https://pokeapi.co/api/v2/version-group/25/"
+          },
+          "move_learn_method": {
+            "name": "machine",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/4/"
+          },
+          "order": null
+        }
+      ]
+    },
+    {
+      "move": {
+        "name": "struggle-bug",
+        "url": "https://pokeapi.co/api/v2/move/522/"
+      },
+      "version_group_details": [
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "scarlet-violet",
+            "url": "https://pokeapi.co/api/v2/version-group/25/"
+          },
+          "move_learn_method": {
+            "name": "machine",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/4/"
+          },
+          "order": null
+        }
+      ]
+    },
+    {
+      "move": {
+        "name": "electroweb",
+        "url": "https://pokeapi.co/api/v2/move/527/"
+      },
+      "version_group_details": [
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "omega-ruby-alpha-sapphire",
+            "url": "https://pokeapi.co/api/v2/version-group/16/"
+          },
+          "move_learn_method": {
+            "name": "tutor",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/3/"
+          },
+          "order": null
+        },
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "ultra-sun-ultra-moon",
+            "url": "https://pokeapi.co/api/v2/version-group/18/"
+          },
+          "move_learn_method": {
+            "name": "tutor",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/3/"
+          },
+          "order": null
+        }
+      ]
+    },
+    {
+      "move": {
+        "name": "tera-blast",
+        "url": "https://pokeapi.co/api/v2/move/851/"
+      },
+      "version_group_details": [
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "scarlet-violet",
+            "url": "https://pokeapi.co/api/v2/version-group/25/"
+          },
+          "move_learn_method": {
+            "name": "machine",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/4/"
+          },
+          "order": null
+        }
+      ]
+    },
+    {
+      "move": {
+        "name": "pounce",
+        "url": "https://pokeapi.co/api/v2/move/884/"
+      },
+      "version_group_details": [
+        {
+          "level_learned_at": 0,
+          "version_group": {
+            "name": "scarlet-violet",
+            "url": "https://pokeapi.co/api/v2/version-group/25/"
+          },
+          "move_learn_method": {
+            "name": "machine",
+            "url": "https://pokeapi.co/api/v2/move-learn-method/4/"
+          },
+          "order": null
+        }
+      ]
+    }
+  ],
+  "species": {
+    "name": "spewpa",
+    "url": "https://pokeapi.co/api/v2/pokemon-species/665/"
+  },
+  "sprites": {
+    "other": {
+      "home": {
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/665.png",
+        "front_female": null,
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/665.png",
+        "front_shiny_female": null
+      },
+      "showdown": {
+        "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/shiny/665.gif",
+        "back_female": null,
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/shiny/665.gif",
+        "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/back/665.gif",
+        "front_female": null,
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/665.gif",
+        "back_shiny_female": null,
+        "front_shiny_female": null
+      },
+      "dream_world": {
+        "front_female": null,
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/665.svg"
+      },
+      "official-artwork": {
+        "versions": {
+          "generation-i": {
+            "red-and-blue": {
+              "front_default": null
+            },
+            "red-and-green": {
+              "front_default": null
+            }
+          },
+          "generation-ii": {
+            "gold-and-silver": {
+              "front_default": null
+            }
+          }
+        },
+        "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/665.png",
+        "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/665.png"
+      }
+    },
+    "versions": {
+      "generation-i": {
+        "yellow": {
+          "back_gbc": null,
+          "back_gray": null,
+          "front_gbc": null,
+          "front_gray": null,
+          "back_default": null,
+          "front_default": null,
+          "back_transparent": null,
+          "front_transparent": null,
+          "back_transparent_gray": null,
+          "front_transparent_gray": null
+        },
+        "red-blue": {
+          "back_gray": null,
+          "front_gray": null,
+          "back_default": null,
+          "front_default": null,
+          "back_transparent": null,
+          "front_transparent": null,
+          "back_transparent_gray": null,
+          "front_transparent_gray": null
+        },
+        "red-green-japan": {
+          "back_gray": null,
+          "front_gray": null,
+          "back_default": null,
+          "front_default": null
+        }
+      },
+      "generation-v": {
+        "icons": {
+          "animated": {
+            "front_default": null
+          },
+          "front_default": null
+        },
+        "black-white": {
+          "animated": {
+            "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/665.gif",
+            "back_female": null,
+            "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/665.gif",
+            "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/665.gif",
+            "front_female": null,
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/665.gif",
+            "back_shiny_female": null,
+            "front_shiny_female": null
+          },
+          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/back/shiny/665.png",
+          "back_female": null,
+          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/shiny/665.png",
+          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/back/665.png",
+          "front_female": null,
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/665.png",
+          "back_shiny_female": null,
+          "front_shiny_female": null
+        }
+      },
+      "generation-ii": {
+        "gold": {
+          "back_shiny": null,
+          "front_shiny": null,
+          "back_default": null,
+          "front_default": null,
+          "back_transparent": null,
+          "front_transparent": null,
+          "back_shiny_transparent": null,
+          "front_shiny_transparent": null
+        },
+        "silver": {
+          "back_shiny": null,
+          "front_shiny": null,
+          "back_default": null,
+          "front_default": null,
+          "back_transparent": null,
+          "front_transparent": null,
+          "back_shiny_transparent": null,
+          "front_shiny_transparent": null
+        },
+        "crystal": {
+          "animated": {
+            "front_shiny": null,
+            "front_default": null
+          },
+          "back_shiny": null,
+          "front_shiny": null,
+          "back_default": null,
+          "front_default": null,
+          "back_transparent": null,
+          "front_transparent": null,
+          "back_shiny_transparent": null,
+          "front_shiny_transparent": null
+        }
+      },
+      "generation-iv": {
+        "icons": {
+          "front_default": null
+        },
+        "platinum": {
+          "animated": {
+            "front_shiny": null,
+            "front_female": null,
+            "front_default": null,
+            "front_shiny_female": null
+          },
+          "back_shiny": null,
+          "back_female": null,
+          "front_shiny": null,
+          "back_default": null,
+          "front_female": null,
+          "front_default": null,
+          "back_shiny_female": null,
+          "front_shiny_female": null
+        },
+        "diamond-pearl": {
+          "animated": {
+            "front_shiny": null,
+            "front_female": null,
+            "front_default": null,
+            "front_shiny_female": null
+          },
+          "back_shiny": null,
+          "back_female": null,
+          "front_shiny": null,
+          "back_default": null,
+          "front_female": null,
+          "front_default": null,
+          "back_shiny_female": null,
+          "front_shiny_female": null
+        },
+        "heartgold-soulsilver": {
+          "animated": {
+            "front_shiny": null,
+            "front_female": null,
+            "front_default": null,
+            "front_shiny_female": null
+          },
+          "back_shiny": null,
+          "back_female": null,
+          "front_shiny": null,
+          "back_default": null,
+          "front_female": null,
+          "front_default": null,
+          "back_shiny_female": null,
+          "front_shiny_female": null
+        }
+      },
+      "generation-ix": {
+        "champions": {
+          "front_shiny": null,
+          "front_default": null
+        },
+        "scarlet-violet": {
+          "front_female": null,
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/665.png"
+        }
+      },
+      "generation-vi": {
+        "x-y": {
+          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/back/shiny/665.png",
+          "back_female": null,
+          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/shiny/665.png",
+          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/back/665.png",
+          "front_female": null,
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/665.png",
+          "back_shiny_female": null,
+          "front_shiny_female": null
+        },
+        "icons": {
+          "front_female": null,
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/icons/665.png"
+        },
+        "omegaruby-alphasapphire": {
+          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/back/shiny/665.png",
+          "back_female": null,
+          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/shiny/665.png",
+          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/back/665.png",
+          "front_female": null,
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/omegaruby-alphasapphire/665.png",
+          "back_shiny_female": null,
+          "front_shiny_female": null
+        }
+      },
+      "generation-iii": {
+        "icons": {
+          "front_default": null
+        },
+        "emerald": {
+          "animated": {
+            "back_shiny": null,
+            "front_shiny": null,
+            "back_default": null,
+            "front_default": null
+          },
+          "back_shiny": null,
+          "front_shiny": null,
+          "back_default": null,
+          "front_default": null
+        },
+        "ruby-sapphire": {
+          "back_shiny": null,
+          "front_shiny": null,
+          "back_default": null,
+          "front_default": null
+        },
+        "firered-leafgreen": {
+          "back_shiny": null,
+          "front_shiny": null,
+          "back_default": null,
+          "front_default": null
+        }
+      },
+      "generation-vii": {
+        "icons": {
+          "front_female": null,
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/665.png"
+        },
+        "ultra-sun-ultra-moon": {
+          "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/back/shiny/665.gif",
+          "back_female": null,
+          "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/shiny/665.gif",
+          "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/back/665.gif",
+          "front_female": null,
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/ultra-sun-ultra-moon/665.gif",
+          "back_shiny_female": null,
+          "front_shiny_female": null
+        },
+        "lets-go-pikachu-lets-go-eevee": {
+          "icons": {
+            "front_default": null
+          },
+          "back_shiny": null,
+          "back_female": null,
+          "front_shiny": null,
+          "back_default": null,
+          "front_female": null,
+          "front_default": null,
+          "back_shiny_female": null,
+          "front_shiny_female": null
+        }
+      },
+      "generation-viii": {
+        "icons": {
+          "front_female": null,
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/665.png"
+        },
+        "brilliant-diamond-shining-pearl": {
+          "front_default": null
+        }
+      }
+    },
+    "back_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/665.png",
+    "back_female": null,
+    "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/665.png",
+    "back_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/665.png",
+    "front_female": null,
+    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
+    "back_shiny_female": null,
+    "front_shiny_female": null
+  },
+  "cries": {
+    "latest": "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/665.ogg",
+    "legacy": null
+  },
+  "stats": [
+    {
+      "base_stat": 45,
+      "effort": 0,
+      "stat": {
+        "name": "hp",
+        "url": "https://pokeapi.co/api/v2/stat/1/"
+      }
+    },
+    {
+      "base_stat": 22,
+      "effort": 0,
+      "stat": {
+        "name": "attack",
+        "url": "https://pokeapi.co/api/v2/stat/2/"
+      }
+    },
+    {
+      "base_stat": 60,
+      "effort": 2,
+      "stat": {
+        "name": "defense",
+        "url": "https://pokeapi.co/api/v2/stat/3/"
+      }
+    },
+    {
+      "base_stat": 27,
+      "effort": 0,
+      "stat": {
+        "name": "special-attack",
+        "url": "https://pokeapi.co/api/v2/stat/4/"
+      }
+    },
+    {
+      "base_stat": 30,
+      "effort": 0,
+      "stat": {
+        "name": "special-defense",
+        "url": "https://pokeapi.co/api/v2/stat/5/"
+      }
+    },
+    {
+      "base_stat": 29,
+      "effort": 0,
+      "stat": {
+        "name": "speed",
+        "url": "https://pokeapi.co/api/v2/stat/6/"
+      }
+    }
+  ],
+  "past_stats": [],
+  "types": [
+    {
+      "slot": 1,
+      "type": {
+        "name": "bug",
+        "url": "https://pokeapi.co/api/v2/type/7/"
+      }
+    }
+  ],
+  "past_types": []
+}

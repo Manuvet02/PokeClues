@@ -1,0 +1,247 @@
+{
+  "date": "2026-09-27",
+  "grid_size": [
+    5,
+    4
+  ],
+  "candidates": [
+    {
+      "name": "weepinbell",
+      "id": 70
+    },
+    {
+      "name": "exploud",
+      "id": 295
+    },
+    {
+      "name": "rillaboom",
+      "id": 812
+    },
+    {
+      "name": "charcadet",
+      "id": 935
+    },
+    {
+      "name": "salazzle",
+      "id": 758
+    },
+    {
+      "name": "pineco",
+      "id": 204
+    },
+    {
+      "name": "vikavolt",
+      "id": 738
+    },
+    {
+      "name": "frosmoth",
+      "id": 873
+    },
+    {
+      "name": "dubwool",
+      "id": 832
+    },
+    {
+      "name": "frillish-male",
+      "id": 592
+    },
+    {
+      "name": "ditto",
+      "id": 132
+    },
+    {
+      "name": "bibarel",
+      "id": 400
+    },
+    {
+      "name": "naganadel",
+      "id": 804
+    },
+    {
+      "name": "lunala",
+      "id": 792
+    },
+    {
+      "name": "boldore",
+      "id": 525
+    },
+    {
+      "name": "misdreavus",
+      "id": 200
+    },
+    {
+      "name": "umbreon",
+      "id": 197
+    },
+    {
+      "name": "zapdos",
+      "id": 145
+    },
+    {
+      "name": "noivern",
+      "id": 715
+    },
+    {
+      "name": "tinkatuff",
+      "id": 958
+    }
+  ],
+  "clues": [
+    {
+      "id": 0,
+      "text": "D3 appartiene alla generation-vi.",
+      "reveals_cells": [
+        12
+      ]
+    },
+    {
+      "id": 1,
+      "text": "A2 è di tipo dragon.",
+      "reveals_cells": [
+        5
+      ]
+    },
+    {
+      "id": 2,
+      "text": "C4 è di colore red.",
+      "reveals_cells": [
+        15
+      ]
+    },
+    {
+      "id": 3,
+      "text": "B4 è di tipo steel.",
+      "reveals_cells": [
+        14
+      ]
+    },
+    {
+      "id": 4,
+      "text": "D1 appartiene alla generation-iii.",
+      "reveals_cells": [
+        4
+      ]
+    },
+    {
+      "id": 5,
+      "text": "C5 è di tipo ice.",
+      "reveals_cells": [
+        19
+      ]
+    },
+    {
+      "id": 6,
+      "text": "B1 è di tipo rock.",
+      "reveals_cells": [
+        2
+      ]
+    },
+    {
+      "id": 7,
+      "text": "D2 è di colore blue.",
+      "reveals_cells": [
+        8
+      ]
+    },
+    {
+      "id": 8,
+      "text": "A5 è di tipo bug.",
+      "reveals_cells": [
+        17
+      ]
+    },
+    {
+      "id": 9,
+      "text": "A1 è di colore yellow.",
+      "reveals_cells": [
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "text": "D5 è di colore gray.",
+      "reveals_cells": [
+        20
+      ]
+    },
+    {
+      "id": 11,
+      "text": "B5 è di tipo fire.",
+      "reveals_cells": [
+        18
+      ]
+    },
+    {
+      "id": 12,
+      "text": "D4 è di tipo poison.",
+      "reveals_cells": [
+        16
+      ]
+    },
+    {
+      "id": 13,
+      "text": "C3 appartiene alla generation-i.",
+      "reveals_cells": [
+        11
+      ]
+    },
+    {
+      "id": 14,
+      "text": "A3 è allo stadio evolutivo 1.",
+      "reveals_cells": [
+        9
+      ]
+    },
+    {
+      "id": 15,
+      "text": "C1 è di tipo water.",
+      "reveals_cells": [
+        3
+      ]
+    },
+    {
+      "id": 16,
+      "text": "B2 è di tipo normal.",
+      "reveals_cells": [
+        6
+      ]
+    },
+    {
+      "id": 17,
+      "text": "A4 (defense) > A5",
+      "reveals_cells": [
+        13
+      ]
+    },
+    {
+      "id": 18,
+      "text": "B3 è di tipo ghost.",
+      "reveals_cells": [
+        7,
+        10
+      ]
+    }
+  ],
+  "solution": [
+    "zapdos",
+    "boldore",
+    "bibarel",
+    "exploud",
+    "naganadel",
+    "dubwool",
+    "rillaboom",
+    "vikavolt",
+    "frillish-male",
+    "lunala",
+    "ditto",
+    "noivern",
+    "umbreon",
+    "tinkatuff",
+    "charcadet",
+    "weepinbell",
+    "pineco",
+    "salazzle",
+    "frosmoth",
+    "misdreavus"
+  ]
+}

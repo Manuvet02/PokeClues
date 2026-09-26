@@ -1,0 +1,742 @@
+/* ========================================
+   POKÉMON CLUES - Application Logic
+   Drag & Drop grid with sprite pool,
+   real-time JSON position validation,
+   and victory screen celebration
+   ======================================== */
+
+(() => {
+  "use strict";
+
+  // ---- Configuration ----
+  let GRID_ROWS = 5;
+  let GRID_COLS = 4;
+  let TOTAL_CELLS = GRID_ROWS * GRID_COLS;
+
+  // Row letters for cell labels (A1, B1, C1, ...)
+  const ROW_LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
+
+  // ---- State ----
+  let gridState = new Array(TOTAL_CELLS).fill(null); // { name, id, spriteUrl } | null
+  let poolItems = []; // candidates not yet placed
+  let allCandidates = []; // full list of candidates
+  let clues = [];
+  let solution = []; // Pokémon names in correct cell order from JSON
+  let isGameWon = false;
+  let movesCount = 0;
+  let timerSeconds = 0;
+  let timerInterval = null;
+  let isTimerRunning = false;
+  let soundEnabled = true;
+
+  // ---- DOM References ----
+  const gridEl = document.getElementById("puzzle-grid");
+  const poolEl = document.getElementById("sprite-pool");
+  const cluesListEl = document.getElementById("clues-list");
+  const clueCountEl = document.getElementById("clue-count");
+  const poolCountEl = document.getElementById("pool-count");
+  const correctCountTextEl = document.getElementById("correct-count-text");
+  const gameTimerEl = document.getElementById("game-timer");
+  const btnClear = document.getElementById("btn-clear");
+  const btnShuffle = document.getElementById("btn-shuffle");
+  const btnSound = document.getElementById("btn-sound");
+  const soundIcon = document.getElementById("sound-icon");
+
+  // Victory Modal Elements
+  const victoryModalEl = document.getElementById("victory-modal");
+  const victoryTimeEl = document.getElementById("victory-time");
+  const victoryMovesEl = document.getElementById("victory-moves");
+  const victoryAccuracyEl = document.getElementById("victory-accuracy");
+  const btnPlayAgain = document.getElementById("btn-play-again");
+  const btnCloseVictory = document.getElementById("btn-close-victory");
+  const btnShowVictory = document.getElementById("btn-show-victory");
+  const confettiCanvas = document.getElementById("confetti-canvas");
+
+  // ---- Sprite URL Helper ----
+  function getSpriteUrl(pokemonId) {
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`;
+  }
+
+  // ---- Timer Logic ----
+  function startTimer() {
+    if (isTimerRunning || isGameWon) return;
+    isTimerRunning = true;
+    timerInterval = setInterval(() => {
+      timerSeconds++;
+      if (gameTimerEl) {
+        gameTimerEl.textContent = `⏱️ ${formatTime(timerSeconds)}`;
+      }
+    }, 1000);
+  }
+
+  function stopTimer() {
+    isTimerRunning = false;
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+  }
+
+  function resetTimer() {
+    stopTimer();
+    timerSeconds = 0;
+    if (gameTimerEl) {
+      gameTimerEl.textContent = "⏱️ 00:00";
+    }
+  }
+
+  function formatTime(totalSec) {
+    const m = Math.floor(totalSec / 60)
+      .toString()
+      .padStart(2, "0");
+    const s = (totalSec % 60).toString().padStart(2, "0");
+    return `${m}:${s}`;
+  }
+
+  // ---- Audio Synthesizer (Web Audio API) ----
+  let audioCtx = null;
+
+  function getAudioContext() {
+    if (!audioCtx) {
+      const AudioCtxClass = window.AudioContext || window.webkitAudioContext;
+      if (AudioCtxClass) {
+        audioCtx = new AudioCtxClass();
+      }
+    }
+    if (audioCtx && audioCtx.state === "suspended") {
+      audioCtx.resume();
+    }
+    return audioCtx;
+  }
+
+  function playTone(freq, type, duration, delay = 0, gainLevel = 0.12) {
+    if (!soundEnabled) return;
+    try {
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, ctx.currentTime + delay);
+
+      gain.gain.setValueAtTime(gainLevel, ctx.currentTime + delay);
+      gain.gain.exponentialRampToValueAtTime(
+        0.001,
+        ctx.currentTime + delay + duration,
+      );
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start(ctx.currentTime + delay);
+      osc.stop(ctx.currentTime + delay + duration);
+    } catch (e) {
+      // Audio autoplay policies or unsupported browser
+    }
+  }
+
+  function playCorrectSound() {
+    // Upbeat pleasant two-tone chime
+    playTone(523.25, "sine", 0.14, 0, 0.12); // C5
+    playTone(659.25, "sine", 0.22, 0.08, 0.15); // E5
+  }
+
+  function playIncorrectSound() {
+    // Soft muted error tone
+    playTone(220, "triangle", 0.18, 0, 0.1);
+  }
+
+  function playVictoryFanfare() {
+    // Celebratory victory melody
+    const notes = [523.25, 659.25, 783.99, 1046.5, 1318.51];
+    notes.forEach((freq, idx) => {
+      playTone(freq, "triangle", 0.35, idx * 0.12, 0.18);
+    });
+  }
+
+  // ---- Confetti Animation ----
+  let confettiAnimId = null;
+
+  function startConfetti() {
+    if (!confettiCanvas) return;
+    const ctx = confettiCanvas.getContext("2d");
+    const width = (confettiCanvas.width = window.innerWidth);
+    const height = (confettiCanvas.height = window.innerHeight);
+
+    const colors = [
+      "#fac83c",
+      "#3fb950",
+      "#388bfd",
+      "#f85149",
+      "#a371f7",
+      "#39d2c0",
+      "#ffffff",
+    ];
+    const particles = [];
+    const count = 90;
+
+    for (let i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height - height,
+        size: Math.random() * 8 + 6,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        speedY: Math.random() * 3 + 2.5,
+        speedX: (Math.random() - 0.5) * 2,
+        angle: Math.random() * 360,
+        angularSpeed: (Math.random() - 0.5) * 6,
+      });
+    }
+
+    const startTime = Date.now();
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      particles.forEach((p) => {
+        p.y += p.speedY;
+        p.x += p.speedX;
+        p.angle += p.angularSpeed;
+
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.angle * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2);
+        ctx.restore();
+
+        if (p.y > height && Date.now() - startTime < 6000) {
+          p.y = -10;
+          p.x = Math.random() * width;
+        }
+      });
+
+      if (Date.now() - startTime < 7000) {
+        confettiAnimId = requestAnimationFrame(animate);
+      } else {
+        ctx.clearRect(0, 0, width, height);
+      }
+    }
+
+    if (confettiAnimId) cancelAnimationFrame(confettiAnimId);
+    confettiAnimId = requestAnimationFrame(animate);
+  }
+
+  // ---- Load Puzzle Data ----
+  async function loadPuzzle() {
+    try {
+      const today = new Date().toISOString().slice(0, 10);
+      let data = null;
+
+      const paths = [`../puzzles/${today}.json`];
+
+      for (const path of paths) {
+        try {
+          const res = await fetch(path);
+          if (res.ok) {
+            data = await res.json();
+            break;
+          }
+        } catch (e) {
+          continue;
+        }
+      }
+
+      if (data) {
+        if (data.grid_size && data.grid_size.length === 2) {
+          GRID_ROWS = data.grid_size[0];
+          GRID_COLS = data.grid_size[1];
+          TOTAL_CELLS = GRID_ROWS * GRID_COLS;
+          gridState = new Array(TOTAL_CELLS).fill(null);
+        }
+
+        solution = data.solution || [];
+
+        allCandidates = data.candidates.map((c) => ({
+          name: c.name,
+          id: c.id,
+          spriteUrl: getSpriteUrl(c.id),
+        }));
+        clues = data.clues || [];
+      } else {
+        loadPlaceholders();
+      }
+    } catch (err) {
+      console.warn("Could not load puzzle, using placeholders:", err);
+      loadPlaceholders();
+    }
+
+    poolItems = [...allCandidates];
+    renderAll();
+  }
+
+  // ---- Placeholder Data ----
+  function loadPlaceholders() {
+    const placeholders = [
+      { name: "pikachu", id: 25 },
+      { name: "charizard", id: 6 },
+      { name: "bulbasaur", id: 1 },
+      { name: "squirtle", id: 7 },
+      { name: "eevee", id: 133 },
+      { name: "mewtwo", id: 150 },
+      { name: "gengar", id: 94 },
+      { name: "snorlax", id: 143 },
+      { name: "dragonite", id: 149 },
+      { name: "lucario", id: 448 },
+      { name: "gardevoir", id: 282 },
+      { name: "umbreon", id: 197 },
+      { name: "gyarados", id: 130 },
+      { name: "scizor", id: 212 },
+      { name: "arcanine", id: 59 },
+      { name: "togekiss", id: 468 },
+      { name: "garchomp", id: 445 },
+      { name: "blaziken", id: 257 },
+      { name: "mimikyu", id: 778 },
+      { name: "sylveon", id: 700 },
+    ];
+
+    allCandidates = placeholders.map((p) => ({
+      name: p.name,
+      id: p.id,
+      spriteUrl: getSpriteUrl(p.id),
+    }));
+
+    solution = placeholders.map((p) => p.name);
+
+    clues = [
+      { id: 0, text: "Carica un file puzzle per vedere gli indizi qui." },
+    ];
+  }
+
+  // ---- Render Functions ----
+  function renderAll() {
+    renderGrid();
+    renderPool();
+    renderClues();
+    updateCounts();
+  }
+
+  function renderGrid() {
+    gridEl.innerHTML = "";
+    for (let i = 0; i < TOTAL_CELLS; i++) {
+      const row = Math.floor(i / GRID_COLS);
+      const col = i % GRID_COLS;
+      const label = `${ROW_LETTERS[col]}${row + 1}`;
+
+      const cell = document.createElement("div");
+      cell.className = "grid-cell";
+      cell.dataset.index = i;
+
+      // Cell coordinate label (e.g. A1, B2)
+      const labelEl = document.createElement("span");
+      labelEl.className = "cell-label";
+      labelEl.textContent = label;
+      cell.appendChild(labelEl);
+
+      if (gridState[i]) {
+        cell.classList.add("filled");
+        cell.draggable = true;
+
+        // Check if placed in the right position according to JSON solution
+        const isCorrect =
+          solution.length > i && gridState[i].name === solution[i];
+        cell.classList.add(isCorrect ? "is-correct" : "is-incorrect");
+
+        // Status badge (✓ / ✕)
+        const badgeEl = document.createElement("span");
+        badgeEl.className = `cell-status-badge ${isCorrect ? "correct" : "incorrect"}`;
+        badgeEl.textContent = isCorrect ? "✓" : "✕";
+        badgeEl.title = isCorrect ? "Posizione corretta!" : "Posizione errata";
+        cell.appendChild(badgeEl);
+
+        // Filled cell sprite
+        const img = document.createElement("img");
+        img.className = "cell-sprite";
+        img.src = gridState[i].spriteUrl;
+        img.alt = gridState[i].name;
+        img.loading = "lazy";
+        cell.appendChild(img);
+
+        const nameEl = document.createElement("span");
+        nameEl.className = "cell-name";
+        nameEl.textContent = formatName(gridState[i].name);
+        cell.appendChild(nameEl);
+
+        // Allow dragging from cell to another cell or back to pool
+        cell.addEventListener("dragstart", handleCellDragStart);
+        cell.addEventListener("dragend", handleDragEnd);
+      } else {
+        // Empty cell placeholder
+        const placeholder = document.createElement("span");
+        placeholder.className = "cell-placeholder";
+        placeholder.textContent = "?";
+        cell.appendChild(placeholder);
+      }
+
+      // Drop target events
+      cell.addEventListener("dragover", handleDragOver);
+      cell.addEventListener("dragenter", handleDragEnter);
+      cell.addEventListener("dragleave", handleDragLeave);
+      cell.addEventListener("drop", handleDrop);
+
+      // Click to remove Pokémon from cell
+      cell.addEventListener("click", () => handleCellClick(i));
+
+      gridEl.appendChild(cell);
+    }
+  }
+
+  function renderPool() {
+    poolEl.innerHTML = "";
+
+    if (poolItems.length === 0) {
+      const emptyMsg = document.createElement("div");
+      emptyMsg.className = "pool-empty";
+      emptyMsg.textContent = "Tutti i Pokémon sono nella griglia! 🎉";
+      poolEl.appendChild(emptyMsg);
+      return;
+    }
+
+    poolItems.forEach((item, idx) => {
+      const el = document.createElement("div");
+      el.className = "pool-item";
+      el.draggable = true;
+      el.dataset.poolIndex = idx;
+      el.dataset.name = item.name;
+      el.dataset.id = item.id;
+
+      const img = document.createElement("img");
+      img.className = "pool-sprite";
+      img.src = item.spriteUrl;
+      img.alt = item.name;
+      img.loading = "lazy";
+      el.appendChild(img);
+
+      const nameEl = document.createElement("span");
+      nameEl.className = "pool-name";
+      nameEl.textContent = formatName(item.name);
+      el.appendChild(nameEl);
+
+      // Drag events
+      el.addEventListener("dragstart", handlePoolDragStart);
+      el.addEventListener("dragend", handleDragEnd);
+
+      poolEl.appendChild(el);
+    });
+  }
+
+  function renderClues() {
+    cluesListEl.innerHTML = "";
+    clues.forEach((clue, idx) => {
+      const item = document.createElement("div");
+      item.className = "clue-item";
+
+      const num = document.createElement("span");
+      num.className = "clue-number";
+      num.textContent = idx + 1;
+      item.appendChild(num);
+
+      const text = document.createElement("span");
+      text.className = "clue-text";
+      // Highlight cell references like "cella A1" in clue text
+      text.innerHTML = clue.text.replace(/([A-Z]\d+)/gi, "<strong>$1</strong>");
+      item.appendChild(text);
+
+      cluesListEl.appendChild(item);
+    });
+  }
+
+  function updateCounts() {
+    clueCountEl.textContent = `${clues.length} indizi`;
+    poolCountEl.textContent = `${poolItems.length} disponibili`;
+
+    // Calculate correctly placed count
+    let correctCount = 0;
+    for (let i = 0; i < TOTAL_CELLS; i++) {
+      if (gridState[i] && solution[i] && gridState[i].name === solution[i]) {
+        correctCount++;
+      }
+    }
+
+    if (correctCountTextEl) {
+      correctCountTextEl.textContent = `${correctCount} / ${TOTAL_CELLS}`;
+    }
+  }
+
+  // ---- Victory Check ----
+  function checkVictoryCondition() {
+    if (!solution || solution.length === 0) return;
+
+    // Must have all cells filled
+    const allFilled = gridState.every((item) => item !== null);
+    if (!allFilled) return;
+
+    // Check if each Pokémon is in its exact solution cell
+    const allCorrect = gridState.every(
+      (item, idx) => item && item.name === solution[idx],
+    );
+
+    if (allCorrect && !isGameWon) {
+      isGameWon = true;
+      stopTimer();
+      triggerVictory();
+    }
+  }
+
+  function triggerVictory() {
+    if (victoryTimeEl) victoryTimeEl.textContent = formatTime(timerSeconds);
+    if (victoryMovesEl) victoryMovesEl.textContent = movesCount;
+    if (victoryAccuracyEl)
+      victoryAccuracyEl.textContent = `${TOTAL_CELLS} / ${TOTAL_CELLS}`;
+
+    if (victoryModalEl) {
+      victoryModalEl.classList.remove("hidden");
+      victoryModalEl.setAttribute("aria-hidden", "false");
+    }
+
+    if (btnShowVictory) {
+      btnShowVictory.classList.add("hidden");
+    }
+
+    startConfetti();
+    playVictoryFanfare();
+  }
+
+  // ---- Formatting ----
+  function formatName(name) {
+    return name.replace(/-/g, " ");
+  }
+
+  // ---- Drag & Drop Handlers ----
+  let draggedData = null; // { source: 'pool'|'grid', index: number, item: {...} }
+
+  function handlePoolDragStart(e) {
+    const poolIndex = parseInt(e.currentTarget.dataset.poolIndex);
+    draggedData = {
+      source: "pool",
+      index: poolIndex,
+      item: poolItems[poolIndex],
+    };
+    e.currentTarget.classList.add("dragging");
+    e.dataTransfer.effectAllowed = "move";
+
+    const ghost = e.currentTarget.cloneNode(true);
+    ghost.style.position = "absolute";
+    ghost.style.top = "-1000px";
+    document.body.appendChild(ghost);
+    e.dataTransfer.setDragImage(ghost, 45, 45);
+    setTimeout(() => {
+      if (ghost.parentNode) ghost.parentNode.removeChild(ghost);
+    }, 0);
+  }
+
+  function handleCellDragStart(e) {
+    const cellIndex = parseInt(e.currentTarget.dataset.index);
+    if (!gridState[cellIndex]) return;
+
+    draggedData = {
+      source: "grid",
+      index: cellIndex,
+      item: gridState[cellIndex],
+    };
+    e.currentTarget.classList.add("dragging");
+    e.dataTransfer.effectAllowed = "move";
+
+    const ghost = e.currentTarget.cloneNode(true);
+    ghost.style.position = "absolute";
+    ghost.style.top = "-1000px";
+    document.body.appendChild(ghost);
+    e.dataTransfer.setDragImage(ghost, 45, 45);
+    setTimeout(() => {
+      if (ghost.parentNode) ghost.parentNode.removeChild(ghost);
+    }, 0);
+  }
+
+  function handleDragEnd(e) {
+    e.currentTarget.classList.remove("dragging");
+    draggedData = null;
+    document
+      .querySelectorAll(".grid-cell.drag-over")
+      .forEach((c) => c.classList.remove("drag-over"));
+  }
+
+  function handleDragOver(e) {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "move";
+  }
+
+  function handleDragEnter(e) {
+    e.preventDefault();
+    e.currentTarget.classList.add("drag-over");
+  }
+
+  function handleDragLeave(e) {
+    e.currentTarget.classList.remove("drag-over");
+  }
+
+  function handleDrop(e) {
+    e.preventDefault();
+    e.currentTarget.classList.remove("drag-over");
+
+    if (!draggedData) return;
+
+    startTimer();
+    movesCount++;
+
+    const targetCellIndex = parseInt(e.currentTarget.dataset.index);
+    const placedItem = draggedData.item;
+
+    // Check if placement in this cell matches the JSON solution
+    const isCorrect =
+      solution.length > targetCellIndex &&
+      placedItem.name === solution[targetCellIndex];
+    if (isCorrect) {
+      playCorrectSound();
+    } else {
+      playIncorrectSound();
+    }
+
+    if (draggedData.source === "pool") {
+      const prevInTarget = gridState[targetCellIndex];
+      gridState[targetCellIndex] = placedItem;
+      poolItems.splice(draggedData.index, 1);
+      if (prevInTarget) {
+        poolItems.push(prevInTarget);
+      }
+    } else if (draggedData.source === "grid") {
+      const sourceIndex = draggedData.index;
+      if (sourceIndex !== targetCellIndex) {
+        const temp = gridState[targetCellIndex];
+        gridState[targetCellIndex] = gridState[sourceIndex];
+        gridState[sourceIndex] = temp;
+      }
+    }
+
+    draggedData = null;
+    renderAll();
+    checkVictoryCondition();
+  }
+
+  // Drop back to pool from grid
+  poolEl.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "move";
+  });
+
+  poolEl.addEventListener("drop", (e) => {
+    e.preventDefault();
+    if (!draggedData) return;
+
+    if (draggedData.source === "grid") {
+      const cellIndex = draggedData.index;
+      if (gridState[cellIndex]) {
+        poolItems.push(gridState[cellIndex]);
+        gridState[cellIndex] = null;
+        renderAll();
+        checkVictoryCondition();
+      }
+    }
+    draggedData = null;
+  });
+
+  // ---- Cell Click: Remove Pokémon ----
+  function handleCellClick(cellIndex) {
+    if (gridState[cellIndex]) {
+      poolItems.push(gridState[cellIndex]);
+      gridState[cellIndex] = null;
+      renderAll();
+      checkVictoryCondition();
+    }
+  }
+
+  // ---- Control Buttons ----
+  btnClear.addEventListener("click", () => {
+    resetTimer();
+    movesCount = 0;
+    isGameWon = false;
+    if (btnShowVictory) btnShowVictory.classList.add("hidden");
+    if (victoryModalEl) victoryModalEl.classList.add("hidden");
+
+    for (let i = 0; i < TOTAL_CELLS; i++) {
+      if (gridState[i]) {
+        poolItems.push(gridState[i]);
+        gridState[i] = null;
+      }
+    }
+    renderAll();
+  });
+
+  btnShuffle.addEventListener("click", () => {
+    for (let i = poolItems.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [poolItems[i], poolItems[j]] = [poolItems[j], poolItems[i]];
+    }
+    renderPool();
+  });
+
+  if (btnSound) {
+    btnSound.addEventListener("click", () => {
+      soundEnabled = !soundEnabled;
+      if (soundIcon) {
+        soundIcon.textContent = soundEnabled ? "🔊" : "🔇";
+      }
+      btnSound.title = soundEnabled ? "Disattiva audio" : "Attiva audio";
+    });
+  }
+
+  // ---- Victory Modal Buttons ----
+  if (btnPlayAgain) {
+    btnPlayAgain.addEventListener("click", () => {
+      if (victoryModalEl) {
+        victoryModalEl.classList.add("hidden");
+        victoryModalEl.setAttribute("aria-hidden", "true");
+      }
+      if (btnShowVictory) {
+        btnShowVictory.classList.add("hidden");
+      }
+      isGameWon = false;
+      movesCount = 0;
+      resetTimer();
+
+      // Return all Pokémon to pool
+      for (let i = 0; i < TOTAL_CELLS; i++) {
+        if (gridState[i]) {
+          poolItems.push(gridState[i]);
+          gridState[i] = null;
+        }
+      }
+      // Shuffle pool
+      for (let i = poolItems.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [poolItems[i], poolItems[j]] = [poolItems[j], poolItems[i]];
+      }
+      renderAll();
+    });
+  }
+
+  if (btnCloseVictory) {
+    btnCloseVictory.addEventListener("click", () => {
+      if (victoryModalEl) {
+        victoryModalEl.classList.add("hidden");
+        victoryModalEl.setAttribute("aria-hidden", "true");
+      }
+      if (isGameWon && btnShowVictory) {
+        btnShowVictory.classList.remove("hidden");
+      }
+    });
+  }
+
+  if (btnShowVictory) {
+    btnShowVictory.addEventListener("click", () => {
+      if (victoryModalEl) {
+        victoryModalEl.classList.remove("hidden");
+        victoryModalEl.setAttribute("aria-hidden", "false");
+      }
+      btnShowVictory.classList.add("hidden");
+    });
+  }
+
+  // ---- Initialize ----
+  loadPuzzle();
+})();

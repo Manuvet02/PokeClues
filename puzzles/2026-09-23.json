@@ -1,0 +1,247 @@
+{
+  "date": "2026-09-23",
+  "grid_size": [
+    5,
+    4
+  ],
+  "candidates": [
+    {
+      "name": "whirlipede",
+      "id": 544
+    },
+    {
+      "name": "beedrill",
+      "id": 15
+    },
+    {
+      "name": "blissey",
+      "id": 242
+    },
+    {
+      "name": "oshawott",
+      "id": 501
+    },
+    {
+      "name": "maushold-family-of-four",
+      "id": 925
+    },
+    {
+      "name": "walrein",
+      "id": 365
+    },
+    {
+      "name": "wimpod",
+      "id": 767
+    },
+    {
+      "name": "nosepass",
+      "id": 299
+    },
+    {
+      "name": "jolteon",
+      "id": 135
+    },
+    {
+      "name": "abra",
+      "id": 63
+    },
+    {
+      "name": "nuzleaf",
+      "id": 274
+    },
+    {
+      "name": "jynx",
+      "id": 124
+    },
+    {
+      "name": "aromatisse",
+      "id": 683
+    },
+    {
+      "name": "electabuzz",
+      "id": 125
+    },
+    {
+      "name": "linoone",
+      "id": 264
+    },
+    {
+      "name": "dratini",
+      "id": 147
+    },
+    {
+      "name": "mr-mime",
+      "id": 122
+    },
+    {
+      "name": "thwackey",
+      "id": 811
+    },
+    {
+      "name": "florges",
+      "id": 671
+    },
+    {
+      "name": "victini",
+      "id": 494
+    }
+  ],
+  "clues": [
+    {
+      "id": 0,
+      "text": "Il Pokémon nella cella 18 è di tipo dark.",
+      "reveals_cells": [
+        18
+      ]
+    },
+    {
+      "id": 1,
+      "text": "Il Pokémon nella cella 17 è di tipo grass.",
+      "reveals_cells": [
+        17
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Il Pokémon nella cella 10 appartiene alla generation-ii.",
+      "reveals_cells": [
+        10
+      ]
+    },
+    {
+      "id": 3,
+      "text": "Il Pokémon nella cella 15 è di tipo dragon.",
+      "reveals_cells": [
+        15
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Il Pokémon nella cella 2 è di colore brown.",
+      "reveals_cells": [
+        2
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Il Pokémon nella cella 19 appartiene alla generation-vii.",
+      "reveals_cells": [
+        19
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Il Pokémon nella cella 8 appartiene alla generation-ix.",
+      "reveals_cells": [
+        8
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Il Pokémon nella cella 12 è di tipo normal.",
+      "reveals_cells": [
+        12
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Il Pokémon nella cella 14 è di colore white.",
+      "reveals_cells": [
+        14
+      ]
+    },
+    {
+      "id": 9,
+      "text": "Il Pokémon nella cella 9 è di tipo rock.",
+      "reveals_cells": [
+        9
+      ]
+    },
+    {
+      "id": 10,
+      "text": "Il Pokémon nella cella 6 appartiene alla generation-iii.",
+      "reveals_cells": [
+        6
+      ]
+    },
+    {
+      "id": 11,
+      "text": "Il Pokémon nella cella 7 è di tipo ice.",
+      "reveals_cells": [
+        7
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Il Pokémon nella cella 3 è di tipo water.",
+      "reveals_cells": [
+        3
+      ]
+    },
+    {
+      "id": 13,
+      "text": "La statistica 'defense' del Pokémon in cella 3 è maggiore di quella del Pokémon in cella 4.",
+      "reveals_cells": [
+        4
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Il Pokémon nella cella 13 è allo stadio evolutivo 1.",
+      "reveals_cells": [
+        13
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Il Pokémon nella cella 1 è di tipo psychic.",
+      "reveals_cells": [
+        1
+      ]
+    },
+    {
+      "id": 16,
+      "text": "Il Pokémon nella cella 5 appartiene alla generation-v.",
+      "reveals_cells": [
+        5
+      ]
+    },
+    {
+      "id": 17,
+      "text": "La statistica 'hp' del Pokémon in cella 16 è minore di quella del Pokémon in cella 20.",
+      "reveals_cells": [
+        20
+      ]
+    },
+    {
+      "id": 18,
+      "text": "La statistica 'attack' del Pokémon in cella 11 è maggiore di quella del Pokémon in cella 12.",
+      "reveals_cells": [
+        11,
+        16
+      ]
+    }
+  ],
+  "solution": [
+    "mr-mime",
+    "abra",
+    "oshawott",
+    "beedrill",
+    "whirlipede",
+    "walrein",
+    "jynx",
+    "maushold-family-of-four",
+    "nosepass",
+    "blissey",
+    "electabuzz",
+    "linoone",
+    "victini",
+    "florges",
+    "dratini",
+    "jolteon",
+    "thwackey",
+    "nuzleaf",
+    "wimpod",
+    "aromatisse"
+  ]
+}
