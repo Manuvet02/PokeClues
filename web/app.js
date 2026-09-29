@@ -22,6 +22,8 @@
   let allCandidates = []; // full list of candidates
   let clues = [];
   let solution = []; // Pokémon names in correct cell order from JSON
+  let shinyPuzzleCells = null;
+  let revealedCells = new Set();
   let isGameWon = false;
   let movesCount = 0;
   let timerSeconds = 0;
@@ -229,7 +231,7 @@
       const today = new Date().toISOString().slice(0, 10);
       let data = null;
 
-      const paths = [`../puzzles/${today}.json`];
+      const paths = [`../puzzles/shiny-${today}.json`];
 
       for (const path of paths) {
         try {
@@ -251,14 +253,27 @@
           gridState = new Array(TOTAL_CELLS).fill(null);
         }
 
-        solution = data.solution || [];
+        shinyPuzzleCells = Array.isArray(data.cells) ? data.cells : null;
+        revealedCells = new Set();
+        if (shinyPuzzleCells) {
+          solution = data.solution || [];
+          shinyPuzzleCells.forEach((pokemon, index) => {
+            pokemon.spriteUrl = getSpriteUrl(pokemon.id);
+            if (pokemon.label === data.start_cell && solution[index] === data.start_status) {
+              revealedCells.add(index);
+            }
+          });
+          clues = shinyPuzzleCells.map((cell) => ({ text: cell.clue }));
+        } else {
+          solution = data.solution || [];
 
-        allCandidates = data.candidates.map((c) => ({
-          name: c.name,
-          id: c.id,
-          spriteUrl: getSpriteUrl(c.id),
-        }));
-        clues = data.clues || [];
+          allCandidates = (data.candidates || []).map((c) => ({
+            name: c.name,
+            id: c.id,
+            spriteUrl: getSpriteUrl(c.id),
+          }));
+          clues = data.clues || [];
+        }
       } else {
         loadPlaceholders();
       }
@@ -268,6 +283,13 @@
     }
 
     poolItems = [...allCandidates];
+    if (shinyPuzzleCells) {
+      document.getElementById("site-header").classList.add("shiny-game-header");
+      document.querySelector("#site-header .subtitle").textContent =
+        "Leggi gli indizi e scopri quali Pokémon sono shiny";
+      document.querySelector("#grid-section h2").textContent = "Indovina lo stato shiny";
+      document.querySelector(".grid-controls").classList.add("legacy-controls");
+    }
     renderAll();
   }
 
@@ -311,10 +333,158 @@
 
   // ---- Render Functions ----
   function renderAll() {
+    if (shinyPuzzleCells) {
+      renderShinyGrid();
+      renderClues();
+      updateCounts();
+      return;
+    }
     renderGrid();
     renderPool();
     renderClues();
     updateCounts();
+  }
+
+  function renderShinyGrid() {
+    gridEl.innerHTML = "";
+    const deducedStatuses = getDeducedStatuses();
+    shinyPuzzleCells.forEach((pokemon, index) => {
+      const cell = document.createElement("article");
+      const solved = revealedCells.has(index);
+      cell.className = `grid-cell shiny-cell${solved ? " is-correct" : ""}`;
+      cell.dataset.index = index;
+
+      const label = document.createElement("span");
+      label.className = "cell-label";
+      label.textContent = pokemon.label;
+      cell.appendChild(label);
+
+      const cardName = document.createElement("div");
+      cardName.className = "shiny-card-name";
+      cardName.textContent = formatName(pokemon.pokemon);
+      cell.appendChild(cardName);
+
+      const cardMain = document.createElement("div");
+      cardMain.className = "shiny-card-main";
+      const pokemonVisual = document.createElement("div");
+      pokemonVisual.className = "shiny-pokemon-visual";
+
+      if (solved) {
+        const img = document.createElement("img");
+        img.className = "cell-sprite";
+        img.src = solution[index] === "shiny"
+          ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id}.png`
+          : pokemon.spriteUrl;
+        img.alt = formatName(pokemon.pokemon);
+        img.loading = "lazy";
+        pokemonVisual.appendChild(img);
+
+      } else {
+        const silhouette = document.createElement("span");
+        silhouette.className = "shiny-silhouette";
+        silhouette.setAttribute("aria-hidden", "true");
+        silhouette.textContent = "?";
+        pokemonVisual.appendChild(silhouette);
+      }
+      cardMain.appendChild(pokemonVisual);
+
+      const clueVisible = solved;
+      if (!solved) cell.classList.add("clue-locked-cell");
+      const clue = document.createElement("p");
+      clue.className = `cell-clue${clueVisible ? "" : " clue-locked"}`;
+      clue.textContent = clueVisible ? pokemon.clue : "Risolvi la cella per rivelare l'indizio";
+      cardMain.appendChild(clue);
+      cell.appendChild(cardMain);
+
+      const choices = document.createElement("div");
+      choices.className = "shiny-choices";
+      ["regular", "shiny"].forEach((status) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `shiny-choice${solved && solution[index] === status ? " selected" : ""}`;
+        button.textContent = status === "shiny" ? "✦ Shiny" : "Regular";
+        button.disabled = solved;
+        button.setAttribute("aria-pressed", String(solved && solution[index] === status));
+        button.addEventListener("click", () => guessShinyStatus(index, status, cell));
+        choices.appendChild(button);
+      });
+      cell.appendChild(choices);
+      gridEl.appendChild(cell);
+    });
+  }
+
+  function getDeducedStatuses() {
+    const state = new Array(shinyPuzzleCells.length).fill(null);
+    revealedCells.forEach((index) => {
+      state[index] = solution[index] === "shiny" ? 1 : 0;
+    });
+
+    const constraints = [];
+    shinyPuzzleCells.forEach((cell, index) => {
+      if (!revealedCells.has(index)) return;
+      (cell.logic || []).forEach((constraint) => constraints.push(constraint));
+    });
+
+    let changed = true;
+    while (changed) {
+      changed = false;
+      for (const constraint of constraints) {
+        const weights = Object.entries(constraint.weights || {}).map(([cell, weight]) => [
+          Number(cell), Number(weight),
+        ]);
+        let maxSum = 0;
+        for (const [cell, weight] of weights) {
+          if (weight > 0 && state[cell] !== 0) maxSum += weight;
+          else if (weight < 0 && state[cell] === 1) maxSum += weight;
+        }
+        const slack = maxSum - constraint.bound;
+        if (slack < 0) return state;
+
+        for (const [cell, weight] of weights) {
+          if (state[cell] !== null) continue;
+          if (weight > 0 && weight > slack) {
+            state[cell] = 1;
+            changed = true;
+          } else if (weight < 0 && -weight > slack) {
+            state[cell] = 0;
+            changed = true;
+          }
+        }
+      }
+    }
+    return state;
+  }
+
+  function guessShinyStatus(index, status, cell) {
+    const forcedStatus = getDeducedStatuses()[index];
+    const selectedStatus = status === "shiny" ? 1 : 0;
+    if (revealedCells.has(index)) return;
+    if (forcedStatus == null) {
+      cell.classList.remove("deduction-pending");
+      void cell.offsetWidth;
+      cell.classList.add("deduction-pending");
+      return;
+    }
+    if (forcedStatus !== selectedStatus) {
+      playIncorrectSound();
+      cell.classList.remove("guess-wrong");
+      void cell.offsetWidth;
+      cell.classList.add("guess-wrong");
+      return;
+    }
+    startTimer();
+    movesCount++;
+    if (status === solution[index]) {
+      revealedCells.add(index);
+      playCorrectSound();
+      renderAll();
+      checkVictoryCondition();
+    } else {
+      playIncorrectSound();
+      cell.classList.remove("guess-wrong");
+      void cell.offsetWidth;
+      cell.classList.add("guess-wrong");
+    }
   }
 
   function renderGrid() {
@@ -452,6 +622,13 @@
     poolCountEl.textContent = `${poolItems.length} disponibili`;
 
     // Calculate correctly placed count
+    if (shinyPuzzleCells) {
+      const correctCount = revealedCells.size;
+      if (correctCountTextEl) correctCountTextEl.textContent = `${correctCount} / ${TOTAL_CELLS}`;
+      clueCountEl.textContent = `${TOTAL_CELLS} indizi`;
+      poolCountEl.textContent = `${TOTAL_CELLS - correctCount} da scoprire`;
+      return;
+    }
     let correctCount = 0;
     for (let i = 0; i < TOTAL_CELLS; i++) {
       if (gridState[i] && solution[i] && gridState[i].name === solution[i]) {
@@ -467,6 +644,15 @@
   // ---- Victory Check ----
   function checkVictoryCondition() {
     if (!solution || solution.length === 0) return;
+
+    if (shinyPuzzleCells) {
+      if (revealedCells.size === shinyPuzzleCells.length && !isGameWon) {
+        isGameWon = true;
+        stopTimer();
+        triggerVictory();
+      }
+      return;
+    }
 
     // Must have all cells filled
     const allFilled = gridState.every((item) => item !== null);

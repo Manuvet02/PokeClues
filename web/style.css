@@ -524,6 +524,171 @@ body {
   pointer-events: none;
 }
 
+/* Shiny deduction board */
+#main-content:has(.shiny-cell) {
+  display: block;
+  max-width: 1440px;
+}
+
+#main-content:has(.shiny-cell) #grid-section {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 8px 0;
+}
+
+#main-content:has(.shiny-cell) #clues-section,
+#main-content:has(.shiny-cell) ~ #pool-section,
+.legacy-controls {
+  display: none;
+}
+
+#main-content:has(.shiny-cell) .puzzle-grid {
+  grid-template-rows: none;
+  grid-auto-rows: minmax(215px, auto);
+  gap: 12px;
+}
+
+.shiny-cell {
+  aspect-ratio: auto;
+  min-height: 205px;
+  padding: 30px 12px 12px;
+  display: grid;
+  grid-template-rows: 20px minmax(0, 1fr) auto;
+  justify-content: stretch;
+  gap: 10px;
+  cursor: default;
+}
+
+.shiny-cell:hover {
+  transform: none;
+}
+
+.shiny-card-main {
+  display: grid;
+  grid-template-columns: clamp(72px, 34%, 112px) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 10px;
+  min-height: 0;
+}
+
+.shiny-pokemon-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  gap: 4px;
+}
+
+.shiny-cell .cell-sprite {
+  width: min(100%, 104px);
+  height: auto;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+}
+
+.shiny-silhouette {
+  width: min(100%, 104px);
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  font-size: 2rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.shiny-card-name {
+  min-width: 0;
+  padding-left: 30px;
+  color: var(--text-primary);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cell-clue {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 92px;
+  margin: 0;
+  padding: 8px 2px 8px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.cell-clue.clue-locked {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.shiny-cell.clue-locked-cell {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.shiny-choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  width: 100%;
+  margin-top: 0;
+}
+
+.shiny-choice {
+  min-width: 0;
+  min-height: 34px;
+  padding: 5px 4px;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.shiny-choice:hover:not(:disabled) {
+  border-color: var(--accent-gold);
+  color: var(--text-primary);
+}
+
+.shiny-choice:disabled {
+  cursor: default;
+  opacity: 0.42;
+}
+
+.shiny-choice.selected {
+  background: rgba(63, 185, 80, 0.16);
+  border-color: #3fb950;
+  color: #56d364;
+}
+
+.shiny-cell.guess-wrong {
+  animation: cellShake 0.4s ease-in-out;
+  border-color: #f85149;
+}
+
+.shiny-cell.deduction-pending {
+  animation: cellShake 0.4s ease-in-out;
+  border-color: var(--border-glow);
+}
+
 /* Empty cell placeholder */
 .cell-placeholder {
   color: var(--text-muted);
@@ -964,6 +1129,12 @@ body {
     gap: 4px;
   }
 
+  #main-content:has(.shiny-cell) .puzzle-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 10px;
+  }
+
   .grid-cell {
     min-height: 80px;
   }
@@ -1001,6 +1172,57 @@ body {
 
   .grid-cell {
     min-height: 70px;
+  }
+
+  #main-content:has(.shiny-cell) {
+    padding: 12px;
+  }
+
+  #main-content:has(.shiny-cell) #grid-section {
+    padding: 4px 0;
+  }
+
+  #main-content:has(.shiny-cell) .puzzle-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(195px, auto);
+  }
+
+  .shiny-cell {
+    min-height: 195px;
+    padding: 28px 8px 8px;
+    gap: 8px;
+  }
+
+  .shiny-card-main {
+    grid-template-columns: clamp(60px, 34%, 88px) minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .cell-clue {
+    min-height: 88px;
+    padding: 8px;
+    font-size: 0.7rem;
+  }
+
+  .shiny-choice {
+    min-height: 32px;
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 380px) {
+  #main-content:has(.shiny-cell) .puzzle-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: minmax(170px, auto);
+  }
+
+  .shiny-card-main {
+    grid-template-columns: 100px minmax(0, 1fr);
+  }
+
+  .cell-clue {
+    min-height: 72px;
+    font-size: 0.78rem;
   }
 
   .cell-sprite {
