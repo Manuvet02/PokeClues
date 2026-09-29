@@ -228,7 +228,14 @@
   // ---- Load Puzzle Data ----
   async function loadPuzzle() {
     try {
-      const today = new Date().toISOString().slice(0, 10);
+      const dateParts = new Intl.DateTimeFormat("en", {
+        timeZone: "Europe/Rome",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }).formatToParts(new Date());
+      const dateValues = Object.fromEntries(dateParts.map(({ type, value }) => [type, value]));
+      const today = `${dateValues.year}-${dateValues.month}-${dateValues.day}`;
       let data = null;
 
       const paths = [`../puzzles/shiny-${today}.json`];
