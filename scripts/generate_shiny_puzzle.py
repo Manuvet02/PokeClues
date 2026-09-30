@@ -30,6 +30,7 @@ PUZZLES_DIR = Path(__file__).resolve().parent.parent / "puzzles"
 
 SHINY_RATIO = 0.35
 MAX_GAIN = 3  # una clue può sbloccare da 1 a MAX_GAIN celle nuove: più alto = più rami
+MAX_COMPARE_SHARE = 0.75
 REQUIRED_FIELDS = ["id", "name"]
 
 
@@ -169,14 +170,14 @@ def build_groups(entries: list[dict], rows: int, cols: int) -> list[dict]:
     ]:
         members = [i for i, entry in enumerate(entries)
                    if entry.get("base_stats", {}).get(stat, 0) >= threshold]
-        add(members, f"i Pokemon con {label} base almeno {threshold}",
-            f"con {label} base almeno {threshold}")
+        add(members, f"i Pokemon con {label} almeno {threshold}",
+            f"con {label} almeno {threshold}")
 
     total_stats = [sum(entry.get("base_stats", {}).values()) for entry in entries]
     for threshold in (400, 500):
         members = [i for i, total in enumerate(total_stats) if total >= threshold]
-        add(members, f"i Pokemon con almeno {threshold} punti statistica base",
-            f"con almeno {threshold} punti statistica base")
+        add(members, f"i Pokemon con almeno {threshold} punti totali nelle statistiche",
+            f"con almeno {threshold} punti totali nelle statistiche")
 
     for threshold_dm in (10, 20):
         members = [i for i, entry in enumerate(entries) if entry.get("height_dm", 0) >= threshold_dm]
@@ -357,6 +358,8 @@ def refresh_existing_puzzle(puzzle: dict, rng: random.Random) -> dict:
     ) != 1:
         raise PuzzleGenerationError("le nuove clues non producono una soluzione unica e deducibile")
 
+    validate_clue_quality(all_clues, start_cell, unlocked_by)
+
     for i, cell in enumerate(cells):
         cell["clue"] = clue_of_cell[i].text
         cell["unlocked_by"] = None if unlocked_by[i] is None else cell_label(unlocked_by[i], cols)
@@ -382,6 +385,29 @@ def fill_remaining_clues(n: int, clue_of_cell: dict[int, Clue], pool: list[Clue]
     for cell in range(n):
         if cell not in clue_of_cell:
             clue_of_cell[cell] = spare.pop()
+
+
+def validate_clue_quality(clues: list[Clue], start_cell: int,
+                           unlocked_by: dict[int, int | None]) -> None:
+    """Reject repetitive, overly revealing, or jargon-heavy clue sets."""
+    texts = [" ".join(clue.text.casefold().split()) for clue in clues]
+    if len(set(texts)) != len(texts):
+        raise PuzzleGenerationError("clue ripetute")
+
+    compare_share = sum(clue.kind == "compare" for clue in clues) / len(clues)
+    if compare_share > MAX_COMPARE_SHARE:
+        raise PuzzleGenerationError("troppi confronti tra gruppi; manca varietà di clue")
+
+    unlock_counts: dict[int, int] = {}
+    for cell, owner in unlocked_by.items():
+        if cell != start_cell and owner is not None:
+            unlock_counts[owner] = unlock_counts.get(owner, 0) + 1
+    if max(unlock_counts.values(), default=0) > MAX_GAIN:
+        raise PuzzleGenerationError(f"una clue sblocca più di {MAX_GAIN} celle")
+
+    technical_terms = ("gruppo uova", "punti statistica base", "ps base", "abilità")
+    if any(term in text for text in texts for term in technical_terms):
+        raise PuzzleGenerationError("clue con terminologia troppo tecnica")
 
 
 def generate_puzzle(target_date: date, rows: int, cols: int, rng: random.Random) -> dict:
@@ -411,6 +437,8 @@ def generate_puzzle(target_date: date, rows: int, cols: int, rng: random.Random)
     start_state[start_cell] = truth[start_cell]
     if count_solutions(start_state, all_clues, limit=2) != 1:
         raise PuzzleGenerationError("soluzione non unica")
+
+    validate_clue_quality(all_clues, start_cell, unlocked_by)
 
     return {
         "date": target_date.isoformat(),
