@@ -1,0 +1,483 @@
+{
+  "date": "2026-09-30",
+  "grid_size": [
+    5,
+    4
+  ],
+  "start_cell": "E2",
+  "start_status": "regular",
+  "cells": [
+    {
+      "label": "A1",
+      "pokemon": "duosion",
+      "id": 578,
+      "clue": "Ci sono più shiny tra i Pokemon con Attacco base almeno 80 che tra i Pokemon allo stadio intermedio.",
+      "unlocked_by": "B4",
+      "logic": [
+        {
+          "weights": {
+            "5": 1,
+            "7": 1,
+            "8": 1,
+            "11": 1,
+            "15": 1,
+            "0": -1,
+            "12": -1,
+            "13": -1,
+            "16": -1,
+            "19": -1
+          },
+          "bound": 1
+        }
+      ]
+    },
+    {
+      "label": "A2",
+      "pokemon": "brambleghast",
+      "id": 947,
+      "clue": "Ci sono più shiny tra i Pokemon di tipo normale che tra i Pokemon nella riga E.",
+      "unlocked_by": "D2",
+      "logic": [
+        {
+          "weights": {
+            "11": 1,
+            "16": -1,
+            "17": -1,
+            "18": -1
+          },
+          "bound": 1
+        }
+      ]
+    },
+    {
+      "label": "A3",
+      "pokemon": "rookidee",
+      "id": 821,
+      "clue": "I Pokémon in B1 e C2 hanno stato diverso.",
+      "unlocked_by": "C2",
+      "logic": [
+        {
+          "weights": {
+            "4": 1,
+            "9": 1
+          },
+          "bound": 1
+        },
+        {
+          "weights": {
+            "4": -1,
+            "9": -1
+          },
+          "bound": -1
+        }
+      ]
+    },
+    {
+      "label": "A4",
+      "pokemon": "goomy",
+      "id": 704,
+      "clue": "Ci sono più shiny tra i Pokemon sul bordo che tra i Pokemon di tipo acqua.",
+      "unlocked_by": "C2",
+      "logic": [
+        {
+          "weights": {
+            "0": 1,
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "7": 1,
+            "11": 1,
+            "16": 1,
+            "18": 1,
+            "19": 1,
+            "6": -1,
+            "10": -1
+          },
+          "bound": 1
+        }
+      ]
+    },
+    {
+      "label": "B1",
+      "pokemon": "oricorio-baile",
+      "id": 741,
+      "clue": "Ci sono più shiny tra i Pokemon alti almeno 2 m che tra i Pokemon di colore marrone.",
+      "unlocked_by": "D2",
+      "logic": [
+        {
+          "weights": {
+            "7": 1,
+            "9": 1,
+            "1": -1,
+            "11": -1
+          },
+          "bound": 1
+        }
+      ]
+    },
+    {
+      "label": "B2",
+      "pokemon": "enamorus-incarnate",
+      "id": 905,
+      "clue": "Ci sono più shiny tra i Pokemon con PS base almeno 80 che tra i Pokemon di colore grigio.",
+      "unlocked_by": "E2",
+      "logic": [
+        {
+          "weights": {
+            "12": 1
+          },
+          "bound": 1
+        }
+      ]
+    },
+    {
+      "label": "B3",
+      "pokemon": "clamperl",
+      "id": 366,
+      "clue": "Ci sono più shiny tra i Pokemon alti almeno 1 m che tra i Pokemon di tipo coleottero.",
+      "unlocked_by": "C1",
+      "logic": [
+        {
+          "weights": {
+            "1": 1,
+            "5": 1,
+            "8": 1,
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1,
+            "14": 1,
+            "16": 1,
+            "18": 1,
+            "19": 1,
+            "17": -1
+          },
+          "bound": 1
+        }
+      ]
+    },
+    {
+      "label": "B4",
+      "pokemon": "scolipede",
+      "id": 545,
+      "clue": "Ci sono più shiny tra i Pokemon con Attacco Speciale base almeno 80 che tra i Pokemon di tipo buio.",
+      "unlocked_by": "D1",
+      "logic": [
+        {
+          "weights": {
+            "0": 1,
+            "1": 1,
+            "4": 1,
+            "5": 1,
+            "13": 1,
+            "16": 1,
+            "18": -1
+          },
+          "bound": 1
+        }
+      ]
+    },
+    {
+      "label": "C1",
+      "pokemon": "relicanth",
+      "id": 369,
+      "clue": "Ci sono più shiny tra i Pokemon della quinta generazione che tra i Pokemon nella colonna 3.",
+      "unlocked_by": "E1",
+      "logic": [
+        {
+          "weights": {
+            "0": 1,
+            "7": 1,
+            "16": 1,
+            "2": -1,
+            "6": -1,
+            "10": -1,
+            "18": -1
+          },
+          "bound": 1
+        }
+      ]
+    },
+    {
+      "label": "C2",
+      "pokemon": "gliscor",
+      "id": 472,
+      "clue": "Ci sono più shiny tra i Pokemon di tipo acqua che tra i Pokemon allo stadio base.",
+      "unlocked_by": "B1",
+      "logic": [
+        {
+          "weights": {
+            "10": 1,
+            "12": 1,
+            "2": -1,
+            "3": -1,
+            "4": -1,
+            "5": -1,
+            "11": -1
+          },
+          "bound": 1
+        }
+      ]
+    },
+    {
+      "label": "C3",
+      "pokemon": "sharpedo",
+      "id": 319,
+      "clue": "Ci sono più shiny tra i Pokemon sul bordo che tra i Pokemon della nona generazione.",
+      "unlocked_by": "E3",
+      "logic": [
+        {
+          "weights": {
+            "0": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1,
+            "7": 1,
+            "8": 1,
+            "11": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1,
+            "19": 1
+          },
+          "bound": 1
+        }
+      ]
+    },
+    {
+      "label": "C4",
+      "pokemon": "doduo",
+      "id": 84,
+      "clue": "I Pokémon in E3 e E4 hanno lo stesso stato.",
+      "unlocked_by": "A2",
+      "logic": [
+        {
+          "weights": {
+            "18": 1,
+            "19": -1
+          },
+          "bound": 0
+        },
+        {
+          "weights": {
+            "18": -1,
+            "19": 1
+          },
+          "bound": 0
+        }
+      ]
+    },
+    {
+      "label": "D1",
+      "pokemon": "palafin-zero",
+      "id": 964,
+      "clue": "I due Pokémon di tipo coleottero hanno stato diverso.",
+      "unlocked_by": "B2",
+      "logic": [
+        {
+          "weights": {
+            "7": 1,
+            "17": 1
+          },
+          "bound": 1
+        },
+        {
+          "weights": {
+            "7": -1,
+            "17": -1
+          },
+          "bound": -1
+        }
+      ]
+    },
+    {
+      "label": "D2",
+      "pokemon": "chimecho",
+      "id": 358,
+      "clue": "Nessuno tra i vicini di A1 e shiny.",
+      "unlocked_by": "E2",
+      "logic": [
+        {
+          "weights": {
+            "1": 1,
+            "4": 1,
+            "5": 1
+          },
+          "bound": 0
+        },
+        {
+          "weights": {
+            "1": -1,
+            "4": -1,
+            "5": -1
+          },
+          "bound": 0
+        }
+      ]
+    },
+    {
+      "label": "D3",
+      "pokemon": "gurdurr",
+      "id": 533,
+      "clue": "Ci sono più shiny tra i Pokemon sulla diagonale principale che tra i Pokemon di colore viola.",
+      "unlocked_by": "E4",
+      "logic": [
+        {
+          "weights": {
+            "0": 1,
+            "5": 1,
+            "10": 1,
+            "15": 1,
+            "3": -1,
+            "9": -1
+          },
+          "bound": 1
+        }
+      ]
+    },
+    {
+      "label": "D4",
+      "pokemon": "corphish",
+      "id": 341,
+      "clue": "Esattamente 1 tra i Pokemon di tipo psico sono shiny.",
+      "unlocked_by": "A1",
+      "logic": [
+        {
+          "weights": {
+            "0": 1,
+            "13": 1
+          },
+          "bound": 1
+        },
+        {
+          "weights": {
+            "0": -1,
+            "13": -1
+          },
+          "bound": -1
+        }
+      ]
+    },
+    {
+      "label": "E1",
+      "pokemon": "vanillish",
+      "id": 583,
+      "clue": "I Pokémon in C1 e D1 hanno stato diverso.",
+      "unlocked_by": "A2",
+      "logic": [
+        {
+          "weights": {
+            "8": 1,
+            "12": 1
+          },
+          "bound": 1
+        },
+        {
+          "weights": {
+            "8": -1,
+            "12": -1
+          },
+          "bound": -1
+        }
+      ]
+    },
+    {
+      "label": "E2",
+      "pokemon": "surskit",
+      "id": 283,
+      "clue": "Nessuno tra i Pokemon con Difesa Speciale base almeno 80 e shiny.",
+      "unlocked_by": null,
+      "logic": [
+        {
+          "weights": {
+            "5": 1,
+            "13": 1
+          },
+          "bound": 0
+        },
+        {
+          "weights": {
+            "5": -1,
+            "13": -1
+          },
+          "bound": 0
+        }
+      ]
+    },
+    {
+      "label": "E3",
+      "pokemon": "mabosstiff",
+      "id": 943,
+      "clue": "Ci sono più shiny tra i Pokemon con Attacco Speciale base almeno 80 che tra i Pokemon della prima generazione.",
+      "unlocked_by": "A2",
+      "logic": [
+        {
+          "weights": {
+            "0": 1,
+            "1": 1,
+            "4": 1,
+            "5": 1,
+            "10": 1,
+            "13": 1,
+            "16": 1,
+            "11": -1,
+            "19": -1
+          },
+          "bound": 1
+        }
+      ]
+    },
+    {
+      "label": "E4",
+      "pokemon": "persian",
+      "id": 53,
+      "clue": "Esattamente 1 tra i vicini di E3 sono shiny.",
+      "unlocked_by": "C4",
+      "logic": [
+        {
+          "weights": {
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "17": 1,
+            "19": 1
+          },
+          "bound": 1
+        },
+        {
+          "weights": {
+            "13": -1,
+            "14": -1,
+            "15": -1,
+            "17": -1,
+            "19": -1
+          },
+          "bound": -1
+        }
+      ]
+    }
+  ],
+  "solution": [
+    "shiny",
+    "regular",
+    "regular",
+    "regular",
+    "regular",
+    "regular",
+    "regular",
+    "shiny",
+    "regular",
+    "shiny",
+    "shiny",
+    "shiny",
+    "shiny",
+    "regular",
+    "regular",
+    "shiny",
+    "regular",
+    "regular",
+    "regular",
+    "regular"
+  ]
+}
