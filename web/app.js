@@ -949,7 +949,7 @@
 
   // ---- Victory Modal Buttons ----
   if (btnPlayAgain) {
-    btnPlayAgain.addEventListener("click", () => {
+    btnPlayAgain.addEventListener("click", async () => {
       if (victoryModalEl) {
         victoryModalEl.classList.add("hidden");
         victoryModalEl.setAttribute("aria-hidden", "true");
@@ -960,6 +960,17 @@
       isGameWon = false;
       movesCount = 0;
       resetTimer();
+
+      if (shinyPuzzleCells) {
+        if (shinyPuzzleDate) {
+          localStorage.removeItem(`pokemon-clues-state-${shinyPuzzleDate}`);
+        }
+        shinyStateToken = null;
+        revealedCells = new Set();
+        shinyStatuses = new Array(shinyPuzzleCells.length).fill(null);
+        await loadPuzzle();
+        return;
+      }
 
       // Return all Pokémon to pool
       for (let i = 0; i < TOTAL_CELLS; i++) {
