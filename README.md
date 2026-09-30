@@ -15,7 +15,17 @@ Gli indizi descrivono conteggi o confronti tra insiemi di celle. Gli insiemi pos
 
 ## Puzzle giornaliero
 
-La GitHub Action in `.github/workflows/daily-shiny-puzzle.yml` genera il puzzle ogni giorno alle 00:17 nel fuso `Europe/Rome`, tenendo conto dell'ora legale. GitHub può ritardare i workflow schedulati; il job calcola quindi la data italiana quando parte e non annulla la generazione se l'avvio slitta oltre mezzanotte. Il nuovo JSON viene committato su `main`, da cui Cloudflare Pages può pubblicarlo. È possibile avviare il workflow anche manualmente dalla scheda **Actions** di GitHub.
+La GitHub Action in `.github/workflows/daily-shiny-puzzle.yml` prova a preparare il puzzle del giorno successivo alle 23:17 e a generare/recuperare quello corrente alle 00:17, nel fuso `Europe/Rome` e tenendo conto dell'ora legale. GitHub può ritardare i workflow schedulati; la data da generare viene quindi scelta quando il job parte. Il puzzle completo viene caricato nella namespace KV privata `POKECLUES_PRIVATE_PUZZLES`, non committato su GitHub. È possibile avviare il workflow anche manualmente dalla scheda **Actions** di GitHub.
+
+La Function `functions/api/puzzle.js` serve al browser soltanto i dati pubblici, verifica le risposte deducibili e restituisce clues e stato delle celle risolte. La Function richiede il binding KV `PUZZLES_PRIVATE` e il secret `GAME_STATE_SECRET` nel progetto Cloudflare Pages. La GitHub Action richiede i repository secrets `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_API_TOKEN` (permesso di scrittura Workers KV) e `CLOUDFLARE_KV_NAMESPACE_ID`.
+
+Per Cloudflare Pages, il build command deve copiare **solo** i file web e non i puzzle privati:
+
+```sh
+rm -rf dist && mkdir -p dist && cp -R web/. dist/
+```
+
+Impostare `dist` come build output directory e lasciare la root del progetto vuota. La cartella `functions/` deve restare nella root del repository affinché Pages registri la route `/api/puzzle`.
 
 Per generare un puzzle manualmente dalla radice del repository:
 

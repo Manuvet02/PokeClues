@@ -24,6 +24,10 @@
   let solution = []; // Pokémon names in correct cell order from JSON
   let shinyPuzzleCells = null;
   let revealedCells = new Set();
+  let shinyStatuses = [];
+  let shinyStateToken = null;
+  let shinyApiEnabled = false;
+  let shinyPuzzleDate = "";
   let isGameWon = false;
   let movesCount = 0;
   let timerSeconds = 0;
@@ -236,21 +240,29 @@
       }).formatToParts(new Date());
       const dateValues = Object.fromEntries(dateParts.map(({ type, value }) => [type, value]));
       const today = `${dateValues.year}-${dateValues.month}-${dateValues.day}`;
+      shinyPuzzleDate = today;
       let data = null;
-
-      const paths = [`../puzzles/shiny-${today}.json`];
-
-      for (const path of paths) {
-        try {
-          const res = await fetch(path);
-          if (res.ok) {
-            data = await res.json();
-            break;
-          }
-        } catch (e) {
-          continue;
+      const savedToken = localStorage.getItem(`pokemon-clues-state-${today}`);
+      const tokenQuery = savedToken ? `&state=${encodeURIComponent(savedToken)}` : "";
+      let response = await fetch(`/api/puzzle?date=${today}${tokenQuery}`);
+      if (response.ok) {
+        data = await response.json();
+        shinyApiEnabled = true;
+      } else if (savedToken && response.status === 400) {
+        localStorage.removeItem(`pokemon-clues-state-${today}`);
+        response = await fetch(`/api/puzzle?date=${today}`);
+        if (response.ok) {
+          data = await response.json();
+          shinyApiEnabled = true;
         }
       }
+
+      // Local static preview only. Production never falls back to public answer JSON.
+      if (!data && ["localhost", "127.0.0.1"].includes(location.hostname)) {
+        const localResponse = await fetch(`../puzzles/shiny-${today}.json`);
+        if (localResponse.ok) data = await localResponse.json();
+      }
+      if (!data) throw new Error(`Puzzle API returned ${response.status}`);
 
       if (data) {
         if (data.grid_size && data.grid_size.length === 2) {
@@ -263,14 +275,29 @@
         shinyPuzzleCells = Array.isArray(data.cells) ? data.cells : null;
         revealedCells = new Set();
         if (shinyPuzzleCells) {
-          solution = data.solution || [];
+          solution = data.solution || new Array(shinyPuzzleCells.length).fill(null);
+          shinyStatuses = new Array(shinyPuzzleCells.length).fill(null);
+          shinyStateToken = data.stateToken || null;
           shinyPuzzleCells.forEach((pokemon, index) => {
             pokemon.spriteUrl = getSpriteUrl(pokemon.id);
-            if (pokemon.label === data.start_cell && solution[index] === data.start_status) {
-              revealedCells.add(index);
-            }
           });
-          clues = shinyPuzzleCells.map((cell) => ({ text: cell.clue }));
+          if (Array.isArray(data.revealed)) {
+            data.revealed.forEach(({ index, status, clue, logic }) => {
+              revealedCells.add(index);
+              shinyStatuses[index] = status === "shiny" ? 1 : 0;
+              shinyPuzzleCells[index].clue = clue;
+              shinyPuzzleCells[index].logic = logic;
+            });
+          } else {
+            shinyPuzzleCells.forEach((pokemon, index) => {
+              if (pokemon.label === data.start_cell && solution[index] === data.start_status) {
+                revealedCells.add(index);
+                shinyStatuses[index] = solution[index] === "shiny" ? 1 : 0;
+              }
+            });
+          }
+          if (shinyStateToken) localStorage.setItem(`pokemon-clues-state-${today}`, shinyStateToken);
+          clues = [];
         } else {
           solution = data.solution || [];
 
@@ -379,7 +406,7 @@
       if (solved) {
         const img = document.createElement("img");
         img.className = "cell-sprite";
-        img.src = solution[index] === "shiny"
+        img.src = shinyStatuses[index] === 1 || solution[index] === "shiny"
           ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id}.png`
           : pokemon.spriteUrl;
         img.alt = formatName(pokemon.pokemon);
@@ -408,10 +435,11 @@
       ["regular", "shiny"].forEach((status) => {
         const button = document.createElement("button");
         button.type = "button";
-        button.className = `shiny-choice${solved && solution[index] === status ? " selected" : ""}`;
+        const selected = solved && (shinyStatuses[index] === (status === "shiny" ? 1 : 0) || solution[index] === status);
+        button.className = `shiny-choice${selected ? " selected" : ""}`;
         button.textContent = status === "shiny" ? "✦ Shiny" : "Regular";
         button.disabled = solved;
-        button.setAttribute("aria-pressed", String(solved && solution[index] === status));
+        button.setAttribute("aria-pressed", String(selected));
         button.addEventListener("click", () => guessShinyStatus(index, status, cell));
         choices.appendChild(button);
       });
@@ -423,7 +451,7 @@
   function getDeducedStatuses() {
     const state = new Array(shinyPuzzleCells.length).fill(null);
     revealedCells.forEach((index) => {
-      state[index] = solution[index] === "shiny" ? 1 : 0;
+      state[index] = shinyStatuses[index] ?? (solution[index] === "shiny" ? 1 : 0);
     });
 
     const constraints = [];
@@ -462,7 +490,7 @@
     return state;
   }
 
-  function guessShinyStatus(index, status, cell) {
+  async function guessShinyStatus(index, status, cell) {
     const forcedStatus = getDeducedStatuses()[index];
     const selectedStatus = status === "shiny" ? 1 : 0;
     if (revealedCells.has(index)) return;
@@ -481,8 +509,50 @@
     }
     startTimer();
     movesCount++;
+    if (shinyApiEnabled) {
+      const buttons = [...cell.querySelectorAll("button")];
+      buttons.forEach((button) => { button.disabled = true; });
+      try {
+        const response = await fetch("/api/puzzle", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            date: shinyPuzzleDate,
+            index,
+            status,
+            stateToken: shinyStateToken,
+          }),
+        });
+        const result = await response.json();
+        if (!response.ok) {
+          playIncorrectSound();
+          cell.classList.remove("guess-wrong");
+          void cell.offsetWidth;
+          cell.classList.add("guess-wrong");
+          return;
+        }
+        shinyStateToken = result.stateToken;
+        localStorage.setItem(`pokemon-clues-state-${shinyPuzzleDate}`, result.stateToken);
+        shinyStatuses[index] = result.status === "shiny" ? 1 : 0;
+        shinyPuzzleCells[index].clue = result.clue;
+        shinyPuzzleCells[index].logic = result.logic;
+        revealedCells.add(index);
+        playCorrectSound();
+        renderAll();
+        checkVictoryCondition();
+      } catch (error) {
+        console.error("Could not verify answer:", error);
+        cell.classList.remove("guess-wrong");
+        void cell.offsetWidth;
+        cell.classList.add("guess-wrong");
+      } finally {
+        buttons.forEach((button) => { button.disabled = revealedCells.has(index); });
+      }
+      return;
+    }
     if (status === solution[index]) {
       revealedCells.add(index);
+      shinyStatuses[index] = status === "shiny" ? 1 : 0;
       playCorrectSound();
       renderAll();
       checkVictoryCondition();
@@ -650,8 +720,6 @@
 
   // ---- Victory Check ----
   function checkVictoryCondition() {
-    if (!solution || solution.length === 0) return;
-
     if (shinyPuzzleCells) {
       if (revealedCells.size === shinyPuzzleCells.length && !isGameWon) {
         isGameWon = true;
@@ -660,6 +728,7 @@
       }
       return;
     }
+    if (!solution || solution.length === 0) return;
 
     // Must have all cells filled
     const allFilled = gridState.every((item) => item !== null);

@@ -2,12 +2,14 @@ name: Generate daily shiny puzzle
 
 on:
   schedule:
+    - cron: "17 23 * * *"
+      timezone: "Europe/Rome"
     - cron: "17 0 * * *"
       timezone: "Europe/Rome"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: daily-shiny-puzzle
@@ -30,22 +32,35 @@ jobs:
       - name: Set puzzle date in Rome timezone
         id: schedule
         run: |
-          echo "puzzle_date=$(TZ=Europe/Rome date +%F)" >> "$GITHUB_OUTPUT"
+          today="$(TZ=Europe/Rome date +%F)"
+          hour="$(TZ=Europe/Rome date +%H)"
+          if [[ "$GITHUB_EVENT_NAME" == "schedule" && "$hour" == "23" ]]; then
+            puzzle_date="$(TZ=Europe/Rome date -d "$today +1 day" +%F)"
+          else
+            puzzle_date="$today"
+          fi
+          echo "puzzle_date=${puzzle_date}" >> "$GITHUB_OUTPUT"
 
       - name: Generate puzzle
         run: python scripts/generate_shiny_puzzle.py --date "${{ steps.schedule.outputs.puzzle_date }}"
 
-      - name: Commit puzzle
+      - name: Upload private puzzle to Cloudflare KV
         shell: bash
         env:
           PUZZLE_DATE: ${{ steps.schedule.outputs.puzzle_date }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_KV_NAMESPACE_ID: ${{ secrets.CLOUDFLARE_KV_NAMESPACE_ID }}
         run: |
-          git add "puzzles/shiny-${PUZZLE_DATE}.json"
-          if git diff --cached --quiet; then
-            echo "No puzzle changes to commit."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Generate shiny puzzle for ${PUZZLE_DATE}"
-          git push
+          set -euo pipefail
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_KV_NAMESPACE_ID"
+          curl --fail-with-body --silent --show-error \
+            --request PUT \
+            --url "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/storage/kv/namespaces/${CLOUDFLARE_KV_NAMESPACE_ID}/values/shiny%3A${PUZZLE_DATE}" \
+            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            --header "Content-Type: application/json" \
+            --data-binary "@puzzles/shiny-${PUZZLE_DATE}.json" \
+            | jq -e '.success == true' > /dev/null
+          echo "Private puzzle for ${PUZZLE_DATE} uploaded to KV."
