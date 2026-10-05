@@ -20,8 +20,9 @@ from datetime import date
 from pathlib import Path
 
 from shiny_solver import (
-    Clue, ContradictionError, compare_clue, count_clue, count_solutions,
-    different_clue, propagate_all, same_clue, simulate_player,
+    Clue, ContradictionError, at_least_clue, at_most_clue, compare_clue,
+    conditional_clue, count_clue, count_solutions, different_clue,
+    propagate_all, same_clue, simulate_player,
 )
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
@@ -212,10 +213,32 @@ def legacy_count_text(k: int, size: int, subject: str) -> str:
 
 def count_text(k: int, size: int, subject: str) -> str:
     if k == 0:
-        return f"Nessuno tra {subject} e shiny."
+        return f"Tra {subject}, nessuno è shiny."
     if k == size:
-        return f"Tutti {subject} sono shiny."
-    return f"Esattamente {k} tra {subject} sono shiny."
+        return f"Tra {subject}, tutti sono shiny."
+    if k == 1:
+        return f"Tra {subject}, esattamente un Pokémon è shiny."
+    return f"Tra {subject}, esattamente {k} sono shiny."
+
+
+def at_least_text(k: int, subject: str) -> str:
+    if k == 1:
+        return f"Tra {subject}, almeno un Pokémon è shiny."
+    return f"Tra {subject}, almeno {k} sono shiny."
+
+
+def at_most_text(k: int, subject: str) -> str:
+    if k == 1:
+        return f"Tra {subject}, al massimo un Pokémon è shiny."
+    return f"Tra {subject}, al massimo {k} sono shiny."
+
+
+def add_count_clues(pool: list[Clue], cells: list[int], k: int, subject: str) -> None:
+    size = len(cells)
+    pool.append(count_clue(cells, k, count_text(k, size, subject)))
+    if 0 < k < size:
+        pool.append(at_least_clue(cells, k, at_least_text(k, subject)))
+        pool.append(at_most_clue(cells, k, at_most_text(k, subject)))
 
 
 def build_pool(entries: list[dict], truth: list[int], rows: int, cols: int) -> list[Clue]:
@@ -226,14 +249,13 @@ def build_pool(entries: list[dict], truth: list[int], rows: int, cols: int) -> l
     # conteggi su righe, colonne e gruppi da attributo
     for g in groups:
         k = sum(truth[c] for c in g["cells"])
-        pool.append(count_clue(g["cells"], k, count_text(k, len(g["cells"]), g["subject"])))
+        add_count_clues(pool, g["cells"], k, g["subject"])
 
     # conteggi sui vicini di una cella
     for i in range(n):
         cells = neighbors(i, rows, cols)
         k = sum(truth[c] for c in cells)
-        text = count_text(k, len(cells), f"i vicini di {cell_label(i, cols)}")
-        pool.append(count_clue(cells, k, text))
+        add_count_clues(pool, cells, k, f"i vicini di {cell_label(i, cols)}")
 
     # confronti fra gruppi: "più shiny in A che in B"
     for i, ga in enumerate(groups):
@@ -254,6 +276,19 @@ def build_pool(entries: list[dict], truth: list[int], rows: int, cols: int) -> l
                     pool.append(same_clue(i, j, f"I Pokémon in {a} e {b} hanno lo stesso stato."))
                 else:
                     pool.append(different_clue(i, j, f"I Pokémon in {a} e {b} hanno stato diverso."))
+
+    # implicazioni tra due celle: la prima condizione è vera nella soluzione,
+    # così la clue non risulta vera solo per un antecedente impossibile.
+    for i in range(n):
+        for j in range(n):
+            if i == j:
+                continue
+            a, b = entries[i]["name"].capitalize(), entries[j]["name"].capitalize()
+            a_status, b_status = truth[i], truth[j]
+            a_text = "shiny" if a_status else "regular"
+            b_text = "shiny" if b_status else "regular"
+            text = f"Se {a} è {a_text}, {b} è {b_text}."
+            pool.append(conditional_clue(i, a_status, j, b_status, text))
 
     # coppie "i due Pokémon di tipo X": stesso stato / diverso
     for g in groups:

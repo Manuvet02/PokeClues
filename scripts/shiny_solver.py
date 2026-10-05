@@ -80,6 +80,32 @@ def count_clue(cells: list[int], k: int, text: str) -> Clue:
     return Clue("count", [up, down], text, set(cells))
 
 
+def at_least_clue(cells: list[int], k: int, text: str) -> Clue:
+    """Almeno k shiny fra `cells`."""
+    return Clue("at_least", [Linear({c: 1 for c in cells}, k)], text, set(cells))
+
+
+def at_most_clue(cells: list[int], k: int, text: str) -> Clue:
+    """Al massimo k shiny fra `cells`."""
+    return Clue("at_most", [Linear({c: -1 for c in cells}, -k)], text, set(cells))
+
+
+def conditional_clue(a: int, a_status: int, b: int, b_status: int, text: str) -> Clue:
+    """If cell `a` has `a_status`, cell `b` must have `b_status`."""
+    # Each literal is true exactly when a cell has the requested status.
+    weights: dict[int, int] = {}
+    constant = 0
+    for cell, status in ((a, 1 - a_status), (b, b_status)):
+        if status == 1:
+            weights[cell] = weights.get(cell, 0) + 1
+        else:
+            weights[cell] = weights.get(cell, 0) - 1
+            constant += 1
+    # The implication is equivalent to at least one of these literals being true:
+    # the premise is false, or the conclusion is true.
+    return Clue("conditional", [Linear(weights, 1 - constant)], text, {a, b})
+
+
 def compare_clue(cells_a: list[int], cells_b: list[int], text: str) -> Clue:
     """Più shiny in A che in B (le celle in comune si annullano)."""
     weights: dict[int, int] = {}
