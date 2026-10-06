@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Pokémon Clues - Un puzzle game ispirato a Clues by Sam con Pokémon. Posiziona i Pokémon nella griglia seguendo gli indizi!"
+      content="Pokémon Clues - A daily Pokémon logic puzzle inspired by Clues by Sam."
     />
     <title>Pokémon Clues</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -28,12 +28,13 @@
       <section id="grid-section">
         <div class="grid-header">
           <div class="grid-title-group">
-            <h2>Puzzle Grid</h2>
+            <h2 data-i18n="gridTitle">Puzzle Grid</h2>
             <div class="grid-stats">
               <span
                 id="correct-count-badge"
                 class="stat-badge"
-                title="Pokémon posizionati correttamente"
+                title="Pokémon placed correctly"
+                data-i18n-title="placedCorrectly"
               >
                 <span class="stat-icon">✓</span>
                 <span id="correct-count-text">0 / 20</span>
@@ -48,14 +49,31 @@
             </div>
           </div>
           <div class="grid-controls">
+            <label class="language-control">
+              <span class="visually-hidden" data-i18n="language">Language</span>
+              <select
+                id="language-select"
+                aria-label="Language"
+                data-i18n-aria-label="language"
+              >
+                <option value="en">English</option>
+                <option value="it">Italiano</option>
+              </select>
+            </label>
             <button
               id="btn-sound"
               class="control-btn"
-              title="Attiva/Disattiva audio"
+              title="Toggle sound"
+              data-i18n-title="toggleSound"
             >
               <span id="sound-icon">🔊</span>
             </button>
-            <button id="btn-clear" class="control-btn" title="Svuota griglia">
+            <button
+              id="btn-clear"
+              class="control-btn"
+              title="Clear grid"
+              data-i18n-title="clearGrid"
+            >
               <svg
                 width="16"
                 height="16"
@@ -68,9 +86,14 @@
                   d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"
                 />
               </svg>
-              Svuota
+              <span data-i18n="clear">Clear</span>
             </button>
-            <button id="btn-shuffle" class="control-btn" title="Rimescola pool">
+            <button
+              id="btn-shuffle"
+              class="control-btn"
+              title="Shuffle pool"
+              data-i18n-title="shufflePool"
+            >
               <svg
                 width="16"
                 height="16"
@@ -85,7 +108,7 @@
                 <line x1="15" y1="15" x2="21" y2="21" />
                 <line x1="4" y1="4" x2="9" y2="9" />
               </svg>
-              Rimescola
+              <span data-i18n="shuffle">Shuffle</span>
             </button>
           </div>
         </div>
@@ -97,7 +120,7 @@
       <!-- Clues Section (sidebar on desktop) -->
       <section id="clues-section">
         <div class="clues-header">
-          <h2>📋 Indizi</h2>
+          <h2 data-i18n="cluesTitle">📋 Clues</h2>
           <span class="clue-count" id="clue-count">0 indizi</span>
         </div>
         <div id="clues-list" class="clues-list">
@@ -109,7 +132,7 @@
     <!-- Pool Section -->
     <section id="pool-section">
       <div class="pool-header">
-        <h2>🎒 Pool Pokémon</h2>
+        <h2 data-i18n="poolTitle">🎒 Pokémon Pool</h2>
         <span class="pool-count" id="pool-count">0 disponibili</span>
       </div>
       <div id="sprite-pool" class="sprite-pool">
@@ -117,22 +140,16 @@
       </div>
     </section>
 
-    <footer id="site-footer">
-      <p>
-        Pokémon Clues &mdash; Un puzzle game ispirato a
-        <a href="https://cluesbysam.com/" target="_blank" rel="noopener"
-          >Clues by Sam</a
-        >
-      </p>
-    </footer>
-
     <!-- Floating Victory Banner (appears when puzzle is won) -->
     <button
       id="btn-show-victory"
       class="floating-victory-banner hidden"
-      title="Riapri schermata vittoria"
+      title="Reopen victory screen"
+      data-i18n-title="reopenVictory"
     >
-      🏆 Puzzle Completato! Clicca per vedere le statistiche
+      <span data-i18n="reopenBanner"
+        >🏆 Puzzle Complete! Click to see your stats</span
+      >
     </button>
 
     <!-- Victory Screen Modal -->
@@ -155,22 +172,24 @@
           </div>
           <div class="victory-crown">👑</div>
         </div>
-        <h2 class="victory-title">VITTORIA!</h2>
+        <h2 class="victory-title" data-i18n="victory">VICTORY!</h2>
         <p class="victory-subtitle">
-          Hai posizionato tutti i Pokémon al posto giusto!
+          <span data-i18n="victorySubtitle"
+            >You placed every Pokémon correctly!</span
+          >
         </p>
 
         <div class="victory-stats">
           <div class="stat-box">
-            <span class="stat-label">Tempo</span>
+            <span class="stat-label" data-i18n="time">Time</span>
             <span class="stat-value" id="victory-time">00:00</span>
           </div>
           <div class="stat-box">
-            <span class="stat-label">Mosse</span>
+            <span class="stat-label" data-i18n="moves">Moves</span>
             <span class="stat-value" id="victory-moves">0</span>
           </div>
           <div class="stat-box">
-            <span class="stat-label">Correttezza</span>
+            <span class="stat-label" data-i18n="accuracy">Accuracy</span>
             <span class="stat-value" id="victory-accuracy">20 / 20</span>
           </div>
         </div>
@@ -188,15 +207,16 @@
               <polyline points="1 4 1 10 7 10"></polyline>
               <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
             </svg>
-            Rigioca
+            <span data-i18n="playAgain">Play Again</span>
           </button>
           <button id="btn-close-victory" class="modal-btn btn-secondary">
-            Ammira la Griglia
+            <span data-i18n="viewGrid">View Grid</span>
           </button>
         </div>
       </div>
     </div>
 
+    <script src="i18n.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

@@ -8,6 +8,8 @@
 (() => {
   "use strict";
 
+  const t = (...args) => window.PokemonCluesI18n.t(...args);
+
   // ---- Configuration ----
   let GRID_ROWS = 5;
   let GRID_COLS = 4;
@@ -88,24 +90,15 @@
   };
 
   const pokemonTypeNames = {
-    normal: "Normale",
-    fire: "Fuoco",
-    water: "Acqua",
-    electric: "Elettro",
-    grass: "Erba",
-    ice: "Ghiaccio",
-    fighting: "Lotta",
-    poison: "Veleno",
-    ground: "Terra",
-    flying: "Volante",
-    psychic: "Psico",
-    bug: "Coleottero",
-    rock: "Roccia",
-    ghost: "Spettro",
-    dragon: "Drago",
-    dark: "Buio",
-    steel: "Acciaio",
-    fairy: "Folletto",
+    normal: { en: "Normal", it: "Normale" }, fire: { en: "Fire", it: "Fuoco" },
+    water: { en: "Water", it: "Acqua" }, electric: { en: "Electric", it: "Elettro" },
+    grass: { en: "Grass", it: "Erba" }, ice: { en: "Ice", it: "Ghiaccio" },
+    fighting: { en: "Fighting", it: "Lotta" }, poison: { en: "Poison", it: "Veleno" },
+    ground: { en: "Ground", it: "Terra" }, flying: { en: "Flying", it: "Volante" },
+    psychic: { en: "Psychic", it: "Psico" }, bug: { en: "Bug", it: "Coleottero" },
+    rock: { en: "Rock", it: "Roccia" }, ghost: { en: "Ghost", it: "Spettro" },
+    dragon: { en: "Dragon", it: "Drago" }, dark: { en: "Dark", it: "Buio" },
+    steel: { en: "Steel", it: "Acciaio" }, fairy: { en: "Fairy", it: "Folletto" },
   };
 
   // ---- Timer Logic ----
@@ -411,7 +404,7 @@
     solution = placeholders.map((p) => p.name);
 
     clues = [
-      { id: 0, text: "Carica un file puzzle per vedere gli indizi qui." },
+      { id: 0, text: t("fallbackClue") },
     ];
   }
 
@@ -453,7 +446,7 @@
         (pokemon.types || []).forEach((type) => {
           const badge = document.createElement("span");
           badge.className = "shiny-type-badge";
-          badge.textContent = pokemonTypeNames[type] || formatName(type);
+          badge.textContent = pokemonTypeNames[type]?.[window.PokemonCluesI18n.locale] || formatName(type);
           badge.style.setProperty(
             "--type-color",
             pokemonTypeColors[type] || "#667085",
@@ -494,7 +487,7 @@
       clue.className = `cell-clue${clueVisible ? "" : " clue-locked"}`;
       clue.textContent = clueVisible
         ? pokemon.clue
-        : "Risolvi la cella per rivelare l'indizio";
+        : t("lockedClue");
       cardMain.appendChild(clue);
       cell.appendChild(cardMain);
 
@@ -508,7 +501,7 @@
           (shinyStatuses[index] === (status === "shiny" ? 1 : 0) ||
             solution[index] === status);
         button.className = `shiny-choice${selected ? " selected" : ""}`;
-        button.textContent = status === "shiny" ? "✦ Shiny" : "Regular";
+        button.textContent = t(status === "shiny" ? "shiny" : "regular");
         button.disabled = solved;
         button.setAttribute("aria-pressed", String(selected));
         button.addEventListener("click", () =>
@@ -675,7 +668,7 @@
         const badgeEl = document.createElement("span");
         badgeEl.className = `cell-status-badge ${isCorrect ? "correct" : "incorrect"}`;
         badgeEl.textContent = isCorrect ? "✓" : "✕";
-        badgeEl.title = isCorrect ? "Posizione corretta!" : "Posizione errata";
+        badgeEl.title = t(isCorrect ? "correctPosition" : "incorrectPosition");
         cell.appendChild(badgeEl);
 
         // Filled cell sprite
@@ -721,7 +714,7 @@
     if (poolItems.length === 0) {
       const emptyMsg = document.createElement("div");
       emptyMsg.className = "pool-empty";
-      emptyMsg.textContent = "Tutti i Pokémon sono nella griglia! 🎉";
+      emptyMsg.textContent = t("allInGrid");
       poolEl.appendChild(emptyMsg);
       return;
     }
@@ -776,16 +769,16 @@
   }
 
   function updateCounts() {
-    clueCountEl.textContent = `${clues.length} indizi`;
-    poolCountEl.textContent = `${poolItems.length} disponibili`;
+    clueCountEl.textContent = t("clueCount", clues.length);
+    poolCountEl.textContent = t("poolCount", poolItems.length);
 
     // Calculate correctly placed count
     if (shinyPuzzleCells) {
       const correctCount = revealedCells.size;
       if (correctCountTextEl)
         correctCountTextEl.textContent = `${correctCount} / ${TOTAL_CELLS}`;
-      clueCountEl.textContent = `${TOTAL_CELLS} indizi`;
-      poolCountEl.textContent = `${TOTAL_CELLS - correctCount} da scoprire`;
+      clueCountEl.textContent = t("clueCount", TOTAL_CELLS);
+      poolCountEl.textContent = t("undiscovered", TOTAL_CELLS - correctCount);
       return;
     }
     let correctCount = 0;
@@ -1025,9 +1018,14 @@
       if (soundIcon) {
         soundIcon.textContent = soundEnabled ? "🔊" : "🔇";
       }
-      btnSound.title = soundEnabled ? "Disattiva audio" : "Attiva audio";
+      btnSound.title = t(soundEnabled ? "soundOn" : "soundOff");
     });
   }
+
+  document.addEventListener("pokemon-clues-language-changed", () => {
+    renderAll();
+    if (btnSound) btnSound.title = t(soundEnabled ? "soundOn" : "soundOff");
+  });
 
   // ---- Victory Modal Buttons ----
   if (btnPlayAgain) {
