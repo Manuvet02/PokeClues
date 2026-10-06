@@ -59,8 +59,11 @@
   const confettiCanvas = document.getElementById("confetti-canvas");
 
   // ---- Sprite URL Helper ----
-  function getSpriteUrl(pokemonId) {
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`;
+  function getSpriteUrl(pokemonId, shiny = false) {
+    if (shiny) {
+      return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${pokemonId}.png`;
+    }
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`;
   }
 
   const pokemonTypeColors = {
@@ -480,10 +483,7 @@
       if (solved) {
         const img = document.createElement("img");
         img.className = "cell-sprite";
-        img.src =
-          shinyStatuses[index] === 1 || solution[index] === "shiny"
-            ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id}.png`
-            : pokemon.spriteUrl;
+        img.src = getSpriteUrl(pokemon.id, shinyStatuses[index] === 1);
         img.alt = formatName(pokemon.pokemon);
         img.loading = "lazy";
         pokemonVisual.appendChild(img);
