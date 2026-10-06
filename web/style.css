@@ -554,7 +554,7 @@ body {
   min-height: 205px;
   padding: 30px 12px 12px;
   display: grid;
-  grid-template-rows: 14px 20px 20px minmax(0, 1fr) auto;
+  grid-template-rows: 20px minmax(0, 1fr) auto;
   justify-content: stretch;
   gap: 10px;
   cursor: default;
@@ -602,25 +602,33 @@ body {
 
 .shiny-card-name {
   min-width: 0;
-  padding-left: 30px;
+  flex: 0 1 auto;
   color: var(--text-primary);
   font-size: 0.84rem;
   font-weight: 700;
   line-height: 20px;
-  text-align: center;
+  text-align: right;
   text-transform: capitalize;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.shiny-type-list {
+.shiny-card-heading {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 0;
+}
+
+.shiny-type-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 0 auto;
   gap: 4px;
-  min-height: 20px;
+  min-width: 0;
 }
 
 .shiny-type-badge {

@@ -151,7 +151,7 @@ export async function onRequestGet({ request, env }) {
     date: puzzle.date,
     grid_size: puzzle.grid_size,
     start_cell: puzzle.start_cell,
-    cells: puzzle.cells.map(({ label, pokemon, id, types }) => ({ label, pokemon, id, types })),
+    cells: puzzle.cells.map(({ label, pokemon, id, types }) => ({ label, pokemon, id, types: types || [] })),
     revealed: clueData(puzzle, state.solved),
     stateToken: await signState(state, env.GAME_STATE_SECRET),
   });

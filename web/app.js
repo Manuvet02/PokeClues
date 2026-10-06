@@ -424,7 +424,6 @@
       const cardName = document.createElement("div");
       cardName.className = "shiny-card-name";
       cardName.textContent = formatName(pokemon.pokemon);
-      cell.appendChild(cardName);
 
       const typeList = document.createElement("div");
       typeList.className = "shiny-type-list";
@@ -443,7 +442,11 @@
           typeList.appendChild(badge);
         });
       }
-      cell.appendChild(typeList);
+
+      const cardHeading = document.createElement("div");
+      cardHeading.className = "shiny-card-heading";
+      cardHeading.append(cardName, typeList);
+      cell.appendChild(cardHeading);
 
       const cardMain = document.createElement("div");
       cardMain.className = "shiny-card-main";
