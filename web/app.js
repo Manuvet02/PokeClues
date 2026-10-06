@@ -374,14 +374,6 @@
     }
 
     poolItems = [...allCandidates];
-    if (shinyPuzzleCells) {
-      document.getElementById("site-header").classList.add("shiny-game-header");
-      document.querySelector("#site-header .subtitle").textContent =
-        "Leggi gli indizi e scopri quali Pokémon sono shiny";
-      document.querySelector("#grid-section h2").textContent =
-        "Indovina lo stato shiny";
-      document.querySelector(".grid-controls").classList.add("legacy-controls");
-    }
     renderAll();
   }
 

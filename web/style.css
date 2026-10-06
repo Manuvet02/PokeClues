@@ -160,29 +160,6 @@ body {
   }
 }
 
-/* --- Header --- */
-#site-header {
-  position: relative;
-  z-index: 10;
-  padding: 28px 24px 20px;
-  text-align: center;
-  background: var(--gradient-header);
-  border-bottom: 1px solid var(--border-primary);
-}
-
-.header-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.logo-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 6px;
-}
-
 /* Pokéball icon */
 .pokeball-icon {
   width: 36px;
