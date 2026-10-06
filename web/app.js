@@ -28,7 +28,6 @@
   let shinyStateToken = null;
   let shinyApiEnabled = false;
   let shinyPuzzleDate = "";
-  const pokemonTypesRequests = new Map();
   let isGameWon = false;
   let movesCount = 0;
   let timerSeconds = 0;
@@ -79,17 +78,6 @@
     rock: "Roccia", ghost: "Spettro", dragon: "Drago", dark: "Buio",
     steel: "Acciaio", fairy: "Folletto",
   };
-
-  function fetchPokemonTypes(pokemonId) {
-    if (!pokemonTypesRequests.has(pokemonId)) {
-      const request = fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
-        .then((response) => response.ok ? response.json() : null)
-        .then((data) => data?.types?.map(({ type }) => type.name) || [])
-        .catch(() => []);
-      pokemonTypesRequests.set(pokemonId, request);
-    }
-    return pokemonTypesRequests.get(pokemonId);
-  }
 
   // ---- Timer Logic ----
   function startTimer() {
@@ -428,13 +416,6 @@
       const typeList = document.createElement("div");
       typeList.className = "shiny-type-list";
       if (solved) {
-        if ((!Array.isArray(pokemon.types) || pokemon.types.length === 0) &&
-            !pokemonTypesRequests.has(pokemon.id)) {
-          fetchPokemonTypes(pokemon.id).then((types) => {
-            pokemon.types = types;
-            if (revealedCells.has(index)) renderAll();
-          });
-        }
         (pokemon.types || []).forEach((type) => {
           const badge = document.createElement("span");
           badge.className = "shiny-type-badge";
