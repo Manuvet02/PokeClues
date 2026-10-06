@@ -1366,6 +1366,31 @@ body {
   }
 }
 
+#main-content:has(.shiny-cell) {
+  max-width: none;
+  margin: 0;
+  background-color: #111812;
+  background-image:
+    linear-gradient(180deg, rgba(12, 19, 14, 0.48), rgba(12, 19, 14, 0.7)),
+    url("assets/landscape.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#main-content:has(.shiny-cell) #grid-section {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  #main-content:has(.shiny-cell) {
+    background-size: auto 100vh;
+    background-position: center center;
+  }
+}
+
 /* --- Victory Screen Modal --- */
 .modal-overlay {
   position: fixed;

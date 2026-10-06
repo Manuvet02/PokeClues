@@ -8,7 +8,7 @@
       content="Pokémon Clues - Un puzzle game ispirato a Clues by Sam con Pokémon. Posiziona i Pokémon nella griglia seguendo gli indizi!"
     />
     <title>Pokémon Clues</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,17 +46,29 @@
           <div class="grid-title-group">
             <h2>Puzzle Grid</h2>
             <div class="grid-stats">
-              <span id="correct-count-badge" class="stat-badge" title="Pokémon posizionati correttamente">
+              <span
+                id="correct-count-badge"
+                class="stat-badge"
+                title="Pokémon posizionati correttamente"
+              >
                 <span class="stat-icon">✓</span>
                 <span id="correct-count-text">0 / 20</span>
               </span>
-              <span id="game-timer" class="stat-badge timer-badge" title="Tempo trascorso">
+              <span
+                id="game-timer"
+                class="stat-badge timer-badge"
+                title="Tempo trascorso"
+              >
                 ⏱️ 00:00
               </span>
             </div>
           </div>
           <div class="grid-controls">
-            <button id="btn-sound" class="control-btn" title="Attiva/Disattiva audio">
+            <button
+              id="btn-sound"
+              class="control-btn"
+              title="Attiva/Disattiva audio"
+            >
               <span id="sound-icon">🔊</span>
             </button>
             <button id="btn-clear" class="control-btn" title="Svuota griglia">
@@ -131,12 +143,22 @@
     </footer>
 
     <!-- Floating Victory Banner (appears when puzzle is won) -->
-    <button id="btn-show-victory" class="floating-victory-banner hidden" title="Riapri schermata vittoria">
+    <button
+      id="btn-show-victory"
+      class="floating-victory-banner hidden"
+      title="Riapri schermata vittoria"
+    >
       🏆 Puzzle Completato! Clicca per vedere le statistiche
     </button>
 
     <!-- Victory Screen Modal -->
-    <div id="victory-modal" class="modal-overlay hidden" aria-hidden="true" role="dialog" aria-modal="true">
+    <div
+      id="victory-modal"
+      class="modal-overlay hidden"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+    >
       <div class="modal-backdrop"></div>
       <canvas id="confetti-canvas"></canvas>
       <div class="modal-card">
@@ -150,8 +172,10 @@
           <div class="victory-crown">👑</div>
         </div>
         <h2 class="victory-title">VITTORIA!</h2>
-        <p class="victory-subtitle">Hai posizionato tutti i Pokémon al posto giusto!</p>
-        
+        <p class="victory-subtitle">
+          Hai posizionato tutti i Pokémon al posto giusto!
+        </p>
+
         <div class="victory-stats">
           <div class="stat-box">
             <span class="stat-label">Tempo</span>
@@ -169,7 +193,14 @@
 
         <div class="victory-actions">
           <button id="btn-play-again" class="modal-btn btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <polyline points="1 4 1 10 7 10"></polyline>
               <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
             </svg>
