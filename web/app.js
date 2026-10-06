@@ -60,23 +60,49 @@
 
   // ---- Sprite URL Helper ----
   function getSpriteUrl(pokemonId) {
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`;
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`;
   }
 
   const pokemonTypeColors = {
-    normal: "#a8a77a", fire: "#ee8130", water: "#6390f0", electric: "#f7d02c",
-    grass: "#7ac74c", ice: "#96d9d6", fighting: "#c22e28", poison: "#a33ea1",
-    ground: "#e2bf65", flying: "#a98ff3", psychic: "#f95587", bug: "#a6b91a",
-    rock: "#b6a136", ghost: "#735797", dragon: "#6f35fc", dark: "#705746",
-    steel: "#b7b7ce", fairy: "#d685ad",
+    normal: "#a8a77a",
+    fire: "#ee8130",
+    water: "#6390f0",
+    electric: "#f7d02c",
+    grass: "#7ac74c",
+    ice: "#96d9d6",
+    fighting: "#c22e28",
+    poison: "#a33ea1",
+    ground: "#e2bf65",
+    flying: "#a98ff3",
+    psychic: "#f95587",
+    bug: "#a6b91a",
+    rock: "#b6a136",
+    ghost: "#735797",
+    dragon: "#6f35fc",
+    dark: "#705746",
+    steel: "#b7b7ce",
+    fairy: "#d685ad",
   };
 
   const pokemonTypeNames = {
-    normal: "Normale", fire: "Fuoco", water: "Acqua", electric: "Elettro",
-    grass: "Erba", ice: "Ghiaccio", fighting: "Lotta", poison: "Veleno",
-    ground: "Terra", flying: "Volante", psychic: "Psico", bug: "Coleottero",
-    rock: "Roccia", ghost: "Spettro", dragon: "Drago", dark: "Buio",
-    steel: "Acciaio", fairy: "Folletto",
+    normal: "Normale",
+    fire: "Fuoco",
+    water: "Acqua",
+    electric: "Elettro",
+    grass: "Erba",
+    ice: "Ghiaccio",
+    fighting: "Lotta",
+    poison: "Veleno",
+    ground: "Terra",
+    flying: "Volante",
+    psychic: "Psico",
+    bug: "Coleottero",
+    rock: "Roccia",
+    ghost: "Spettro",
+    dragon: "Drago",
+    dark: "Buio",
+    steel: "Acciaio",
+    fairy: "Folletto",
   };
 
   // ---- Timer Logic ----
@@ -254,12 +280,16 @@
         month: "2-digit",
         day: "2-digit",
       }).formatToParts(new Date());
-      const dateValues = Object.fromEntries(dateParts.map(({ type, value }) => [type, value]));
+      const dateValues = Object.fromEntries(
+        dateParts.map(({ type, value }) => [type, value]),
+      );
       const today = `${dateValues.year}-${dateValues.month}-${dateValues.day}`;
       shinyPuzzleDate = today;
       let data = null;
       const savedToken = localStorage.getItem(`pokemon-clues-state-${today}`);
-      const tokenQuery = savedToken ? `&state=${encodeURIComponent(savedToken)}` : "";
+      const tokenQuery = savedToken
+        ? `&state=${encodeURIComponent(savedToken)}`
+        : "";
       let response = await fetch(`/api/puzzle?date=${today}${tokenQuery}`);
       if (response.ok) {
         data = await response.json();
@@ -291,7 +321,8 @@
         shinyPuzzleCells = Array.isArray(data.cells) ? data.cells : null;
         revealedCells = new Set();
         if (shinyPuzzleCells) {
-          solution = data.solution || new Array(shinyPuzzleCells.length).fill(null);
+          solution =
+            data.solution || new Array(shinyPuzzleCells.length).fill(null);
           shinyStatuses = new Array(shinyPuzzleCells.length).fill(null);
           shinyStateToken = data.stateToken || null;
           shinyPuzzleCells.forEach((pokemon, index) => {
@@ -306,13 +337,20 @@
             });
           } else {
             shinyPuzzleCells.forEach((pokemon, index) => {
-              if (pokemon.label === data.start_cell && solution[index] === data.start_status) {
+              if (
+                pokemon.label === data.start_cell &&
+                solution[index] === data.start_status
+              ) {
                 revealedCells.add(index);
                 shinyStatuses[index] = solution[index] === "shiny" ? 1 : 0;
               }
             });
           }
-          if (shinyStateToken) localStorage.setItem(`pokemon-clues-state-${today}`, shinyStateToken);
+          if (shinyStateToken)
+            localStorage.setItem(
+              `pokemon-clues-state-${today}`,
+              shinyStateToken,
+            );
           clues = [];
         } else {
           solution = data.solution || [];
@@ -337,7 +375,8 @@
       document.getElementById("site-header").classList.add("shiny-game-header");
       document.querySelector("#site-header .subtitle").textContent =
         "Leggi gli indizi e scopri quali Pokémon sono shiny";
-      document.querySelector("#grid-section h2").textContent = "Indovina lo stato shiny";
+      document.querySelector("#grid-section h2").textContent =
+        "Indovina lo stato shiny";
       document.querySelector(".grid-controls").classList.add("legacy-controls");
     }
     renderAll();
@@ -420,7 +459,10 @@
           const badge = document.createElement("span");
           badge.className = "shiny-type-badge";
           badge.textContent = pokemonTypeNames[type] || formatName(type);
-          badge.style.setProperty("--type-color", pokemonTypeColors[type] || "#667085");
+          badge.style.setProperty(
+            "--type-color",
+            pokemonTypeColors[type] || "#667085",
+          );
           typeList.appendChild(badge);
         });
       }
@@ -438,13 +480,13 @@
       if (solved) {
         const img = document.createElement("img");
         img.className = "cell-sprite";
-        img.src = shinyStatuses[index] === 1 || solution[index] === "shiny"
-          ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id}.png`
-          : pokemon.spriteUrl;
+        img.src =
+          shinyStatuses[index] === 1 || solution[index] === "shiny"
+            ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokemon.id}.png`
+            : pokemon.spriteUrl;
         img.alt = formatName(pokemon.pokemon);
         img.loading = "lazy";
         pokemonVisual.appendChild(img);
-
       } else {
         const silhouette = document.createElement("span");
         silhouette.className = "shiny-silhouette";
@@ -458,7 +500,9 @@
       if (!solved) cell.classList.add("clue-locked-cell");
       const clue = document.createElement("p");
       clue.className = `cell-clue${clueVisible ? "" : " clue-locked"}`;
-      clue.textContent = clueVisible ? pokemon.clue : "Risolvi la cella per rivelare l'indizio";
+      clue.textContent = clueVisible
+        ? pokemon.clue
+        : "Risolvi la cella per rivelare l'indizio";
       cardMain.appendChild(clue);
       cell.appendChild(cardMain);
 
@@ -467,12 +511,17 @@
       ["regular", "shiny"].forEach((status) => {
         const button = document.createElement("button");
         button.type = "button";
-        const selected = solved && (shinyStatuses[index] === (status === "shiny" ? 1 : 0) || solution[index] === status);
+        const selected =
+          solved &&
+          (shinyStatuses[index] === (status === "shiny" ? 1 : 0) ||
+            solution[index] === status);
         button.className = `shiny-choice${selected ? " selected" : ""}`;
         button.textContent = status === "shiny" ? "✦ Shiny" : "Regular";
         button.disabled = solved;
         button.setAttribute("aria-pressed", String(selected));
-        button.addEventListener("click", () => guessShinyStatus(index, status, cell));
+        button.addEventListener("click", () =>
+          guessShinyStatus(index, status, cell),
+        );
         choices.appendChild(button);
       });
       cell.appendChild(choices);
@@ -483,7 +532,8 @@
   function getDeducedStatuses() {
     const state = new Array(shinyPuzzleCells.length).fill(null);
     revealedCells.forEach((index) => {
-      state[index] = shinyStatuses[index] ?? (solution[index] === "shiny" ? 1 : 0);
+      state[index] =
+        shinyStatuses[index] ?? (solution[index] === "shiny" ? 1 : 0);
     });
 
     const constraints = [];
@@ -496,9 +546,9 @@
     while (changed) {
       changed = false;
       for (const constraint of constraints) {
-        const weights = Object.entries(constraint.weights || {}).map(([cell, weight]) => [
-          Number(cell), Number(weight),
-        ]);
+        const weights = Object.entries(constraint.weights || {}).map(
+          ([cell, weight]) => [Number(cell), Number(weight)],
+        );
         let maxSum = 0;
         for (const [cell, weight] of weights) {
           if (weight > 0 && state[cell] !== 0) maxSum += weight;
@@ -543,7 +593,9 @@
     movesCount++;
     if (shinyApiEnabled) {
       const buttons = [...cell.querySelectorAll("button")];
-      buttons.forEach((button) => { button.disabled = true; });
+      buttons.forEach((button) => {
+        button.disabled = true;
+      });
       try {
         const response = await fetch("/api/puzzle", {
           method: "POST",
@@ -564,7 +616,10 @@
           return;
         }
         shinyStateToken = result.stateToken;
-        localStorage.setItem(`pokemon-clues-state-${shinyPuzzleDate}`, result.stateToken);
+        localStorage.setItem(
+          `pokemon-clues-state-${shinyPuzzleDate}`,
+          result.stateToken,
+        );
         shinyStatuses[index] = result.status === "shiny" ? 1 : 0;
         shinyPuzzleCells[index].clue = result.clue;
         shinyPuzzleCells[index].logic = result.logic;
@@ -578,7 +633,9 @@
         void cell.offsetWidth;
         cell.classList.add("guess-wrong");
       } finally {
-        buttons.forEach((button) => { button.disabled = revealedCells.has(index); });
+        buttons.forEach((button) => {
+          button.disabled = revealedCells.has(index);
+        });
       }
       return;
     }
@@ -733,7 +790,8 @@
     // Calculate correctly placed count
     if (shinyPuzzleCells) {
       const correctCount = revealedCells.size;
-      if (correctCountTextEl) correctCountTextEl.textContent = `${correctCount} / ${TOTAL_CELLS}`;
+      if (correctCountTextEl)
+        correctCountTextEl.textContent = `${correctCount} / ${TOTAL_CELLS}`;
       clueCountEl.textContent = `${TOTAL_CELLS} indizi`;
       poolCountEl.textContent = `${TOTAL_CELLS - correctCount} da scoprire`;
       return;
