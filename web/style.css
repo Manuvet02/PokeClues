@@ -554,7 +554,7 @@ body {
   min-height: 205px;
   padding: 30px 12px 12px;
   display: grid;
-  grid-template-rows: 20px minmax(0, 1fr) auto;
+  grid-template-rows: 14px 20px 20px minmax(0, 1fr) auto;
   justify-content: stretch;
   gap: 10px;
   cursor: default;
@@ -612,6 +612,29 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.shiny-type-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-height: 20px;
+}
+
+.shiny-type-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 18px;
+  padding: 1px 7px;
+  border: 1px solid color-mix(in srgb, var(--type-color) 75%, white 25%);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--type-color) 24%, #111722);
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1;
 }
 
 .cell-clue {

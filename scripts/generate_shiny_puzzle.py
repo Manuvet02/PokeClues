@@ -485,6 +485,7 @@ def generate_puzzle(target_date: date, rows: int, cols: int, rng: random.Random)
                 "label": cell_label(i, cols),
                 "pokemon": entries[i]["name"],
                 "id": entries[i]["id"],
+                "types": entries[i]["types"],
                 "clue": clue_of_cell[i].text,
                 "unlocked_by": None if unlocked_by[i] is None else cell_label(unlocked_by[i], cols),
                 "logic": serialize_logic(clue_of_cell[i]),

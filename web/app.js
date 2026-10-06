@@ -28,6 +28,7 @@
   let shinyStateToken = null;
   let shinyApiEnabled = false;
   let shinyPuzzleDate = "";
+  const pokemonTypesRequests = new Map();
   let isGameWon = false;
   let movesCount = 0;
   let timerSeconds = 0;
@@ -61,6 +62,33 @@
   // ---- Sprite URL Helper ----
   function getSpriteUrl(pokemonId) {
     return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`;
+  }
+
+  const pokemonTypeColors = {
+    normal: "#a8a77a", fire: "#ee8130", water: "#6390f0", electric: "#f7d02c",
+    grass: "#7ac74c", ice: "#96d9d6", fighting: "#c22e28", poison: "#a33ea1",
+    ground: "#e2bf65", flying: "#a98ff3", psychic: "#f95587", bug: "#a6b91a",
+    rock: "#b6a136", ghost: "#735797", dragon: "#6f35fc", dark: "#705746",
+    steel: "#b7b7ce", fairy: "#d685ad",
+  };
+
+  const pokemonTypeNames = {
+    normal: "Normale", fire: "Fuoco", water: "Acqua", electric: "Elettro",
+    grass: "Erba", ice: "Ghiaccio", fighting: "Lotta", poison: "Veleno",
+    ground: "Terra", flying: "Volante", psychic: "Psico", bug: "Coleottero",
+    rock: "Roccia", ghost: "Spettro", dragon: "Drago", dark: "Buio",
+    steel: "Acciaio", fairy: "Folletto",
+  };
+
+  function fetchPokemonTypes(pokemonId) {
+    if (!pokemonTypesRequests.has(pokemonId)) {
+      const request = fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`)
+        .then((response) => response.ok ? response.json() : null)
+        .then((data) => data?.types?.map(({ type }) => type.name) || [])
+        .catch(() => []);
+      pokemonTypesRequests.set(pokemonId, request);
+    }
+    return pokemonTypesRequests.get(pokemonId);
   }
 
   // ---- Timer Logic ----
@@ -397,6 +425,25 @@
       cardName.className = "shiny-card-name";
       cardName.textContent = formatName(pokemon.pokemon);
       cell.appendChild(cardName);
+
+      const typeList = document.createElement("div");
+      typeList.className = "shiny-type-list";
+      if (solved) {
+        if (!Array.isArray(pokemon.types)) {
+          fetchPokemonTypes(pokemon.id).then((types) => {
+            pokemon.types = types;
+            if (revealedCells.has(index)) renderAll();
+          });
+        }
+        (pokemon.types || []).forEach((type) => {
+          const badge = document.createElement("span");
+          badge.className = "shiny-type-badge";
+          badge.textContent = pokemonTypeNames[type] || formatName(type);
+          badge.style.setProperty("--type-color", pokemonTypeColors[type] || "#667085");
+          typeList.appendChild(badge);
+        });
+      }
+      cell.appendChild(typeList);
 
       const cardMain = document.createElement("div");
       cardMain.className = "shiny-card-main";
