@@ -428,7 +428,8 @@
       const typeList = document.createElement("div");
       typeList.className = "shiny-type-list";
       if (solved) {
-        if (!Array.isArray(pokemon.types)) {
+        if ((!Array.isArray(pokemon.types) || pokemon.types.length === 0) &&
+            !pokemonTypesRequests.has(pokemon.id)) {
           fetchPokemonTypes(pokemon.id).then((types) => {
             pokemon.types = types;
             if (revealedCells.has(index)) renderAll();
